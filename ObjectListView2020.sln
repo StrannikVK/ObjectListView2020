@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectListView2020", "ObjectListView\ObjectListView2020.csproj", "{18FEDA0C-D147-4286-B39A-01204808106A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectListViewDemo2020", "Demo\ObjectListViewDemo2020.csproj", "{C5332EAB-17B3-48B9-948E-33934B341AB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkleLibrary2020", "SparkleLibrary\SparkleLibrary2020.csproj", "{D63F9786-B608-4085-AF08-D909448B0426}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListViewPrinter2020", "ListViewPrinter\ListViewPrinter2020.csproj", "{E73A10BD-2B5A-4BAC-897F-3A58CFC07631}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListViewPrinterDemo2020", "ListViewPrinterDemo\ListViewPrinterDemo2020.csproj", "{40719365-FC03-46B8-8B6E-5FD1454712B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectListViewTools2020", "ObjectListViewTools2020\ObjectListViewTools2020.csproj", "{A45BE49F-69E0-42FC-BB7C-7E568A044C76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18FEDA0C-D147-4286-B39A-01204808106A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18FEDA0C-D147-4286-B39A-01204808106A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18FEDA0C-D147-4286-B39A-01204808106A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18FEDA0C-D147-4286-B39A-01204808106A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5332EAB-17B3-48B9-948E-33934B341AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5332EAB-17B3-48B9-948E-33934B341AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5332EAB-17B3-48B9-948E-33934B341AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5332EAB-17B3-48B9-948E-33934B341AB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D63F9786-B608-4085-AF08-D909448B0426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D63F9786-B608-4085-AF08-D909448B0426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D63F9786-B608-4085-AF08-D909448B0426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D63F9786-B608-4085-AF08-D909448B0426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E73A10BD-2B5A-4BAC-897F-3A58CFC07631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E73A10BD-2B5A-4BAC-897F-3A58CFC07631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E73A10BD-2B5A-4BAC-897F-3A58CFC07631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E73A10BD-2B5A-4BAC-897F-3A58CFC07631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40719365-FC03-46B8-8B6E-5FD1454712B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40719365-FC03-46B8-8B6E-5FD1454712B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40719365-FC03-46B8-8B6E-5FD1454712B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40719365-FC03-46B8-8B6E-5FD1454712B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A45BE49F-69E0-42FC-BB7C-7E568A044C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A45BE49F-69E0-42FC-BB7C-7E568A044C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A45BE49F-69E0-42FC-BB7C-7E568A044C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A45BE49F-69E0-42FC-BB7C-7E568A044C76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A2944DC-0FF8-460F-AEB0-D0968F83AFB1}
+	EndGlobalSection
+EndGlobal

@@ -42,6 +42,7 @@
             this.olvColumnPriority = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumnStatus = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.imageListSmall = new System.Windows.Forms.ImageList(this.components);
+            this.hotItemStyle1 = new BrightIdeasSoftware.HotItemStyle();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.olvTasks)).BeginInit();
             this.SuspendLayout();
@@ -201,6 +202,10 @@
             this.imageListSmall.Images.SetKeyName(4, "Coin");
             this.imageListSmall.Images.SetKeyName(5, "Lamp");
             // 
+            // hotItemStyle1
+            // 
+            this.hotItemStyle1.BackColor = System.Drawing.Color.Black;
+            // 
             // TabDescribedTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +215,7 @@
             this.Controls.Add(this.olvTasks);
             this.Name = "TabDescribedTask";
             this.Size = new System.Drawing.Size(804, 499);
+            this.Load += new System.EventHandler(this.TabDescribedTask_Load);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.olvTasks)).EndInit();
@@ -231,5 +237,6 @@
         private BrightIdeasSoftware.OLVColumn olvColumnPriority;
         private BrightIdeasSoftware.OLVColumn olvColumnAction;
         private System.Windows.Forms.ImageList imageListSmall;
+        private BrightIdeasSoftware.HotItemStyle hotItemStyle1;
     }
 }

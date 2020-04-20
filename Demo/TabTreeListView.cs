@@ -17,7 +17,7 @@ namespace ObjectListViewDemo
         {
             InitializeComponent();
             this.ListView = treeListView;
-            this.ListView.CellClick += (sender, args) => Debug.WriteLine("CellClicked: {0}", args);
+            //this.ListView.CellClick += (sender, args) => Debug.WriteLine("CellClicked: {0}", args);
         }
 
         protected override void InitializeTab() {
@@ -263,5 +263,9 @@ namespace ObjectListViewDemo
             this.treeListView.Refresh();
         }
 
+        private void TabTreeListView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

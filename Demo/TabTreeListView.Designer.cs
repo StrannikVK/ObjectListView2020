@@ -362,6 +362,7 @@
             this.Controls.Add(this.treeListView);
             this.Name = "TabTreeListView";
             this.Size = new System.Drawing.Size(804, 499);
+            this.Load += new System.EventHandler(this.TabTreeListView_Load);
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeListView)).EndInit();

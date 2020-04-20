@@ -206,6 +206,11 @@ namespace ObjectListViewDemo
         private void checkBoxIncomplete_CheckedChanged(object sender, EventArgs e) {
             this.RebuildFilters();
         }
+
+        private void TabDescribedTask_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     /// <summary>

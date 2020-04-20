@@ -50,8 +50,6 @@ namespace ObjectListViewDemo
             this.tabTreeListView1 = new ObjectListViewDemo.TabTreeListView();
             this.tabPageDataTreeListView = new System.Windows.Forms.TabPage();
             this.tabDataTreeListView1 = new ObjectListViewDemo.TabDataTreeListView();
-            this.tabPagePrinting = new System.Windows.Forms.TabPage();
-            this.tabPrinting1 = new ObjectListViewDemo.TabPrinting();
             this.tabPageDragAndDrop = new System.Windows.Forms.TabPage();
             this.tabDragAndDrop1 = new ObjectListViewDemo.TabDragAndDrop();
             this.tabDescribedTasks = new System.Windows.Forms.TabPage();
@@ -66,7 +64,6 @@ namespace ObjectListViewDemo
             this.tabPageFastList.SuspendLayout();
             this.tabPageTreeListView.SuspendLayout();
             this.tabPageDataTreeListView.SuspendLayout();
-            this.tabPagePrinting.SuspendLayout();
             this.tabPageDragAndDrop.SuspendLayout();
             this.tabDescribedTasks.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -97,7 +94,6 @@ namespace ObjectListViewDemo
             this.tabControl1.Controls.Add(this.tabPageFastList);
             this.tabControl1.Controls.Add(this.tabPageTreeListView);
             this.tabControl1.Controls.Add(this.tabPageDataTreeListView);
-            this.tabControl1.Controls.Add(this.tabPagePrinting);
             this.tabControl1.Controls.Add(this.tabPageDragAndDrop);
             this.tabControl1.Controls.Add(this.tabDescribedTasks);
             this.tabControl1.Location = new System.Drawing.Point(13, 12);
@@ -123,15 +119,15 @@ namespace ObjectListViewDemo
             this.tabSimple.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabSimple.Name = "tabSimple";
             this.tabSimple.Location = new System.Drawing.Point(4, 4);
+            this.tabSimple.Name = "tabSimple";
             this.tabSimple.Size = new System.Drawing.Size(800, 500);
             this.tabSimple.TabIndex = 0;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.tabComplex);
-            this.tabPage2.Location = new System.Drawing.Point(4,22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(811, 503);
@@ -144,7 +140,7 @@ namespace ObjectListViewDemo
             this.tabComplex.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabComplex.Location = new System.Drawing.Point(4,4);
+            this.tabComplex.Location = new System.Drawing.Point(4, 4);
             this.tabComplex.Name = "tabComplex";
             this.tabComplex.Size = new System.Drawing.Size(800, 500);
             this.tabComplex.TabIndex = 0;
@@ -165,7 +161,7 @@ namespace ObjectListViewDemo
             this.tabDataSet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabDataSet.Location = new System.Drawing.Point(4,4);
+            this.tabDataSet.Location = new System.Drawing.Point(4, 4);
             this.tabDataSet.Name = "tabDataSet";
             this.tabDataSet.Size = new System.Drawing.Size(800, 500);
             this.tabDataSet.TabIndex = 0;
@@ -249,31 +245,10 @@ namespace ObjectListViewDemo
             this.tabDataTreeListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabDataTreeListView1.Location = new System.Drawing.Point(4,4);
+            this.tabDataTreeListView1.Location = new System.Drawing.Point(4, 4);
             this.tabDataTreeListView1.Name = "tabDataTreeListView1";
             this.tabDataTreeListView1.Size = new System.Drawing.Size(800, 500);
             this.tabDataTreeListView1.TabIndex = 0;
-            // 
-            // tabPagePrinting
-            // 
-            this.tabPagePrinting.Controls.Add(this.tabPrinting1);
-            this.tabPagePrinting.Location = new System.Drawing.Point(4, 22);
-            this.tabPagePrinting.Name = "tabPagePrinting";
-            this.tabPagePrinting.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePrinting.Size = new System.Drawing.Size(811, 503);
-            this.tabPagePrinting.TabIndex = 16;
-            this.tabPagePrinting.Text = "Printing ListViews";
-            this.tabPagePrinting.UseVisualStyleBackColor = true;
-            // 
-            // tabPrinting1
-            // 
-            this.tabPrinting1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabPrinting1.Location = new System.Drawing.Point(4,4);
-            this.tabPrinting1.Name = "tabPrinting1";
-            this.tabPrinting1.Size = new System.Drawing.Size(800, 500);
-            this.tabPrinting1.TabIndex = 0;
             // 
             // tabPageDragAndDrop
             // 
@@ -291,7 +266,7 @@ namespace ObjectListViewDemo
             this.tabDragAndDrop1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabDragAndDrop1.Location = new System.Drawing.Point(4,4);
+            this.tabDragAndDrop1.Location = new System.Drawing.Point(4, 4);
             this.tabDragAndDrop1.Name = "tabDragAndDrop1";
             this.tabDragAndDrop1.Size = new System.Drawing.Size(800, 500);
             this.tabDragAndDrop1.TabIndex = 0;
@@ -312,7 +287,7 @@ namespace ObjectListViewDemo
             this.tabDescribedTask1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabDescribedTask1.Location = new System.Drawing.Point(4,4);
+            this.tabDescribedTask1.Location = new System.Drawing.Point(4, 4);
             this.tabDescribedTask1.Name = "tabDescribedTask1";
             this.tabDescribedTask1.Size = new System.Drawing.Size(800, 500);
             this.tabDescribedTask1.TabIndex = 0;
@@ -344,6 +319,7 @@ namespace ObjectListViewDemo
             this.Controls.Add(this.tabControl1);
             this.Name = "MainForm";
             this.Text = "ObjectListView Demo";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -352,7 +328,6 @@ namespace ObjectListViewDemo
             this.tabPageFastList.ResumeLayout(false);
             this.tabPageTreeListView.ResumeLayout(false);
             this.tabPageDataTreeListView.ResumeLayout(false);
-            this.tabPagePrinting.ResumeLayout(false);
             this.tabPageDragAndDrop.ResumeLayout(false);
             this.tabDescribedTasks.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
@@ -381,8 +356,6 @@ namespace ObjectListViewDemo
         private TabTreeListView tabTreeListView1;
         private TabPage tabPageDataTreeListView;
         private TabDataTreeListView tabDataTreeListView1;
-        private TabPage tabPagePrinting;
-        private TabPrinting tabPrinting1;
         private TabPage tabPageDragAndDrop;
         private TabDragAndDrop tabDragAndDrop1;
         private TabPage tabDescribedTasks;

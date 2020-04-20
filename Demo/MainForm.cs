@@ -58,20 +58,25 @@ namespace ObjectListViewDemo {
             this.tabDescribedTask1.Coordinator = coordinator;
 
             // Printing tab is slightly different, since it needs to know about the ObjectListViews from the other tabs
-            this.tabPrinting1.SimpleView = this.tabSimple.ListView;
-            this.tabPrinting1.ComplexView = this.tabComplex.ListView;
-            this.tabPrinting1.DataListView = this.tabDataSet.ListView;
-            this.tabPrinting1.FileExplorerView = this.tabFileExplorer1.ListView;
-            this.tabPrinting1.TreeListView = this.tabTreeListView1.ListView;
-            this.tabPrinting1.Coordinator = coordinator;
+            //this.tabPrinting1.SimpleView = this.tabSimple.ListView;
+            //this.tabPrinting1.ComplexView = this.tabComplex.ListView;
+            //this.tabPrinting1.DataListView = this.tabDataSet.ListView;
+            //this.tabPrinting1.FileExplorerView = this.tabFileExplorer1.ListView;
+            //this.tabPrinting1.TreeListView = this.tabTreeListView1.ListView;
+            //this.tabPrinting1.Coordinator = coordinator;
 
             //this.tabControl1.SelectTab(this.tabDescribedTasks);
         }
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
-            if (tabControl1.TabPages[e.TabPageIndex].Name == "tabPagePrinting")
-                this.tabPrinting1.UpdatePrintPreview();
+            //if (tabControl1.TabPages[e.TabPageIndex].Name == "tabPagePrinting")
+                //this.tabPrinting1.UpdatePrintPreview();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

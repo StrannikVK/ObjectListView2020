@@ -8,6 +8,8 @@
 *.sln.ide/
 *.userprefs
 *.GhostDoc.xml
+#Visual Studio
+.vs/
 
 # Build results
 [Dd]ebug/

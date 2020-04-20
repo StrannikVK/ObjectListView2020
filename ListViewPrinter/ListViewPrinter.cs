@@ -919,30 +919,41 @@ namespace BrightIdeasSoftware
         /// <param name="lv">The listview to be printed</param>
         protected void PrintRows(Graphics g, ListView lv)
         {
-            while (this.rowIndex < this.GetRowCount(lv)) {
+            try 
+            {
+                while (this.rowIndex < this.GetRowCount(lv))
+                {
 
-                // Will this row fit before the end of page?
-                float rowHeight = this.CalculateRowHeight(g, lv, this.rowIndex);
-                if (this.currentOrigin.Y + rowHeight > this.listBounds.Bottom)
-                    break;
+                    // Will this row fit before the end of page?
+                    float rowHeight = this.CalculateRowHeight(g, lv, this.rowIndex);
+                    if (this.currentOrigin.Y + rowHeight > this.listBounds.Bottom)
+                        break;
 
-                // If we are printing group and there is a group beginning at the current position,
-                // print it so long as the group header and at least one following row will fit on the page
-                if (this.IsShowingGroups) {
-                    int groupIndex = this.GetGroupAtPosition(this.rowIndex);
-                    if (groupIndex != -1) {
-                        float groupHeaderHeight = this.GroupHeaderFormat.CalculateHeight(g);
-                        if (this.currentOrigin.Y + groupHeaderHeight + rowHeight < this.listBounds.Bottom) {
-                            this.PrintGroupHeader(g, lv, groupIndex);
-                        } else {
-                            this.currentOrigin.Y = this.listBounds.Bottom;
-                            break;
+                    // If we are printing group and there is a group beginning at the current position,
+                    // print it so long as the group header and at least one following row will fit on the page
+                    if (this.IsShowingGroups)
+                    {
+                        int groupIndex = this.GetGroupAtPosition(this.rowIndex);
+                        if (groupIndex != -1)
+                        {
+                            float groupHeaderHeight = this.GroupHeaderFormat.CalculateHeight(g);
+                            if (this.currentOrigin.Y + groupHeaderHeight + rowHeight < this.listBounds.Bottom)
+                            {
+                                this.PrintGroupHeader(g, lv, groupIndex);
+                            }
+                            else
+                            {
+                                this.currentOrigin.Y = this.listBounds.Bottom;
+                                break;
+                            }
                         }
                     }
+                    this.PrintRow(g, lv, this.rowIndex, rowHeight);
+                    this.rowIndex++;
                 }
-                this.PrintRow(g, lv, this.rowIndex, rowHeight);
-                this.rowIndex++;
             }
+            catch (Exception ex) { string oDebug = ex.Message; }
+            
         }
 
         /// <summary>
