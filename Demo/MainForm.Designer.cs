@@ -123,6 +123,7 @@ namespace ObjectListViewDemo
             this.tabSimple.Name = "tabSimple";
             this.tabSimple.Size = new System.Drawing.Size(800, 500);
             this.tabSimple.TabIndex = 0;
+            this.tabSimple.Load += new System.EventHandler(this.tabSimple_Load);
             // 
             // tabPage2
             // 

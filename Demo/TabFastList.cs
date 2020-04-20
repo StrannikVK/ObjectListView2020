@@ -233,5 +233,10 @@ namespace ObjectListViewDemo
                     g.DrawRectangle(this.BorderPen, bounds);
             }
         }
+
+        private void TabFastList_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -78,5 +78,10 @@ namespace ObjectListViewDemo {
         {
 
         }
+
+        private void tabSimple_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

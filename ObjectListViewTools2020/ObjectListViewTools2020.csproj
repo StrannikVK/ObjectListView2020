@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -56,7 +71,6 @@
     <Compile Include="Controllers\ListViewObjectsToControl.Designer.cs">
       <DependentUpon>ListViewObjectsToControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mgr\ObjectListViewMgr.cs" />
     <Compile Include="ObjectsControllerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,21 +79,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestToBeDeleted\DebugForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestToBeDeleted\DebugForm1.Designer.cs">
-      <DependentUpon>DebugForm1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TestToBeDeleted\OlvDemoTab.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TestToBeDeleted\TabDescribedTask.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TestToBeDeleted\TabDescribedTask.Designer.cs">
-      <DependentUpon>TabDescribedTask.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Controllers\ListViewObjectsToControl.resx">
       <DependentUpon>ListViewObjectsToControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,13 +94,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TestToBeDeleted\DebugForm1.resx">
-      <DependentUpon>DebugForm1.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestToBeDeleted\TabDescribedTask.resx">
-      <DependentUpon>TabDescribedTask.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -116,14 +108,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\generictools\GenericTools.csproj">
-      <Project>{d5525581-efc5-4bdb-bd6d-0d4b2fcaf832}</Project>
-      <Name>GenericTools</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ObjectListView\ObjectListView2020.csproj">
       <Project>{18feda0c-d147-4286-b39a-01204808106a}</Project>
       <Name>ObjectListView2020</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

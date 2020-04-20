@@ -28,24 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.FastDataListView_ObjectsToControl = new BrightIdeasSoftware.FastDataListView();
             this.olvColumn_Name = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn_Status = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn_Action = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.hotItemStyle1 = new BrightIdeasSoftware.HotItemStyle();
             this.checkBoxCheckboxes = new System.Windows.Forms.CheckBox();
             this.checkBoxGroups = new System.Windows.Forms.CheckBox();
             this.comboBoxEditable = new System.Windows.Forms.ComboBox();
             this.comboBoxView = new System.Windows.Forms.ComboBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStrip_StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.comboBoxFilterType = new System.Windows.Forms.ComboBox();
+            this.textBoxFilterFast = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.FastDataListView_ObjectsToControl)).BeginInit();
+            this.statusStrip1.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // FastDataListView_ObjectsToControl
             // 
@@ -66,15 +65,15 @@
             this.FastDataListView_ObjectsToControl.EmptyListMsg = "No Itmes";
             this.FastDataListView_ObjectsToControl.GridLines = true;
             this.FastDataListView_ObjectsToControl.HideSelection = false;
-            this.FastDataListView_ObjectsToControl.HotItemStyle = this.hotItemStyle1;
-            this.FastDataListView_ObjectsToControl.Location = new System.Drawing.Point(3, 60);
+            this.FastDataListView_ObjectsToControl.Location = new System.Drawing.Point(1, 47);
             this.FastDataListView_ObjectsToControl.Name = "FastDataListView_ObjectsToControl";
             this.FastDataListView_ObjectsToControl.ShowGroups = false;
-            this.FastDataListView_ObjectsToControl.Size = new System.Drawing.Size(696, 408);
+            this.FastDataListView_ObjectsToControl.Size = new System.Drawing.Size(698, 397);
             this.FastDataListView_ObjectsToControl.TabIndex = 1;
             this.FastDataListView_ObjectsToControl.UseAlternatingBackColors = true;
             this.FastDataListView_ObjectsToControl.UseCompatibleStateImageBehavior = false;
-            this.FastDataListView_ObjectsToControl.UseHotItem = true;
+            this.FastDataListView_ObjectsToControl.UseHotControls = false;
+            this.FastDataListView_ObjectsToControl.UseOverlays = false;
             this.FastDataListView_ObjectsToControl.View = System.Windows.Forms.View.Details;
             this.FastDataListView_ObjectsToControl.VirtualMode = true;
             this.FastDataListView_ObjectsToControl.ButtonClick += new System.EventHandler<BrightIdeasSoftware.CellClickEventArgs>(this.FastDataListView_ObjectsToControl_ButtonClick);
@@ -83,12 +82,13 @@
             // 
             this.olvColumn_Name.AspectName = "Name";
             this.olvColumn_Name.Text = "Name";
+            this.olvColumn_Name.Width = 200;
             // 
             // olvColumn_Status
             // 
             this.olvColumn_Status.AspectName = "Status";
             this.olvColumn_Status.Text = "Status";
-            this.olvColumn_Status.WordWrap = true;
+            this.olvColumn_Status.Width = 200;
             // 
             // olvColumn_Action
             // 
@@ -97,20 +97,15 @@
             this.olvColumn_Action.ButtonSizing = BrightIdeasSoftware.OLVColumn.ButtonSizingMode.CellBounds;
             this.olvColumn_Action.EnableButtonWhenItemIsDisabled = true;
             this.olvColumn_Action.HeaderForeColor = System.Drawing.Color.Black;
+            this.olvColumn_Action.IsButton = true;
             this.olvColumn_Action.MinimumWidth = 40;
             this.olvColumn_Action.Text = "Action";
-            // 
-            // hotItemStyle1
-            // 
-            this.hotItemStyle1.BackColor = System.Drawing.Color.Lime;
-            this.hotItemStyle1.ForeColor = System.Drawing.Color.Black;
+            this.olvColumn_Action.Width = 100;
             // 
             // checkBoxCheckboxes
             // 
             this.checkBoxCheckboxes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBoxCheckboxes.Checked = true;
-            this.checkBoxCheckboxes.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxCheckboxes.Location = new System.Drawing.Point(69, 475);
+            this.checkBoxCheckboxes.Location = new System.Drawing.Point(71, 450);
             this.checkBoxCheckboxes.Name = "checkBoxCheckboxes";
             this.checkBoxCheckboxes.Size = new System.Drawing.Size(87, 21);
             this.checkBoxCheckboxes.TabIndex = 39;
@@ -121,7 +116,7 @@
             // checkBoxGroups
             // 
             this.checkBoxGroups.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBoxGroups.Location = new System.Drawing.Point(1, 475);
+            this.checkBoxGroups.Location = new System.Drawing.Point(3, 450);
             this.checkBoxGroups.Name = "checkBoxGroups";
             this.checkBoxGroups.Size = new System.Drawing.Size(60, 21);
             this.checkBoxGroups.TabIndex = 38;
@@ -139,7 +134,7 @@
             "Single Click",
             "Double Click",
             "F2 Only"});
-            this.comboBoxEditable.Location = new System.Drawing.Point(256, 474);
+            this.comboBoxEditable.Location = new System.Drawing.Point(164, 450);
             this.comboBoxEditable.Name = "comboBoxEditable";
             this.comboBoxEditable.Size = new System.Drawing.Size(83, 21);
             this.comboBoxEditable.TabIndex = 36;
@@ -156,17 +151,68 @@
             "List",
             "Tile",
             "Details"});
-            this.comboBoxView.Location = new System.Drawing.Point(388, 474);
+            this.comboBoxView.Location = new System.Drawing.Point(296, 450);
             this.comboBoxView.Name = "comboBoxView";
             this.comboBoxView.Size = new System.Drawing.Size(83, 21);
             this.comboBoxView.TabIndex = 37;
             this.comboBoxView.SelectedIndexChanged += new System.EventHandler(this.comboBoxView_SelectedIndexChanged);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.AutoSize = false;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStrip_StatusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 475);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(702, 21);
+            this.statusStrip1.TabIndex = 40;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStrip_StatusLabel
+            // 
+            this.toolStrip_StatusLabel.Name = "toolStrip_StatusLabel";
+            this.toolStrip_StatusLabel.Size = new System.Drawing.Size(46, 16);
+            this.toolStrip_StatusLabel.Text = "Loaded";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.comboBoxFilterType);
+            this.groupBox11.Controls.Add(this.textBoxFilterFast);
+            this.groupBox11.Location = new System.Drawing.Point(2, 1);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(214, 45);
+            this.groupBox11.TabIndex = 41;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Filter";
+            // 
+            // comboBoxFilterType
+            // 
+            this.comboBoxFilterType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFilterType.FormattingEnabled = true;
+            this.comboBoxFilterType.Items.AddRange(new object[] {
+            "Any text",
+            "Prefix",
+            "Regex"});
+            this.comboBoxFilterType.Location = new System.Drawing.Point(114, 18);
+            this.comboBoxFilterType.Name = "comboBoxFilterType";
+            this.comboBoxFilterType.Size = new System.Drawing.Size(94, 21);
+            this.comboBoxFilterType.TabIndex = 1;
+            // 
+            // textBoxFilterFast
+            // 
+            this.textBoxFilterFast.Location = new System.Drawing.Point(7, 18);
+            this.textBoxFilterFast.Name = "textBoxFilterFast";
+            this.textBoxFilterFast.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFilterFast.TabIndex = 0;
+            this.textBoxFilterFast.TextChanged += new System.EventHandler(this.textBoxFilterFast_TextChanged);
             // 
             // ListViewObjectsToControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.groupBox11);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.checkBoxCheckboxes);
             this.Controls.Add(this.checkBoxGroups);
             this.Controls.Add(this.comboBoxEditable);
@@ -176,12 +222,15 @@
             this.Size = new System.Drawing.Size(702, 496);
             this.Load += new System.EventHandler(this.ListViewObjectsToControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FastDataListView_ObjectsToControl)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private BrightIdeasSoftware.FastDataListView FastDataListView_ObjectsToControl;
         private BrightIdeasSoftware.OLVColumn olvColumn_Name;
         private BrightIdeasSoftware.OLVColumn olvColumn_Status;
@@ -190,6 +239,10 @@
         private System.Windows.Forms.CheckBox checkBoxGroups;
         private System.Windows.Forms.ComboBox comboBoxEditable;
         private System.Windows.Forms.ComboBox comboBoxView;
-        private BrightIdeasSoftware.HotItemStyle hotItemStyle1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStrip_StatusLabel;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.ComboBox comboBoxFilterType;
+        private System.Windows.Forms.TextBox textBoxFilterFast;
     }
 }

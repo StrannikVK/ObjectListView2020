@@ -7,33 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GenericTools.Controllers;
 using BrightIdeasSoftware;
 
 namespace ObjectListViewTools2020.Controllers
 {
     public partial class ListViewObjectsToControl : UserControl
     {
-        private ControllerOfObjects _ControllerOfObjects;
         public ListViewObjectsToControl()
         {
             InitializeComponent();
+            //this.FastDataListView_ObjectsToControl.UseHotItem = true;
+            //this.FastDataListView_ObjectsToControl.UseTranslucentHotItem = true;
         }
 
         private void ListViewObjectsToControl_Load(object sender, EventArgs e)
         {
-           
+
             //this.SetupDescibedTaskColumn();
             //this.SetupColumns();
-           
+
 
             // How much space do we want to give each row? Obviously, this should be at least
             // the height of the images used by the renderer
-            //olv_ObjectList_View.RowHeight = 54;
-            //olv_ObjectList_View.SmallImageList = new ImageList(;
-            //olv_ObjectList_View.EmptyListMsg = "No tasks match the filter";
-            //olv_ObjectList_View.UseAlternatingBackColors = false;
-            //olv_ObjectList_View.UseHotItem = false;
+            //FastDataListView_ObjectsToControl.RowHeight = 54;
+            //FastDataListView_ObjectsToControl.EmptyListMsg = "No tasks match the filter";
+            //FastDataListView_ObjectsToControl.UseAlternatingBackColors = true;
+            //FastDataListView_ObjectsToControl.UseHotItem = false;
 
             // Make and display a list of tasks
             List<ServiceTask> tasks = CreateTasks();
@@ -41,10 +40,6 @@ namespace ObjectListViewTools2020.Controllers
             this.SetupColumnWithButton();
         }
 
-        public void Set_ControllerOfObjects(ControllerOfObjects oControllerOfObjects)
-        {
-
-        }
 
         private void SetupColumnWithButton()
         {
@@ -52,11 +47,11 @@ namespace ObjectListViewTools2020.Controllers
             // Tell the columns that it is going to show buttons.
             // The label that goes into the button is the Aspect that would have been
             // displayed in the cell.
-            BrightIdeasSoftware.ColumnButtonRenderer oColumnButtonRenderer = new ColumnButtonRenderer();
+            //BrightIdeasSoftware.ColumnButtonRenderer oColumnButtonRenderer = new ColumnButtonRenderer();
             //oColumnButtonRenderer.col
             //olvColumn_Action.Renderer = oColumnButtonRenderer;
             //olvColumn_Action.B
-            olvColumn_Action.IsButton = true;
+            //olvColumn_Action.IsButton = true;
 
             // How will the button be sized? That can either be:
             //   - FixedBounds. Each button is ButtonSize in size
@@ -88,117 +83,6 @@ namespace ObjectListViewTools2020.Controllers
             //};
         }
 
-        private void SetupDescibedTaskColumn()
-        {
-            //// Setup a described task renderer, which draws a large icon
-            //// with a title, and a description under the title.
-            //// Almost all of this configuration could be done through the Designer
-            //// but I've done it through code that make it clear what's going on.
-
-            //// Create and install an appropriately configured renderer 
-            //this.olvColumnTask.Renderer = CreateDescribedTaskRenderer();
-
-            //// Now let's setup the couple of other bits that the column needs
-
-            //// Tell the column which property should be used to get the title
-            //this.olvColumnTask.AspectName = "Task";
-
-            //// Tell the column which property holds the identifier for the image for row.
-            //// We could also have installed an ImageGetter
-            //this.olvColumnTask.ImageAspectName = "ImageName";
-
-            //// Put a little bit of space around the task and its description
-            //this.olvColumnTask.CellPadding = new Rectangle(4, 2, 4, 2);
-        }
-
-        private void SetupColumns()
-        {
-            //// Draw the priority column as a collection of coins (first parameter).
-            //// We want the renderer to draw at most 4 stars (second parameter).
-            //// Priority has a value range from 0-5 (the last two parameters).
-            //this.olvColumnPriority.TextAlign = HorizontalAlignment.Center;
-            //MultiImageRenderer multiImageRenderer = new MultiImageRenderer("Lamp", 4, 0, 5);
-            //multiImageRenderer.Spacing = -12; // We want the coins to overlap
-            //this.olvColumnPriority.Renderer = multiImageRenderer;
-
-            //this.olvColumnStatus.AspectToStringConverter = delegate (object model) {
-            //    ServiceTask.TaskStatus status = (ServiceTask.TaskStatus)model;
-            //    switch (status)
-            //    {
-            //        case ServiceTask.TaskStatus.InProgress:
-            //            return "In progress";
-            //        case ServiceTask.TaskStatus.NotStarted:
-            //            return "Not started";
-            //        case ServiceTask.TaskStatus.Complete:
-            //            return "Complete";
-            //        case ServiceTask.TaskStatus.Frozen:
-            //            return "Frozen";
-            //        default:
-            //            return "";
-            //    }
-            //};
-            //this.olvColumnStatus.ImageGetter = delegate (object model) {
-            //    ServiceTask task = (ServiceTask)model;
-            //    switch (task.Status)
-            //    {
-            //        case ServiceTask.TaskStatus.InProgress:
-            //            return "Heart";
-            //        case ServiceTask.TaskStatus.NotStarted:
-            //            return "Add";
-            //        case ServiceTask.TaskStatus.Complete:
-            //            return "Tick";
-            //        case ServiceTask.TaskStatus.Frozen:
-            //            return "Cancel";
-            //        default:
-            //            return "";
-            //    }
-            //};
-        }
-
-        private BrightIdeasSoftware.DescribedTaskRenderer CreateDescribedTaskRenderer()
-        {
-
-            // Let's create an appropriately configured renderer.
-            DescribedTaskRenderer renderer = new DescribedTaskRenderer();
-
-            // Give the renderer its own collection of images.
-            // If this isn't set, the renderer will use the SmallImageList from the ObjectListView.
-            // (this is standard Renderer behaviour, not specific to DescribedTaskRenderer).
-            //renderer.ImageList = this.imageListTasks;
-
-            // Tell the renderer which property holds the text to be used as a description
-            renderer.DescriptionAspectName = "Description";
-
-            // Change the formatting slightly
-            renderer.TitleFont = new Font("Tahoma", 11, FontStyle.Bold);
-            renderer.DescriptionFont = new Font("Tahoma", 9);
-            renderer.ImageTextSpace = 8;
-            renderer.TitleDescriptionSpace = 1;
-
-            // Use older Gdi renderering, since most people think the text looks clearer
-            renderer.UseGdiTextRendering = true;
-
-            // If you like colours other than black and grey, you could uncomment these
-            //            renderer.TitleColor = Color.DarkBlue;
-            //            renderer.DescriptionColor = Color.CornflowerBlue;
-
-            return renderer;
-        }
-
-        private static List<ServiceTask> CreateTasks()
-        {
-            List<ServiceTask> tasks = new List<ServiceTask>();
-
-            tasks.Add(new ServiceTask("Setup spy cameras", "Install spy cameras in several locations to collect interesting footage", "film", ServiceTask.TaskStatus.NotStarted, 5));
-            tasks.Add(new ServiceTask("Check printer status", "Ensure that the printer is turned on and has toner", "printer", ServiceTask.TaskStatus.NotStarted, 2));
-            tasks.Add(new ServiceTask("Check circuit boards", "Ensure that the circuit boards are properly seated and have not be stolen ", "electronics", ServiceTask.TaskStatus.Complete, 4));
-            tasks.Add(new ServiceTask("Swap local gossip", "Spent some time in rec room to pick up any juicy gossip that could be useful", "backandforth", ServiceTask.TaskStatus.InProgress, 3));
-            tasks.Add(new ServiceTask("Answer any questions", "Politely and informatively respond to all tech questions the employees may have", "faq", ServiceTask.TaskStatus.InProgress, 1));
-            tasks.Add(new ServiceTask("Check Windows licenses", "Make sure that each Windows machine is running an authorized copy of Windows", "windows", ServiceTask.TaskStatus.NotStarted, 5));
-            tasks.Add(new ServiceTask("Download new games", "Check to see if anyone has installed an good new games and copy them onto the portable hard drive", "download", ServiceTask.TaskStatus.NotStarted, 1));
-
-            return tasks;
-        }
 
         private void checkBoxCheckboxes_CheckedChanged(object sender, EventArgs e)
         {
@@ -267,9 +151,79 @@ namespace ObjectListViewTools2020.Controllers
                 int oRowindes = e.RowIndex;
                 object oSubitem = e.SubItem;
                 object oModel = e.Model;
+                toolStrip_StatusLabel.Text = String.Format("Button clicked: ({0}, {1}, {2})", e.RowIndex, e.SubItem, e.Model);
+                ServiceTask task = (ServiceTask)e.Model;
+                task.AdvanceToNextState();
+
+                // Just to show off disabled rows, make tasks that are frozen be disabled.
+                if (task.Status == ServiceTask.TaskStatus.Frozen)
+                    this.FastDataListView_ObjectsToControl.DisableObject(e.Model);
+                else
+                    this.FastDataListView_ObjectsToControl.EnableObject(e.Model);
+
+                this.FastDataListView_ObjectsToControl.RefreshObject(e.Model);
+
             }
             catch (Exception ex) { string oDebug = ex.Message; }
         }
+
+        private void textBoxFilterFast_TextChanged(object sender, EventArgs e)
+        {
+            ObjectListView olv = FastDataListView_ObjectsToControl;
+            TextMatchFilter filter = null;
+            string txt = textBoxFilterFast.Text;
+            if (!String.IsNullOrEmpty(txt))
+            {
+                switch (comboBoxFilterType.SelectedIndex)
+                {
+                    case 0:
+                    default:
+                        filter = TextMatchFilter.Contains(olv, txt);
+                        break;
+                    case 1:
+                        filter = TextMatchFilter.Prefix(olv, txt);
+                        break;
+                    case 2:
+                        filter = TextMatchFilter.Regex(olv, txt);
+                        break;
+                }
+            }
+
+            // Text highlighting requires at least a default renderer
+            if (olv.DefaultRenderer == null)
+                olv.DefaultRenderer = new HighlightTextRenderer(filter);
+
+            olv.AdditionalFilter = filter;
+            //olv.BuildList();
+            //olv.Invalidate();
+
+            //if (FastDataListView_ObjectsToControl.Objects == null)
+            //    this.ToolStripStatus1 = prefixForNextSelectionMessage =
+            //        String.Format("Filtered in {0}ms", stopWatch.ElapsedMilliseconds);
+            //else
+            //    this.ToolStripStatus1 = prefixForNextSelectionMessage =
+            //        String.Format("Filtered {0} items down to {1} items",
+            //                      FastDataListView_ObjectsToControl.Objects.cou,
+            //                      FastDataListView_ObjectsToControl.Items.Count);
+        }
+
+
+
+        private static List<ServiceTask> CreateTasks()
+        {
+            List<ServiceTask> tasks = new List<ServiceTask>();
+
+            tasks.Add(new ServiceTask("Setup spy cameras", "Install spy cameras in several locations to collect interesting footage", "film", ServiceTask.TaskStatus.NotStarted, 5));
+            tasks.Add(new ServiceTask("Check printer status", "Ensure that the printer is turned on and has toner", "printer", ServiceTask.TaskStatus.NotStarted, 2));
+            tasks.Add(new ServiceTask("Check circuit boards", "Ensure that the circuit boards are properly seated and have not be stolen ", "electronics", ServiceTask.TaskStatus.Complete, 4));
+            tasks.Add(new ServiceTask("Swap local gossip", "Spent some time in rec room to pick up any juicy gossip that could be useful", "backandforth", ServiceTask.TaskStatus.InProgress, 3));
+            tasks.Add(new ServiceTask("Answer any questions", "Politely and informatively respond to all tech questions the employees may have", "faq", ServiceTask.TaskStatus.InProgress, 1));
+            tasks.Add(new ServiceTask("Check Windows licenses", "Make sure that each Windows machine is running an authorized copy of Windows", "windows", ServiceTask.TaskStatus.NotStarted, 5));
+            tasks.Add(new ServiceTask("Download new games", "Check to see if anyone has installed an good new games and copy them onto the portable hard drive", "download", ServiceTask.TaskStatus.NotStarted, 1));
+
+            return tasks;
+        }
+
     }
 
     /// <summary>

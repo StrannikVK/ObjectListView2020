@@ -462,6 +462,7 @@
             this.Controls.Add(this.olvFast);
             this.Name = "TabFastList";
             this.Size = new System.Drawing.Size(804, 499);
+            this.Load += new System.EventHandler(this.TabFastList_Load);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.olvFast)).EndInit();

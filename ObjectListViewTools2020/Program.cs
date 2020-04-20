@@ -17,7 +17,6 @@ namespace ObjectListViewTools2020
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ObjectsControllerForm());
-            //Application.Run(new TestToBeDeleted.DebugForm1());
         }
     }
 }

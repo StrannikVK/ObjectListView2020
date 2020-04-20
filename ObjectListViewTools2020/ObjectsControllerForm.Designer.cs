@@ -60,10 +60,12 @@
             // 
             // listViewObjectsToControl1
             // 
+            this.listViewObjectsToControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewObjectsToControl1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.listViewObjectsToControl1.Location = new System.Drawing.Point(3, 6);
             this.listViewObjectsToControl1.Name = "listViewObjectsToControl1";
-            this.listViewObjectsToControl1.Size = new System.Drawing.Size(869, 409);
+            this.listViewObjectsToControl1.Size = new System.Drawing.Size(920, 409);
             this.listViewObjectsToControl1.TabIndex = 0;
             // 
             // ObjectsControllerForm
