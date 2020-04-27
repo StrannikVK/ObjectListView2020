@@ -2,8 +2,8 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ObjectListViewDemo</RootNamespace>
-    <AssemblyName>ObjectListViewDemo</AssemblyName>
+    <RootNamespace>OLVTools2020</RootNamespace>
+    <AssemblyName>OLVTools2020</AssemblyName>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C5332EAB-17B3-48B9-948E-33934B341AB0}</ProjectGuid>
@@ -87,12 +87,15 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ObjectListViewDemo.MainForm</StartupObject>
+    <StartupObject>OLVTools2020.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ListViewPrinter, Version=2.5.0.33423, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ListViewPrinter\bin\Debug\ListViewPrinter.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView">
+      <HintPath>..\..\ObjectListViewCurrent\ObjectListView.dll</HintPath>
     </Reference>
     <Reference Include="SparkleLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -106,23 +109,46 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessCardOverlay.cs" />
-    <Compile Include="BusinessCardRenderer.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="UnUsed_To_Be_Deleted\ColumnSelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="UnUsed_To_Be_Deleted\ColumnSelectionForm.Designer.cs">
+      <DependentUpon>ColumnSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectsControllerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectsControllerForm.Designer.cs">
+      <DependentUpon>ObjectsControllerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="UserControls\ObjectListButtonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ObjectListButtonControl.Designer.cs">
+      <DependentUpon>ObjectListButtonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\MyFileSystemInfo.cs" />
+    <Compile Include="Utilities\OLVMgr.cs" />
+    <Compile Include="Utilities\Person.cs" />
+    <Compile Include="Resource1.Designer.cs" />
+    <Compile Include="Utilities\BusinessCardOverlay.cs" />
+    <Compile Include="Utilities\BusinessCardRenderer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UnUsed_To_Be_Deleted\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnUsed_To_Be_Deleted\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AnimatedDecoration.cs" />
+    <Compile Include="Utilities\AnimatedDecoration.cs" />
     <Compile Include="Models\MaritalStatus.cs" />
     <Compile Include="Models\MyFileSystemInfo.cs" />
     <Compile Include="Models\Person.cs" />
-    <Compile Include="OLVDemoCoordinator.cs" />
-    <Compile Include="OlvDemoTab.cs">
+    <Compile Include="Utilities\OLVDemoCoordinator.cs" />
+    <Compile Include="UserControls\OlvDemoTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Properties\Resource1.Designer.cs">
@@ -135,70 +161,76 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ShellUtilities.cs" />
-    <Compile Include="TabComplexExample.cs">
+    <Compile Include="Utilities\ShellUtilities.cs" />
+    <Compile Include="UserControls\TabComplexExample.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabComplexExample.Designer.cs">
+    <Compile Include="UserControls\TabComplexExample.Designer.cs">
       <DependentUpon>TabComplexExample.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabDataSet.cs">
+    <Compile Include="UserControls\TabDataSet.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabDataSet.Designer.cs">
+    <Compile Include="UserControls\TabDataSet.Designer.cs">
       <DependentUpon>TabDataSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabDataTreeListView.cs">
+    <Compile Include="UserControls\TabDataTreeListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabDataTreeListView.Designer.cs">
+    <Compile Include="UserControls\TabDataTreeListView.Designer.cs">
       <DependentUpon>TabDataTreeListView.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabDescribedTask.cs">
+    <Compile Include="UserControls\TabDescribedTask.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabDescribedTask.Designer.cs">
+    <Compile Include="UserControls\TabDescribedTask.Designer.cs">
       <DependentUpon>TabDescribedTask.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabDragAndDrop.cs">
+    <Compile Include="UserControls\TabDragAndDrop.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabDragAndDrop.Designer.cs">
+    <Compile Include="UserControls\TabDragAndDrop.Designer.cs">
       <DependentUpon>TabDragAndDrop.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabFastList.cs">
+    <Compile Include="UserControls\TabFastList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabFastList.Designer.cs">
+    <Compile Include="UserControls\TabFastList.Designer.cs">
       <DependentUpon>TabFastList.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabFileExplorer.cs">
+    <Compile Include="UserControls\TabFileExplorer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabFileExplorer.Designer.cs">
+    <Compile Include="UserControls\TabFileExplorer.Designer.cs">
       <DependentUpon>TabFileExplorer.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabPrinting.cs">
+    <Compile Include="UserControls\TabPrinting.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabPrinting.Designer.cs">
+    <Compile Include="UserControls\TabPrinting.Designer.cs">
       <DependentUpon>TabPrinting.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabSimpleExample.cs">
+    <Compile Include="UserControls\TabSimpleExample.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabSimpleExample.Designer.cs">
+    <Compile Include="UserControls\TabSimpleExample.Designer.cs">
       <DependentUpon>TabSimpleExample.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabTreeListView.cs">
+    <Compile Include="UserControls\TabTreeListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabTreeListView.Designer.cs">
+    <Compile Include="UserControls\TabTreeListView.Designer.cs">
       <DependentUpon>TabTreeListView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="UnUsed_To_Be_Deleted\ColumnSelectionForm.resx">
+      <DependentUpon>ColumnSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnUsed_To_Be_Deleted\MainForm.resx">
       <DependentUpon>MainForm.Designer.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectsControllerForm.resx">
+      <DependentUpon>ObjectsControllerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resource1.resx">
       <SubType>Designer</SubType>
@@ -209,34 +241,40 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabComplexExample.resx">
+    <EmbeddedResource Include="Resource1.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ObjectListButtonControl.resx">
+      <DependentUpon>ObjectListButtonControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TabComplexExample.resx">
       <DependentUpon>TabComplexExample.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabDataSet.resx">
+    <EmbeddedResource Include="UserControls\TabDataSet.resx">
       <DependentUpon>TabDataSet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabDataTreeListView.resx">
+    <EmbeddedResource Include="UserControls\TabDataTreeListView.resx">
       <DependentUpon>TabDataTreeListView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabDescribedTask.resx">
+    <EmbeddedResource Include="UserControls\TabDescribedTask.resx">
       <DependentUpon>TabDescribedTask.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabDragAndDrop.resx">
+    <EmbeddedResource Include="UserControls\TabDragAndDrop.resx">
       <DependentUpon>TabDragAndDrop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabFastList.resx">
+    <EmbeddedResource Include="UserControls\TabFastList.resx">
       <DependentUpon>TabFastList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabFileExplorer.resx">
+    <EmbeddedResource Include="UserControls\TabFileExplorer.resx">
       <DependentUpon>TabFileExplorer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabPrinting.resx">
+    <EmbeddedResource Include="UserControls\TabPrinting.resx">
       <DependentUpon>TabPrinting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabSimpleExample.resx">
+    <EmbeddedResource Include="UserControls\TabSimpleExample.resx">
       <DependentUpon>TabSimpleExample.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabTreeListView.resx">
+    <EmbeddedResource Include="UserControls\TabTreeListView.resx">
       <DependentUpon>TabTreeListView.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -274,6 +312,8 @@
     <Content Include="Data\FamilyTree.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Utilities\FamilyTree.xml" />
+    <Content Include="Utilities\Persons.xml" />
     <Content Include="Photos\ak.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -318,6 +358,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\GenericTools.Controllers.ObjectToControl.datasource" />
     <None Include="Resources\goldstar3.png" />
     <None Include="Resources\goldstart-32.png" />
     <None Include="Resources\fav32.png" />
@@ -364,9 +405,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ObjectListView\ObjectListView2020.csproj">
-      <Project>{18feda0c-d147-4286-b39a-01204808106a}</Project>
-      <Name>ObjectListView2020</Name>
+    <ProjectReference Include="..\..\generictools\GenericTools.csproj">
+      <Project>{d5525581-efc5-4bdb-bd6d-0d4b2fcaf832}</Project>
+      <Name>GenericTools</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
