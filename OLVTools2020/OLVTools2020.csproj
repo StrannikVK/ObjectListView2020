@@ -109,10 +109,10 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnUsed_To_Be_Deleted\ColumnSelectionForm.cs">
+    <Compile Include="Examples_Demo\ColumnSelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UnUsed_To_Be_Deleted\ColumnSelectionForm.Designer.cs">
+    <Compile Include="Examples_Demo\ColumnSelectionForm.Designer.cs">
       <DependentUpon>ColumnSelectionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ObjectsControllerForm.cs">
@@ -122,11 +122,11 @@
       <DependentUpon>ObjectsControllerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="UserControls\ObjectListButtonControl.cs">
+    <Compile Include="Old_To_Be_Deleted\ObjectListButtonControlOld.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ObjectListButtonControl.Designer.cs">
-      <DependentUpon>ObjectListButtonControl.cs</DependentUpon>
+    <Compile Include="Old_To_Be_Deleted\ObjectListButtonControlOld.Designer.cs">
+      <DependentUpon>ObjectListButtonControlOld.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\OLVForecastCNNControl.cs">
       <SubType>UserControl</SubType>
@@ -134,41 +134,17 @@
     <Compile Include="UserControls\OLVForecastCNNControl.Designer.cs">
       <DependentUpon>OLVForecastCNNControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UnUsed_To_Be_Deleted\OLVForecastControl.cs">
+    <Compile Include="Old_To_Be_Deleted\OLVForecastsControlOld.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UnUsed_To_Be_Deleted\OLVForecastControl.Designer.cs">
-      <DependentUpon>OLVForecastControl.cs</DependentUpon>
+    <Compile Include="Old_To_Be_Deleted\OLVForecastsControlOld.Designer.cs">
+      <DependentUpon>OLVForecastsControlOld.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\OLVForecastsControl.cs">
+    <Compile Include="Old_To_Be_Deleted\OLVMarketSymbolControlOld.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\OLVForecastsControl.Designer.cs">
-      <DependentUpon>OLVForecastsControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UnUsed_To_Be_Deleted\OLVMObjectListActionControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UnUsed_To_Be_Deleted\OLVMObjectListActionControl.Designer.cs">
-      <DependentUpon>OLVMObjectListActionControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UnUsed_To_Be_Deleted\OLVMSymbolsControlOld2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UnUsed_To_Be_Deleted\OLVMSymbolsControlOld2.Designer.cs">
-      <DependentUpon>OLVMSymbolsControlOld2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UnUsed_To_Be_Deleted\OLVSymbolsControlOld.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UnUsed_To_Be_Deleted\OLVSymbolsControlOld.Designer.cs">
-      <DependentUpon>OLVSymbolsControlOld.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\OLVMarketSymbolControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\OLVMarketSymbolControl.Designer.cs">
-      <DependentUpon>OLVMarketSymbolControl.cs</DependentUpon>
+    <Compile Include="Old_To_Be_Deleted\OLVMarketSymbolControlOld.Designer.cs">
+      <DependentUpon>OLVMarketSymbolControlOld.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\OLVYahooControl.cs">
       <SubType>UserControl</SubType>
@@ -190,10 +166,10 @@
     <Compile Include="Utilities\BusinessCardRenderer.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UnUsed_To_Be_Deleted\MainForm.cs">
+    <Compile Include="Examples_Demo\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UnUsed_To_Be_Deleted\MainForm.Designer.cs">
+    <Compile Include="Examples_Demo\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -202,7 +178,7 @@
     <Compile Include="Models\MyFileSystemInfo.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Utilities\OLVDemoCoordinator.cs" />
-    <Compile Include="UserControls\OlvDemoTab.cs">
+    <Compile Include="Old_To_Be_Deleted\OlvDemoTabOld.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Properties\Resource1.Designer.cs">
@@ -216,70 +192,70 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Utilities\ShellUtilities.cs" />
-    <Compile Include="UserControls\TabComplexExample.cs">
+    <Compile Include="Old_To_Be_Deleted\TabComplexExample.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TabComplexExample.Designer.cs">
+    <Compile Include="Old_To_Be_Deleted\TabComplexExample.Designer.cs">
       <DependentUpon>TabComplexExample.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TabDataSet.cs">
+    <Compile Include="Old_To_Be_Deleted\TabDataSet.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TabDataSet.Designer.cs">
+    <Compile Include="Old_To_Be_Deleted\TabDataSet.Designer.cs">
       <DependentUpon>TabDataSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TabDataTreeListView.cs">
+    <Compile Include="Old_To_Be_Deleted\TabDataTreeListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TabDataTreeListView.Designer.cs">
+    <Compile Include="Old_To_Be_Deleted\TabDataTreeListView.Designer.cs">
       <DependentUpon>TabDataTreeListView.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TabDescribedTask.cs">
+    <Compile Include="Old_To_Be_Deleted\TabDescribedTask.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TabDescribedTask.Designer.cs">
+    <Compile Include="Old_To_Be_Deleted\TabDescribedTask.Designer.cs">
       <DependentUpon>TabDescribedTask.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TabDragAndDrop.cs">
+    <Compile Include="Old_To_Be_Deleted\TabDragAndDrop.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TabDragAndDrop.Designer.cs">
+    <Compile Include="Old_To_Be_Deleted\TabDragAndDrop.Designer.cs">
       <DependentUpon>TabDragAndDrop.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TabFastList.cs">
+    <Compile Include="Old_To_Be_Deleted\TabFastList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TabFastList.Designer.cs">
+    <Compile Include="Old_To_Be_Deleted\TabFastList.Designer.cs">
       <DependentUpon>TabFastList.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TabFileExplorer.cs">
+    <Compile Include="Old_To_Be_Deleted\TabFileExplorer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TabFileExplorer.Designer.cs">
+    <Compile Include="Old_To_Be_Deleted\TabFileExplorer.Designer.cs">
       <DependentUpon>TabFileExplorer.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TabPrinting.cs">
+    <Compile Include="Old_To_Be_Deleted\TabPrinting.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TabPrinting.Designer.cs">
+    <Compile Include="Old_To_Be_Deleted\TabPrinting.Designer.cs">
       <DependentUpon>TabPrinting.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TabSimpleExample.cs">
+    <Compile Include="Old_To_Be_Deleted\TabSimpleExample.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TabSimpleExample.Designer.cs">
+    <Compile Include="Old_To_Be_Deleted\TabSimpleExample.Designer.cs">
       <DependentUpon>TabSimpleExample.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TabTreeListView.cs">
+    <Compile Include="Old_To_Be_Deleted\TabTreeListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TabTreeListView.Designer.cs">
+    <Compile Include="Old_To_Be_Deleted\TabTreeListView.Designer.cs">
       <DependentUpon>TabTreeListView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UnUsed_To_Be_Deleted\ColumnSelectionForm.resx">
+    <EmbeddedResource Include="Examples_Demo\ColumnSelectionForm.resx">
       <DependentUpon>ColumnSelectionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UnUsed_To_Be_Deleted\MainForm.resx">
+    <EmbeddedResource Include="Examples_Demo\MainForm.resx">
       <DependentUpon>MainForm.Designer.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -298,29 +274,17 @@
     <EmbeddedResource Include="Resource1.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ObjectListButtonControl.resx">
-      <DependentUpon>ObjectListButtonControl.cs</DependentUpon>
+    <EmbeddedResource Include="Old_To_Be_Deleted\ObjectListButtonControlOld.resx">
+      <DependentUpon>ObjectListButtonControlOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\OLVForecastCNNControl.resx">
       <DependentUpon>OLVForecastCNNControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UnUsed_To_Be_Deleted\OLVForecastControl.resx">
-      <DependentUpon>OLVForecastControl.cs</DependentUpon>
+    <EmbeddedResource Include="Old_To_Be_Deleted\OLVForecastsControlOld.resx">
+      <DependentUpon>OLVForecastsControlOld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\OLVForecastsControl.resx">
-      <DependentUpon>OLVForecastsControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UnUsed_To_Be_Deleted\OLVMObjectListActionControl.resx">
-      <DependentUpon>OLVMObjectListActionControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UnUsed_To_Be_Deleted\OLVMSymbolsControlOld2.resx">
-      <DependentUpon>OLVMSymbolsControlOld2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UnUsed_To_Be_Deleted\OLVSymbolsControlOld.resx">
-      <DependentUpon>OLVSymbolsControlOld.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\OLVMarketSymbolControl.resx">
-      <DependentUpon>OLVMarketSymbolControl.cs</DependentUpon>
+    <EmbeddedResource Include="Old_To_Be_Deleted\OLVMarketSymbolControlOld.resx">
+      <DependentUpon>OLVMarketSymbolControlOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\OLVYahooControl.resx">
       <DependentUpon>OLVYahooControl.cs</DependentUpon>
@@ -328,34 +292,34 @@
     <EmbeddedResource Include="UserControls\OLVWalletInvestorControl.resx">
       <DependentUpon>OLVWalletInvestorControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TabComplexExample.resx">
+    <EmbeddedResource Include="Old_To_Be_Deleted\TabComplexExample.resx">
       <DependentUpon>TabComplexExample.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TabDataSet.resx">
+    <EmbeddedResource Include="Old_To_Be_Deleted\TabDataSet.resx">
       <DependentUpon>TabDataSet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TabDataTreeListView.resx">
+    <EmbeddedResource Include="Old_To_Be_Deleted\TabDataTreeListView.resx">
       <DependentUpon>TabDataTreeListView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TabDescribedTask.resx">
+    <EmbeddedResource Include="Old_To_Be_Deleted\TabDescribedTask.resx">
       <DependentUpon>TabDescribedTask.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TabDragAndDrop.resx">
+    <EmbeddedResource Include="Old_To_Be_Deleted\TabDragAndDrop.resx">
       <DependentUpon>TabDragAndDrop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TabFastList.resx">
+    <EmbeddedResource Include="Old_To_Be_Deleted\TabFastList.resx">
       <DependentUpon>TabFastList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TabFileExplorer.resx">
+    <EmbeddedResource Include="Old_To_Be_Deleted\TabFileExplorer.resx">
       <DependentUpon>TabFileExplorer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TabPrinting.resx">
+    <EmbeddedResource Include="Old_To_Be_Deleted\TabPrinting.resx">
       <DependentUpon>TabPrinting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TabSimpleExample.resx">
+    <EmbeddedResource Include="Old_To_Be_Deleted\TabSimpleExample.resx">
       <DependentUpon>TabSimpleExample.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TabTreeListView.resx">
+    <EmbeddedResource Include="Old_To_Be_Deleted\TabTreeListView.resx">
       <DependentUpon>TabTreeListView.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -491,5 +455,6 @@
       <Name>GenericTools</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>
