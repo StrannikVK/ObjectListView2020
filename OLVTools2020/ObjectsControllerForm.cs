@@ -30,10 +30,10 @@ namespace OLVTools2020 {
             // The InitializeComponent() call is required for Windows Forms designer support.
             //
             InitializeComponent();
-            InitializeExamples();
+            Initialize_ObjectListButtonControl();
         }
 
-        void InitializeExamples() {
+        void Initialize_ObjectListButtonControl() {
             // Use different font under Vista
             if (ObjectListView.IsVistaOrLater)
                 this.Font = new Font("Segoe UI", 9);
@@ -48,7 +48,7 @@ namespace OLVTools2020 {
             //this.tabTreeListView1.Coordinator = OLV_Mgr;
             //this.tabDataTreeListView1.Coordinator = OLV_Mgr;
             //this.tabDragAndDrop1.Coordinator = OLV_Mgr;
-            this.ObjectList_W_Button_Control.OLV_Mgr = OLV_Mgr;
+            //this.ObjectList_W_Button_Control.OLV_Mgr = OLV_Mgr;
 
             // Printing tab is slightly different, since it needs to know about the ObjectListViews from the other tabs
             //this.tabPrinting1.SimpleView = this.tabSimple.ListView;

@@ -87,6 +87,7 @@
             this.olvDataTree.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.olvColumn41});
             this.olvDataTree.DataSource = null;
+            this.olvDataTree.HideSelection = false;
             this.olvDataTree.KeyAspectName = "Id";
             this.olvDataTree.Location = new System.Drawing.Point(6, 19);
             this.olvDataTree.Name = "olvDataTree";
@@ -166,6 +167,7 @@
             this.Controls.Add(this.label42);
             this.Name = "TabDataTreeListView";
             this.Size = new System.Drawing.Size(804, 499);
+            this.Load += new System.EventHandler(this.TabDataTreeListView_Load);
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
             this.groupBox15.ResumeLayout(false);

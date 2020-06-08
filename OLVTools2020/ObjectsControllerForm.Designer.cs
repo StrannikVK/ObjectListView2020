@@ -37,11 +37,15 @@ namespace OLVTools2020
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabDescribedTasks = new System.Windows.Forms.TabPage();
-            this.ObjectList_W_Button_Control = new OLVTools2020.ObjectListButtonControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.olvForecastCNNControl1 = new OLVTools2020.OLVForecastCNNControl();
+            this.olvmSymbolsControl21 = new OLVTools2020.OLVMSymbolsControl2();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.olvMarketSymbolControl1 = new OLVTools2020.OLVYahooControl();
             this.tabControl1.SuspendLayout();
             this.tabDescribedTasks.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +65,7 @@ namespace OLVTools2020
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabDescribedTasks);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -71,7 +76,7 @@ namespace OLVTools2020
             // 
             // tabDescribedTasks
             // 
-            this.tabDescribedTasks.Controls.Add(this.ObjectList_W_Button_Control);
+            this.tabDescribedTasks.Controls.Add(this.olvMarketSymbolControl1);
             this.tabDescribedTasks.Location = new System.Drawing.Point(4, 22);
             this.tabDescribedTasks.Name = "tabDescribedTasks";
             this.tabDescribedTasks.Padding = new System.Windows.Forms.Padding(3);
@@ -80,16 +85,33 @@ namespace OLVTools2020
             this.tabDescribedTasks.Text = "Pretty Tasks";
             this.tabDescribedTasks.UseVisualStyleBackColor = true;
             // 
-            // ObjectList_W_Button_Control
+            // tabPage1
             // 
-            this.ObjectList_W_Button_Control.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ObjectList_W_Button_Control.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ObjectList_W_Button_Control.Location = new System.Drawing.Point(4, 4);
-            this.ObjectList_W_Button_Control.Name = "ObjectList_W_Button_Control";
-            this.ObjectList_W_Button_Control.Size = new System.Drawing.Size(894, 537);
-            this.ObjectList_W_Button_Control.TabIndex = 0;
+            this.tabPage1.Controls.Add(this.olvForecastCNNControl1);
+            this.tabPage1.Controls.Add(this.olvmSymbolsControl21);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(904, 540);
+            this.tabPage1.TabIndex = 19;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // olvForecastCNNControl1
+            // 
+            this.olvForecastCNNControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.olvForecastCNNControl1.Location = new System.Drawing.Point(454, 56);
+            this.olvForecastCNNControl1.Name = "olvForecastCNNControl1";
+            this.olvForecastCNNControl1.Size = new System.Drawing.Size(629, 497);
+            this.olvForecastCNNControl1.TabIndex = 1;
+            // 
+            // olvmSymbolsControl21
+            // 
+            this.olvmSymbolsControl21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.olvmSymbolsControl21.Location = new System.Drawing.Point(95, 31);
+            this.olvmSymbolsControl21.Name = "olvmSymbolsControl21";
+            this.olvmSymbolsControl21.Size = new System.Drawing.Size(341, 426);
+            this.olvmSymbolsControl21.TabIndex = 0;
             // 
             // tabPage7
             // 
@@ -109,6 +131,14 @@ namespace OLVTools2020
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // olvMarketSymbolControl1
+            // 
+            this.olvMarketSymbolControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.olvMarketSymbolControl1.Location = new System.Drawing.Point(36, 22);
+            this.olvMarketSymbolControl1.Name = "olvMarketSymbolControl1";
+            this.olvMarketSymbolControl1.Size = new System.Drawing.Size(387, 313);
+            this.olvMarketSymbolControl1.TabIndex = 0;
+            // 
             // ObjectsControllerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,6 +151,7 @@ namespace OLVTools2020
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabDescribedTasks.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -134,7 +165,9 @@ namespace OLVTools2020
         public ToolStripStatusLabel toolStripStatusLabel3;
         public ToolStripStatusLabel toolStripStatusLabel1;
         private TabPage tabDescribedTasks;
-        private ObjectListButtonControl ObjectList_W_Button_Control;
-
-	}
+        private TabPage tabPage1;
+        private OLVMSymbolsControl2 olvmSymbolsControl21;
+        private OLVForecastCNNControl olvForecastCNNControl1;
+        private OLVYahooControl olvMarketSymbolControl1;
+    }
 }

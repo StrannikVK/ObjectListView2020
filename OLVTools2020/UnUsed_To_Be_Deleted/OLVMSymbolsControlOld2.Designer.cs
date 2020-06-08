@@ -1,6 +1,6 @@
 ﻿namespace OLVTools2020
 {
-    partial class ObjectListButtonControl
+    partial class OLVMSymbolsControl2
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label descriptionLabel;
             System.Windows.Forms.Label notesLabel;
             System.Windows.Forms.Label auto_StartLabel;
             System.Windows.Forms.Label synchronousLabel;
             System.Windows.Forms.Label status_Check_IntervalLabel;
-            System.Windows.Forms.Label log_LastLabel;
             System.Windows.Forms.Label statusLabel;
             System.Windows.Forms.Label nameLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObjectListButtonControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OLVMSymbolsControl2));
             this.olvColumnAction = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.button_Refresh = new System.Windows.Forms.Button();
@@ -61,47 +59,39 @@
             this.imageListSmall = new System.Windows.Forms.ImageList(this.components);
             this.hotItemStyle1 = new BrightIdeasSoftware.HotItemStyle();
             this.statusTextBox = new System.Windows.Forms.TextBox();
-            this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.notesTextBox = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage_Modules_List = new System.Windows.Forms.TabPage();
+            this.tabPage_List_DataTree = new System.Windows.Forms.TabPage();
+            this.olvDataTree = new BrightIdeasSoftware.DataTreeListView();
+            this.olvColumn_Symbol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.tabPage_List_with_Actions = new System.Windows.Forms.TabPage();
+            this.tabPage_DataGridView = new System.Windows.Forms.TabPage();
+            this.dataGridView_Symbols = new System.Windows.Forms.DataGridView();
             this.tabPage_Properties = new System.Windows.Forms.TabPage();
             this.button_Enable_Edit = new System.Windows.Forms.Button();
             this.button_Status_Refresh = new System.Windows.Forms.Button();
             this.propertyGrid_Selected_Object = new System.Windows.Forms.PropertyGrid();
             this.button_Action = new System.Windows.Forms.Button();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.log_LastTextBox = new System.Windows.Forms.TextBox();
-            descriptionLabel = new System.Windows.Forms.Label();
             notesLabel = new System.Windows.Forms.Label();
             auto_StartLabel = new System.Windows.Forms.Label();
             synchronousLabel = new System.Windows.Forms.Label();
             status_Check_IntervalLabel = new System.Windows.Forms.Label();
-            log_LastLabel = new System.Windows.Forms.Label();
             statusLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectToControlBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OLV_Objects)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabPage_Modules_List.SuspendLayout();
+            this.tabPage_List_DataTree.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.olvDataTree)).BeginInit();
+            this.tabPage_List_with_Actions.SuspendLayout();
+            this.tabPage_DataGridView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Symbols)).BeginInit();
             this.tabPage_Properties.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // descriptionLabel
-            // 
-            descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(5, 8);
-            descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(63, 13);
-            descriptionLabel.TabIndex = 2;
-            descriptionLabel.Text = "Description:";
             // 
             // notesLabel
             // 
@@ -138,15 +128,6 @@
             status_Check_IntervalLabel.Size = new System.Drawing.Size(112, 13);
             status_Check_IntervalLabel.TabIndex = 4;
             status_Check_IntervalLabel.Text = "Status Check Interval:";
-            // 
-            // log_LastLabel
-            // 
-            log_LastLabel.AutoSize = true;
-            log_LastLabel.Location = new System.Drawing.Point(3, 3);
-            log_LastLabel.Name = "log_LastLabel";
-            log_LastLabel.Size = new System.Drawing.Size(51, 13);
-            log_LastLabel.TabIndex = 0;
-            log_LastLabel.Text = "Log Last:";
             // 
             // statusLabel
             // 
@@ -424,17 +405,6 @@
             this.statusTextBox.Size = new System.Drawing.Size(367, 20);
             this.statusTextBox.TabIndex = 6;
             // 
-            // descriptionTextBox
-            // 
-            this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.objectToControlBindingSource, "Description", true));
-            this.descriptionTextBox.Location = new System.Drawing.Point(74, 5);
-            this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.ReadOnly = true;
-            this.descriptionTextBox.Size = new System.Drawing.Size(490, 20);
-            this.descriptionTextBox.TabIndex = 3;
-            // 
             // notesTextBox
             // 
             this.notesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -452,29 +422,94 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage_Modules_List);
+            this.tabControl1.Controls.Add(this.tabPage_List_DataTree);
+            this.tabControl1.Controls.Add(this.tabPage_List_with_Actions);
+            this.tabControl1.Controls.Add(this.tabPage_DataGridView);
             this.tabControl1.Controls.Add(this.tabPage_Properties);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(419, 579);
             this.tabControl1.TabIndex = 42;
             // 
-            // tabPage_Modules_List
+            // tabPage_List_DataTree
             // 
-            this.tabPage_Modules_List.AutoScroll = true;
-            this.tabPage_Modules_List.Controls.Add(this.groupBox9);
-            this.tabPage_Modules_List.Controls.Add(this.OLV_Objects);
-            this.tabPage_Modules_List.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_Modules_List.Name = "tabPage_Modules_List";
-            this.tabPage_Modules_List.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Modules_List.Size = new System.Drawing.Size(411, 553);
-            this.tabPage_Modules_List.TabIndex = 3;
-            this.tabPage_Modules_List.Text = "Modules List";
-            this.tabPage_Modules_List.UseVisualStyleBackColor = true;
+            this.tabPage_List_DataTree.AutoScroll = true;
+            this.tabPage_List_DataTree.Controls.Add(this.olvDataTree);
+            this.tabPage_List_DataTree.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_List_DataTree.Name = "tabPage_List_DataTree";
+            this.tabPage_List_DataTree.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_List_DataTree.Size = new System.Drawing.Size(411, 553);
+            this.tabPage_List_DataTree.TabIndex = 1;
+            this.tabPage_List_DataTree.Text = "List DataTree";
+            this.tabPage_List_DataTree.UseVisualStyleBackColor = true;
+            // 
+            // olvDataTree
+            // 
+            this.olvDataTree.AllColumns.Add(this.olvColumn_Symbol);
+            this.olvDataTree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.olvDataTree.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvColumn_Symbol});
+            this.olvDataTree.Cursor = System.Windows.Forms.Cursors.Default;
+            this.olvDataTree.DataSource = null;
+            this.olvDataTree.HideSelection = false;
+            this.olvDataTree.KeyAspectName = "Id";
+            this.olvDataTree.Location = new System.Drawing.Point(3, 45);
+            this.olvDataTree.Name = "olvDataTree";
+            this.olvDataTree.ParentKeyAspectName = "ParentId";
+            this.olvDataTree.RootKeyValueString = "";
+            this.olvDataTree.ShowGroups = false;
+            this.olvDataTree.ShowKeyColumns = false;
+            this.olvDataTree.Size = new System.Drawing.Size(402, 502);
+            this.olvDataTree.TabIndex = 1;
+            this.olvDataTree.UseCompatibleStateImageBehavior = false;
+            this.olvDataTree.UseFilterIndicator = true;
+            this.olvDataTree.UseFiltering = true;
+            this.olvDataTree.View = System.Windows.Forms.View.Details;
+            this.olvDataTree.VirtualMode = true;
+            // 
+            // olvColumn_Symbol
+            // 
+            this.olvColumn_Symbol.AspectName = "Symbol";
+            this.olvColumn_Symbol.Text = "Symbol";
+            this.olvColumn_Symbol.Width = 154;
+            // 
+            // tabPage_List_with_Actions
+            // 
+            this.tabPage_List_with_Actions.AutoScroll = true;
+            this.tabPage_List_with_Actions.Controls.Add(this.groupBox9);
+            this.tabPage_List_with_Actions.Controls.Add(this.OLV_Objects);
+            this.tabPage_List_with_Actions.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_List_with_Actions.Name = "tabPage_List_with_Actions";
+            this.tabPage_List_with_Actions.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_List_with_Actions.Size = new System.Drawing.Size(411, 553);
+            this.tabPage_List_with_Actions.TabIndex = 3;
+            this.tabPage_List_with_Actions.Text = "List with Action";
+            this.tabPage_List_with_Actions.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_DataGridView
+            // 
+            this.tabPage_DataGridView.Controls.Add(this.dataGridView_Symbols);
+            this.tabPage_DataGridView.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_DataGridView.Name = "tabPage_DataGridView";
+            this.tabPage_DataGridView.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_DataGridView.Size = new System.Drawing.Size(411, 553);
+            this.tabPage_DataGridView.TabIndex = 4;
+            this.tabPage_DataGridView.Text = "DataGridView";
+            this.tabPage_DataGridView.UseVisualStyleBackColor = true;
+            this.tabPage_DataGridView.Validated += new System.EventHandler(this.tabPage_DataGridView_Validated);
+            // 
+            // dataGridView_Symbols
+            // 
+            this.dataGridView_Symbols.AllowUserToOrderColumns = true;
+            this.dataGridView_Symbols.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Symbols.Location = new System.Drawing.Point(3, 35);
+            this.dataGridView_Symbols.Name = "dataGridView_Symbols";
+            this.dataGridView_Symbols.Size = new System.Drawing.Size(405, 515);
+            this.dataGridView_Symbols.TabIndex = 0;
             // 
             // tabPage_Properties
             // 
@@ -547,19 +582,6 @@
             this.nameTextBox.Size = new System.Drawing.Size(367, 20);
             this.nameTextBox.TabIndex = 1;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.AutoScroll = true;
-            this.tabPage2.Controls.Add(this.descriptionTextBox);
-            this.tabPage2.Controls.Add(descriptionLabel);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(411, 553);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Description";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(notesLabel);
@@ -572,36 +594,13 @@
             this.tabPage3.Text = "Notes";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(log_LastLabel);
-            this.tabPage5.Controls.Add(this.log_LastTextBox);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(411, 553);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Log";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // log_LastTextBox
-            // 
-            this.log_LastTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.log_LastTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.objectToControlBindingSource, "Log_Last", true));
-            this.log_LastTextBox.Location = new System.Drawing.Point(60, 3);
-            this.log_LastTextBox.Multiline = true;
-            this.log_LastTextBox.Name = "log_LastTextBox";
-            this.log_LastTextBox.Size = new System.Drawing.Size(504, 34);
-            this.log_LastTextBox.TabIndex = 1;
-            // 
-            // ObjectListButtonControl
+            // OLVMSymbolsControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.tabControl1);
-            this.Name = "ObjectListButtonControl";
+            this.Name = "OLVMSymbolsControl2";
             this.Size = new System.Drawing.Size(422, 582);
             this.Load += new System.EventHandler(this.ObjectListButtonControl_Load);
             this.groupBox9.ResumeLayout(false);
@@ -609,15 +608,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.objectToControlBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OLV_Objects)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage_Modules_List.ResumeLayout(false);
+            this.tabPage_List_DataTree.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.olvDataTree)).EndInit();
+            this.tabPage_List_with_Actions.ResumeLayout(false);
+            this.tabPage_DataGridView.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Symbols)).EndInit();
             this.tabPage_Properties.ResumeLayout(false);
             this.tabPage_Properties.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -644,22 +643,23 @@
         private BrightIdeasSoftware.OLVColumn olvColumn_Auto_Start;
         private System.Windows.Forms.TextBox statusTextBox;
         private System.Windows.Forms.BindingSource objectToControlBindingSource;
-        private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.TextBox notesTextBox;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage_Properties;
         private System.Windows.Forms.Button button_Action;
         private System.Windows.Forms.Button button_Status_Refresh;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage_List_DataTree;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage_Modules_List;
+        private System.Windows.Forms.TabPage tabPage_List_with_Actions;
         private System.Windows.Forms.TextBox status_Check_IntervalTextBox;
         private System.Windows.Forms.CheckBox synchronousCheckBox;
         private System.Windows.Forms.CheckBox auto_StartCheckBox1;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TextBox log_LastTextBox;
+        private System.Windows.Forms.TabPage tabPage_DataGridView;
         private System.Windows.Forms.PropertyGrid propertyGrid_Selected_Object;
         private System.Windows.Forms.Button button_Enable_Edit;
         private System.Windows.Forms.TextBox nameTextBox;
+        private BrightIdeasSoftware.DataTreeListView olvDataTree;
+        private BrightIdeasSoftware.OLVColumn olvColumn_Symbol;
+        private System.Windows.Forms.DataGridView dataGridView_Symbols;
     }
 }

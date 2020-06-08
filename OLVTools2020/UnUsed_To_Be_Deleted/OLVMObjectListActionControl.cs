@@ -8,7 +8,7 @@ using BrightIdeasSoftware;
 
 namespace OLVTools2020
 {
-    public partial class ObjectListButtonControl : UserControl
+    public partial class OLVMObjectListActionControl : UserControl
     {
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -72,7 +72,7 @@ namespace OLVTools2020
         //    };
         //}
 
-        public ObjectListButtonControl()
+        public OLVMObjectListActionControl()
         {
             InitializeComponent();
             this.ListView = this.OLV_Objects;

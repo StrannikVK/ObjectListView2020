@@ -6,7 +6,7 @@
     <AssemblyName>OLVTools2020</AssemblyName>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5332EAB-17B3-48B9-948E-33934B341AB0}</ProjectGuid>
+    <ProjectGuid>{98685A19-E3B9-4F5E-8780-3D8B00C613F7}</ProjectGuid>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
@@ -128,11 +128,59 @@
     <Compile Include="UserControls\ObjectListButtonControl.Designer.cs">
       <DependentUpon>ObjectListButtonControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\OLVForecastControl.cs">
+    <Compile Include="UserControls\OLVForecastCNNControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\OLVForecastControl.Designer.cs">
+    <Compile Include="UserControls\OLVForecastCNNControl.Designer.cs">
+      <DependentUpon>OLVForecastCNNControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnUsed_To_Be_Deleted\OLVForecastControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UnUsed_To_Be_Deleted\OLVForecastControl.Designer.cs">
       <DependentUpon>OLVForecastControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OLVForecastsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\OLVForecastsControl.Designer.cs">
+      <DependentUpon>OLVForecastsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnUsed_To_Be_Deleted\OLVMObjectListActionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UnUsed_To_Be_Deleted\OLVMObjectListActionControl.Designer.cs">
+      <DependentUpon>OLVMObjectListActionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnUsed_To_Be_Deleted\OLVMSymbolsControlOld2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UnUsed_To_Be_Deleted\OLVMSymbolsControlOld2.Designer.cs">
+      <DependentUpon>OLVMSymbolsControlOld2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnUsed_To_Be_Deleted\OLVSymbolsControlOld.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UnUsed_To_Be_Deleted\OLVSymbolsControlOld.Designer.cs">
+      <DependentUpon>OLVSymbolsControlOld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OLVMarketSymbolControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\OLVMarketSymbolControl.Designer.cs">
+      <DependentUpon>OLVMarketSymbolControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OLVYahooControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\OLVYahooControl.Designer.cs">
+      <DependentUpon>OLVYahooControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OLVWalletInvestorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\OLVWalletInvestorControl.Designer.cs">
+      <DependentUpon>OLVWalletInvestorControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\MyFileSystemInfo.cs" />
     <Compile Include="Utilities\OLVMgr.cs" />
@@ -253,8 +301,32 @@
     <EmbeddedResource Include="UserControls\ObjectListButtonControl.resx">
       <DependentUpon>ObjectListButtonControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\OLVForecastControl.resx">
+    <EmbeddedResource Include="UserControls\OLVForecastCNNControl.resx">
+      <DependentUpon>OLVForecastCNNControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnUsed_To_Be_Deleted\OLVForecastControl.resx">
       <DependentUpon>OLVForecastControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\OLVForecastsControl.resx">
+      <DependentUpon>OLVForecastsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnUsed_To_Be_Deleted\OLVMObjectListActionControl.resx">
+      <DependentUpon>OLVMObjectListActionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnUsed_To_Be_Deleted\OLVMSymbolsControlOld2.resx">
+      <DependentUpon>OLVMSymbolsControlOld2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnUsed_To_Be_Deleted\OLVSymbolsControlOld.resx">
+      <DependentUpon>OLVSymbolsControlOld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\OLVMarketSymbolControl.resx">
+      <DependentUpon>OLVMarketSymbolControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\OLVYahooControl.resx">
+      <DependentUpon>OLVYahooControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\OLVWalletInvestorControl.resx">
+      <DependentUpon>OLVWalletInvestorControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\TabComplexExample.resx">
       <DependentUpon>TabComplexExample.cs</DependentUpon>

@@ -248,10 +248,10 @@ namespace OLVTools2020
                 List<IModelFilter> filters = new List<IModelFilter>();
 
                 if (this.checkBox_HighPotential.Checked)
-                    filters.Add(new ModelFilter(delegate (object model) { return ((ObjectToControl)model).Potential > 3; }));
+                    filters.Add(new ModelFilter(delegate (object model) { return ((ObjectToControl)model).Filter_Value > ((ObjectToControl)model).Filter_Level;  }));
 
                 if (this.checkBox_LowPotential.Checked)
-                    filters.Add(new ModelFilter(delegate (object model) { return ((ObjectToControl)model).Potential <= 3; }));
+                    filters.Add(new ModelFilter(delegate (object model) { return ((ObjectToControl)model).Filter_Value <= ((ObjectToControl)model).Filter_Level; }));
 
                 if (!String.IsNullOrEmpty(this.textBoxFilter.Text))
                     filters.Add(new TextMatchFilter(this.OLV_Objects, this.textBoxFilter.Text));
@@ -295,7 +295,7 @@ namespace OLVTools2020
                 object oModel = e.Model;
                 //toolStrip_StatusLabel.Text = String.Format("Button clicked: ({0}, {1}, {2})", e.RowIndex, e.SubItem, e.Model);
                 ObjectToControl oObjectToControl = (ObjectToControl)e.Model;
-                oObjectToControl.Action_Execute();
+                oObjectToControl.Action_Execute(oObjectToControl.Action);
 
                 //// Just to show off disabled rows, make tasks that are frozen be disabled.
                 //if (oObjectToControl.Status == ObjectToControl.Action_Disabled)
@@ -358,7 +358,7 @@ namespace OLVTools2020
             try 
             {
                 ObjectToControl oObjectToControl = (ObjectToControl)objectToControlBindingSource.DataSource;
-                oObjectToControl.Action_Execute();
+                oObjectToControl.Action_Execute(oObjectToControl.Action);
                 Gen_Tools.DataBindings_Refresh(this, objectToControlBindingSource);
             }
             catch (Exception ex) { string oDebug = ex.Message; }

@@ -68,5 +68,10 @@ namespace OLVTools2020
         }
 
         #endregion
+
+        private void TabDataTreeListView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

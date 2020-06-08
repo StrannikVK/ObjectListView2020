@@ -8,7 +8,7 @@ using BrightIdeasSoftware;
 
 namespace OLVTools2020
 {
-    public partial class ObjectListButtonControl : UserControl
+    public partial class OLVSymbolsControl : UserControl
     {
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -72,7 +72,7 @@ namespace OLVTools2020
         //    };
         //}
 
-        public ObjectListButtonControl()
+        public OLVSymbolsControl()
         {
             InitializeComponent();
             this.ListView = this.OLV_Objects;
@@ -354,11 +354,7 @@ namespace OLVTools2020
             {
                 object oModel = OLV_Objects.SelectedObject;
                 Gen_Tools.DataBindings_ChangeDataSource(this, objectToControlBindingSource, oModel);
-                try { propertyGrid_Selected_Object.SelectedObject = oModel; }
-                catch (Exception ex) { string oDebug = ex.Message; }
                 
-
-
 
             }
             catch (Exception ex) { string oDebug = ex.Message; }
@@ -403,16 +399,10 @@ namespace OLVTools2020
             catch (Exception ex) { string oDebug = ex.Message; }
             
         }
-
-        private void button_Enable_Edit_Click(object sender, EventArgs e)
-        {
-            if (!propertyGrid_Selected_Object.Enabled) { propertyGrid_Selected_Object.Enabled = true; button_Enable_Edit.Text = "Disable Edit"; }
-            else { propertyGrid_Selected_Object.Enabled = false; button_Enable_Edit.Text = "Enable Edit"; }
-        }
     }
 
     ///// <summary>
-    ///// Dumb model class Enable Edit
+    ///// Dumb model class
     ///// </summary>
     //public class TestObject {
     //    private string task;
