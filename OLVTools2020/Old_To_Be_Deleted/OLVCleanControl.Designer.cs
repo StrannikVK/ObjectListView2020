@@ -1,6 +1,6 @@
 ﻿namespace OLVTools2020
 {
-    partial class OLVYahooControl
+    partial class OLVCleanControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label last_SymbolLabel;
             System.Windows.Forms.Label symbols_ProcessedLabel;
-            System.Windows.Forms.Label total_SymbolsLabel;
+            System.Windows.Forms.Label total_CleanLabel;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OLVYahooControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OLVCleanControl));
             this.olvColumnAction = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.textBox_Elev_Average1 = new System.Windows.Forms.TextBox();
             this.last_SymbolTextBox = new System.Windows.Forms.TextBox();
             this.textBox_Generic_Filter = new System.Windows.Forms.TextBox();
             this.symbols_ProcessedTextBox = new System.Windows.Forms.TextBox();
-            this.total_SymbolsTextBox = new System.Windows.Forms.TextBox();
+            this.total_CleanTextBox = new System.Windows.Forms.TextBox();
             this.button_Get_All_Forecast_Properties = new System.Windows.Forms.Button();
             this.button_Refresh = new System.Windows.Forms.Button();
             this.button_Stop_Update_All = new System.Windows.Forms.Button();
@@ -52,37 +52,10 @@
             this.OLV_Objects = new BrightIdeasSoftware.ObjectListView();
             this.olvColumn_Symbol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumnCompanyName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Status = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Potential = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Risk = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Low_Percentage = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Medium_Percentage = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_High_Percentage = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Price_Last = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Medium = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Analysts_Mean = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Elevation_52_Weeks = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations_Rating = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Risk_ESG_Score = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Beta_5Y_Monthly = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Fair_Value = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Estimated_Return_Percentage = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Reporting_Date = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Updated_Local_Time = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Low = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_High = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations_Strong_Buy = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations_Buy = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations_Hold = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations_Sell = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations_Strong_Sell = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Range_52_Weeks_Max = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Range_52_Weeks_Min = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.imageListSmall = new System.Windows.Forms.ImageList(this.components);
             this.hotItemStyle1 = new BrightIdeasSoftware.HotItemStyle();
-            this.tabControl_Symbols = new System.Windows.Forms.TabControl();
-            this.tabPage_SymbolsObjects = new System.Windows.Forms.TabPage();
+            this.tabControl_Clean = new System.Windows.Forms.TabControl();
+            this.tabPage_CleanObjects = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.textBox_Elev_Average2 = new System.Windows.Forms.TextBox();
             this.OLV_Objects_Filtered = new BrightIdeasSoftware.ObjectListView();
@@ -118,13 +91,13 @@
             this.label9 = new System.Windows.Forms.Label();
             last_SymbolLabel = new System.Windows.Forms.Label();
             symbols_ProcessedLabel = new System.Windows.Forms.Label();
-            total_SymbolsLabel = new System.Windows.Forms.Label();
+            total_CleanLabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OLV_Objects)).BeginInit();
-            this.tabControl_Symbols.SuspendLayout();
-            this.tabPage_SymbolsObjects.SuspendLayout();
+            this.tabControl_Clean.SuspendLayout();
+            this.tabPage_CleanObjects.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OLV_Objects_Filtered)).BeginInit();
             this.tabPage_Symbol_Properties.SuspendLayout();
@@ -149,14 +122,14 @@
             symbols_ProcessedLabel.TabIndex = 42;
             symbols_ProcessedLabel.Text = "Processed:";
             // 
-            // total_SymbolsLabel
+            // total_CleanLabel
             // 
-            total_SymbolsLabel.AutoSize = true;
-            total_SymbolsLabel.Location = new System.Drawing.Point(525, 12);
-            total_SymbolsLabel.Name = "total_SymbolsLabel";
-            total_SymbolsLabel.Size = new System.Drawing.Size(76, 13);
-            total_SymbolsLabel.TabIndex = 41;
-            total_SymbolsLabel.Text = "Total Symbols:";
+            total_CleanLabel.AutoSize = true;
+            total_CleanLabel.Location = new System.Drawing.Point(525, 12);
+            total_CleanLabel.Name = "total_CleanLabel";
+            total_CleanLabel.Size = new System.Drawing.Size(76, 13);
+            total_CleanLabel.TabIndex = 41;
+            total_CleanLabel.Text = "Total Clean:";
             // 
             // label2
             // 
@@ -193,10 +166,10 @@
             this.groupBox9.Controls.Add(this.textBox_Generic_Filter);
             this.groupBox9.Controls.Add(this.symbols_ProcessedTextBox);
             this.groupBox9.Controls.Add(symbols_ProcessedLabel);
-            this.groupBox9.Controls.Add(this.total_SymbolsTextBox);
+            this.groupBox9.Controls.Add(this.total_CleanTextBox);
             this.groupBox9.Controls.Add(last_SymbolLabel);
             this.groupBox9.Controls.Add(this.button_Get_All_Forecast_Properties);
-            this.groupBox9.Controls.Add(total_SymbolsLabel);
+            this.groupBox9.Controls.Add(total_CleanLabel);
             this.groupBox9.Controls.Add(this.button_Refresh);
             this.groupBox9.Controls.Add(this.button_Stop_Update_All);
             this.groupBox9.Controls.Add(this.button_Start_Update_All);
@@ -242,14 +215,14 @@
             this.symbols_ProcessedTextBox.TabIndex = 44;
             this.symbols_ProcessedTextBox.Text = "9999";
             // 
-            // total_SymbolsTextBox
+            // total_CleanTextBox
             // 
-            this.total_SymbolsTextBox.Location = new System.Drawing.Point(597, 9);
-            this.total_SymbolsTextBox.Name = "total_SymbolsTextBox";
-            this.total_SymbolsTextBox.ReadOnly = true;
-            this.total_SymbolsTextBox.Size = new System.Drawing.Size(40, 20);
-            this.total_SymbolsTextBox.TabIndex = 43;
-            this.total_SymbolsTextBox.Text = "9999";
+            this.total_CleanTextBox.Location = new System.Drawing.Point(597, 9);
+            this.total_CleanTextBox.Name = "total_CleanTextBox";
+            this.total_CleanTextBox.ReadOnly = true;
+            this.total_CleanTextBox.Size = new System.Drawing.Size(40, 20);
+            this.total_CleanTextBox.TabIndex = 43;
+            this.total_CleanTextBox.Text = "9999";
             // 
             // button_Get_All_Forecast_Properties
             // 
@@ -332,71 +305,17 @@
             this.OLV_Objects.AllColumns.Add(this.olvColumn_Symbol);
             this.OLV_Objects.AllColumns.Add(this.olvColumnAction);
             this.OLV_Objects.AllColumns.Add(this.olvColumnCompanyName);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Status);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Potential);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Risk);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Low_Percentage);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Medium_Percentage);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_High_Percentage);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Price_Last);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Medium);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Analysts_Mean);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Elevation_52_Weeks);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations_Rating);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Risk_ESG_Score);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Beta_5Y_Monthly);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Fair_Value);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Estimated_Return_Percentage);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Reporting_Date);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Updated_Local_Time);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Low);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_High);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations_Strong_Buy);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations_Buy);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations_Hold);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations_Sell);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations_Strong_Sell);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Range_52_Weeks_Max);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Range_52_Weeks_Min);
             this.OLV_Objects.AllowColumnReorder = true;
             this.OLV_Objects.AllowDrop = true;
             this.OLV_Objects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OLV_Objects.CheckBoxes = true;
+            this.OLV_Objects.CheckBoxes = false;
             this.OLV_Objects.CheckedAspectName = "";
             this.OLV_Objects.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.olvColumn_Symbol,
             this.olvColumnAction,
-            this.olvColumnCompanyName,
-            this.olvColumn_Status,
-            this.olvColumn_Potential,
-            this.olvColumn_Risk,
-            this.olvColumn_Low_Percentage,
-            this.olvColumn_Medium_Percentage,
-            this.olvColumn_High_Percentage,
-            this.olvColumn_Price_Last,
-            this.olvColumn_Medium,
-            this.olvColumn_Analysts_Mean,
-            this.olvColumn_Elevation_52_Weeks,
-            this.olvColumn_Recommendations_Rating,
-            this.olvColumn_Recommendations,
-            this.olvColumn_Risk_ESG_Score,
-            this.olvColumn_Beta_5Y_Monthly,
-            this.olvColumn_Fair_Value,
-            this.olvColumn_Estimated_Return_Percentage,
-            this.olvColumn_Reporting_Date,
-            this.olvColumn_Updated_Local_Time,
-            this.olvColumn_Low,
-            this.olvColumn_High,
-            this.olvColumn_Recommendations_Strong_Buy,
-            this.olvColumn_Recommendations_Buy,
-            this.olvColumn_Recommendations_Hold,
-            this.olvColumn_Recommendations_Sell,
-            this.olvColumn_Recommendations_Strong_Sell,
-            this.olvColumn_Range_52_Weeks_Max,
-            this.olvColumn_Range_52_Weeks_Min});
+            this.olvColumnCompanyName});
             this.OLV_Objects.Cursor = System.Windows.Forms.Cursors.Default;
             this.OLV_Objects.FullRowSelect = true;
             this.OLV_Objects.GridLines = true;
@@ -444,178 +363,6 @@
             this.olvColumnCompanyName.ToolTipText = "CompanyName";
             this.olvColumnCompanyName.Width = 119;
             // 
-            // olvColumn_Status
-            // 
-            this.olvColumn_Status.AspectName = "Status";
-            this.olvColumn_Status.Text = "Status";
-            this.olvColumn_Status.ToolTipText = "Status";
-            this.olvColumn_Status.Width = 80;
-            // 
-            // olvColumn_Potential
-            // 
-            this.olvColumn_Potential.AspectName = "Potential";
-            this.olvColumn_Potential.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Potential.Text = "U";
-            this.olvColumn_Potential.ToolTipText = "Potential";
-            this.olvColumn_Potential.Width = 40;
-            // 
-            // olvColumn_Risk
-            // 
-            this.olvColumn_Risk.AspectName = "Risk";
-            this.olvColumn_Risk.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Risk.Text = "Risk";
-            this.olvColumn_Risk.Width = 40;
-            // 
-            // olvColumn_Low_Percentage
-            // 
-            this.olvColumn_Low_Percentage.AspectName = "Low_Percentage";
-            this.olvColumn_Low_Percentage.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Low_Percentage.Text = "Low%";
-            this.olvColumn_Low_Percentage.ToolTipText = "Low_Percentage";
-            this.olvColumn_Low_Percentage.Width = 45;
-            // 
-            // olvColumn_Medium_Percentage
-            // 
-            this.olvColumn_Medium_Percentage.AspectName = "Medium_Percentage";
-            this.olvColumn_Medium_Percentage.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Medium_Percentage.IsTileViewColumn = true;
-            this.olvColumn_Medium_Percentage.MinimumWidth = 30;
-            this.olvColumn_Medium_Percentage.Text = "Med%";
-            this.olvColumn_Medium_Percentage.ToolTipText = "Medium_Percentage";
-            this.olvColumn_Medium_Percentage.Width = 45;
-            // 
-            // olvColumn_High_Percentage
-            // 
-            this.olvColumn_High_Percentage.AspectName = "High_Percentage";
-            this.olvColumn_High_Percentage.AspectToStringFormat = "{0:N}";
-            this.olvColumn_High_Percentage.Text = "High%";
-            this.olvColumn_High_Percentage.ToolTipText = "High_Percentage";
-            this.olvColumn_High_Percentage.Width = 45;
-            // 
-            // olvColumn_Price_Last
-            // 
-            this.olvColumn_Price_Last.AspectName = "Price_Last";
-            this.olvColumn_Price_Last.Text = "Price";
-            this.olvColumn_Price_Last.Width = 50;
-            // 
-            // olvColumn_Medium
-            // 
-            this.olvColumn_Medium.AspectName = "Medium";
-            this.olvColumn_Medium.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Medium.Text = "F12M";
-            this.olvColumn_Medium.Width = 40;
-            // 
-            // olvColumn_Analysts_Mean
-            // 
-            this.olvColumn_Analysts_Mean.AspectName = "Analysts_Mean";
-            this.olvColumn_Analysts_Mean.Text = "A12M";
-            this.olvColumn_Analysts_Mean.Width = 45;
-            // 
-            // olvColumn_Elevation_52_Weeks
-            // 
-            this.olvColumn_Elevation_52_Weeks.AspectName = "Elevation_52_Weeks";
-            this.olvColumn_Elevation_52_Weeks.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Elevation_52_Weeks.Text = "Elev52";
-            this.olvColumn_Elevation_52_Weeks.Width = 50;
-            // 
-            // olvColumn_Recommendations_Rating
-            // 
-            this.olvColumn_Recommendations_Rating.AspectName = "Recommendations_Rating";
-            this.olvColumn_Recommendations_Rating.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Recommendations_Rating.Text = "ElevR";
-            this.olvColumn_Recommendations_Rating.Width = 50;
-            // 
-            // olvColumn_Recommendations
-            // 
-            this.olvColumn_Recommendations.AspectName = "Recommendations";
-            this.olvColumn_Recommendations.Text = "Buy/Sell";
-            // 
-            // olvColumn_Risk_ESG_Score
-            // 
-            this.olvColumn_Risk_ESG_Score.AspectName = "Risk_ESG_Score";
-            this.olvColumn_Risk_ESG_Score.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Risk_ESG_Score.Text = "ESG";
-            // 
-            // olvColumn_Beta_5Y_Monthly
-            // 
-            this.olvColumn_Beta_5Y_Monthly.AspectName = "Beta_5Y_Monthly";
-            this.olvColumn_Beta_5Y_Monthly.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Beta_5Y_Monthly.Text = "Beta";
-            // 
-            // olvColumn_Fair_Value
-            // 
-            this.olvColumn_Fair_Value.AspectName = "Fair_Value";
-            this.olvColumn_Fair_Value.Text = "Fair_Value";
-            this.olvColumn_Fair_Value.Width = 100;
-            // 
-            // olvColumn_Estimated_Return_Percentage
-            // 
-            this.olvColumn_Estimated_Return_Percentage.AspectName = "Estimated_Return_Percentage";
-            this.olvColumn_Estimated_Return_Percentage.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Estimated_Return_Percentage.Text = "Return%";
-            // 
-            // olvColumn_Reporting_Date
-            // 
-            this.olvColumn_Reporting_Date.AspectName = "Reporting_Date";
-            this.olvColumn_Reporting_Date.Text = "Earnings Date";
-            this.olvColumn_Reporting_Date.Width = 80;
-            // 
-            // olvColumn_Updated_Local_Time
-            // 
-            this.olvColumn_Updated_Local_Time.AspectName = "Updated_Local_Time";
-            this.olvColumn_Updated_Local_Time.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Updated_Local_Time.DisplayIndex = 22;
-            this.olvColumn_Updated_Local_Time.Text = "Updated_Time";
-            this.olvColumn_Updated_Local_Time.Width = 100;
-            // 
-            // olvColumn_Low
-            // 
-            this.olvColumn_Low.AspectName = "Low";
-            this.olvColumn_Low.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Low.DisplayIndex = 20;
-            this.olvColumn_Low.Text = "F12L";
-            // 
-            // olvColumn_High
-            // 
-            this.olvColumn_High.AspectName = "High";
-            this.olvColumn_High.DisplayIndex = 21;
-            this.olvColumn_High.Text = "F12H";
-            // 
-            // olvColumn_Recommendations_Strong_Buy
-            // 
-            this.olvColumn_Recommendations_Strong_Buy.AspectName = "Recommendations_Strong_Buy";
-            this.olvColumn_Recommendations_Strong_Buy.Text = "BuyS#";
-            // 
-            // olvColumn_Recommendations_Buy
-            // 
-            this.olvColumn_Recommendations_Buy.AspectName = "Recommendations_Buy";
-            this.olvColumn_Recommendations_Buy.Text = "Buy#";
-            // 
-            // olvColumn_Recommendations_Hold
-            // 
-            this.olvColumn_Recommendations_Hold.AspectName = "Recommendations_Hold";
-            this.olvColumn_Recommendations_Hold.Text = "Hold#";
-            // 
-            // olvColumn_Recommendations_Sell
-            // 
-            this.olvColumn_Recommendations_Sell.AspectName = "Recommendations_Sell";
-            this.olvColumn_Recommendations_Sell.Text = "#Sell";
-            // 
-            // olvColumn_Recommendations_Strong_Sell
-            // 
-            this.olvColumn_Recommendations_Strong_Sell.AspectName = "Recommendations_Strong_Sell";
-            this.olvColumn_Recommendations_Strong_Sell.Text = "SellS#";
-            // 
-            // olvColumn_Range_52_Weeks_Max
-            // 
-            this.olvColumn_Range_52_Weeks_Max.AspectName = "Range_52_Weeks_Max";
-            this.olvColumn_Range_52_Weeks_Max.Text = "52_Max";
-            // 
-            // olvColumn_Range_52_Weeks_Min
-            // 
-            this.olvColumn_Range_52_Weeks_Min.AspectName = "Range_52_Weeks_Min";
-            this.olvColumn_Range_52_Weeks_Min.Text = "52_Min";
-            // 
             // imageListSmall
             // 
             this.imageListSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListSmall.ImageStream")));
@@ -631,30 +378,30 @@
             // 
             this.hotItemStyle1.BackColor = System.Drawing.Color.Black;
             // 
-            // tabControl_Symbols
+            // tabControl_Clean
             // 
-            this.tabControl_Symbols.Controls.Add(this.tabPage_SymbolsObjects);
-            this.tabControl_Symbols.Controls.Add(this.tabPage1);
-            this.tabControl_Symbols.Controls.Add(this.tabPage_Symbol_Properties);
-            this.tabControl_Symbols.Controls.Add(this.tabPage_Settings_Controls_Collumns);
-            this.tabControl_Symbols.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl_Symbols.Location = new System.Drawing.Point(0, 0);
-            this.tabControl_Symbols.Name = "tabControl_Symbols";
-            this.tabControl_Symbols.SelectedIndex = 0;
-            this.tabControl_Symbols.Size = new System.Drawing.Size(1011, 497);
-            this.tabControl_Symbols.TabIndex = 41;
+            this.tabControl_Clean.Controls.Add(this.tabPage_CleanObjects);
+            this.tabControl_Clean.Controls.Add(this.tabPage1);
+            this.tabControl_Clean.Controls.Add(this.tabPage_Symbol_Properties);
+            this.tabControl_Clean.Controls.Add(this.tabPage_Settings_Controls_Collumns);
+            this.tabControl_Clean.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl_Clean.Location = new System.Drawing.Point(0, 0);
+            this.tabControl_Clean.Name = "tabControl_Clean";
+            this.tabControl_Clean.SelectedIndex = 0;
+            this.tabControl_Clean.Size = new System.Drawing.Size(1011, 497);
+            this.tabControl_Clean.TabIndex = 41;
             // 
-            // tabPage_SymbolsObjects
+            // tabPage_CleanObjects
             // 
-            this.tabPage_SymbolsObjects.Controls.Add(this.groupBox9);
-            this.tabPage_SymbolsObjects.Controls.Add(this.OLV_Objects);
-            this.tabPage_SymbolsObjects.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_SymbolsObjects.Name = "tabPage_SymbolsObjects";
-            this.tabPage_SymbolsObjects.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_SymbolsObjects.Size = new System.Drawing.Size(1003, 471);
-            this.tabPage_SymbolsObjects.TabIndex = 0;
-            this.tabPage_SymbolsObjects.Text = "Yahooo";
-            this.tabPage_SymbolsObjects.UseVisualStyleBackColor = true;
+            this.tabPage_CleanObjects.Controls.Add(this.groupBox9);
+            this.tabPage_CleanObjects.Controls.Add(this.OLV_Objects);
+            this.tabPage_CleanObjects.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_CleanObjects.Name = "tabPage_CleanObjects";
+            this.tabPage_CleanObjects.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_CleanObjects.Size = new System.Drawing.Size(1003, 471);
+            this.tabPage_CleanObjects.TabIndex = 0;
+            this.tabPage_CleanObjects.Text = "Clean";
+            this.tabPage_CleanObjects.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
@@ -674,7 +421,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1003, 471);
             this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Filtered Symbols";
+            this.tabPage1.Text = "Filtered Clean";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // textBox_Elev_Average2
@@ -1030,21 +777,21 @@
             this.label9.TabIndex = 44;
             this.label9.Text = "Formats:";
             // 
-            // OLVYahooControl
+            // OLVCleanControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.tabControl_Symbols);
-            this.Name = "OLVYahooControl";
+            this.Controls.Add(this.tabControl_Clean);
+            this.Name = "OLVCleanControl";
             this.Size = new System.Drawing.Size(1011, 497);
-            this.Load += new System.EventHandler(this.ObjectListButtonControl_Load);
+            this.Load += new System.EventHandler(this.OLVCleanControl_Load);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OLV_Objects)).EndInit();
-            this.tabControl_Symbols.ResumeLayout(false);
-            this.tabPage_SymbolsObjects.ResumeLayout(false);
+            this.tabControl_Clean.ResumeLayout(false);
+            this.tabPage_CleanObjects.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OLV_Objects_Filtered)).EndInit();
@@ -1061,32 +808,18 @@
         private System.Windows.Forms.TextBox textBoxFilter;
         private BrightIdeasSoftware.ObjectListView OLV_Objects;
         private BrightIdeasSoftware.OLVColumn olvColumn_Symbol;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Medium_Percentage;
         private System.Windows.Forms.ImageList imageListTasks;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations_Rating;
         private BrightIdeasSoftware.OLVColumn olvColumnAction;
         private System.Windows.Forms.ImageList imageListSmall;
         private BrightIdeasSoftware.HotItemStyle hotItemStyle1;
         private System.Windows.Forms.Button button_Refresh;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Updated_Local_Time;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations_Buy;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations_Hold;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations_Sell;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Range_52_Weeks_Max;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Range_52_Weeks_Min;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations_Strong_Sell;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations_Strong_Buy;
         private System.Windows.Forms.Button button_Load_Browser;
         private System.Windows.Forms.Button button_Stop_Update_All;
         private System.Windows.Forms.Button button_Start_Update_All;
         private BrightIdeasSoftware.OLVColumn olvColumnCompanyName;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Low_Percentage;
-        private BrightIdeasSoftware.OLVColumn olvColumn_High_Percentage;
         private System.Windows.Forms.Button button_Get_All_Forecast_Properties;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Elevation_52_Weeks;
-        private System.Windows.Forms.TabControl tabControl_Symbols;
-        private System.Windows.Forms.TabPage tabPage_SymbolsObjects;
+        private System.Windows.Forms.TabControl tabControl_Clean;
+        private System.Windows.Forms.TabPage tabPage_CleanObjects;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button_Continue_Filter;
         private System.Windows.Forms.ComboBox comboBox_Condition;
@@ -1095,28 +828,15 @@
         private System.Windows.Forms.Button button_Apply_Filter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Price_Last;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Low;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Medium;
-        private BrightIdeasSoftware.OLVColumn olvColumn_High;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Status;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Analysts_Mean;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Risk_ESG_Score;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Fair_Value;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Estimated_Return_Percentage;
         private System.Windows.Forms.TextBox textBox_Generic_Filter;
         private System.Windows.Forms.TabPage tabPage_Symbol_Properties;
         private System.Windows.Forms.PropertyGrid propertyGrid_Symbol;
         private System.Windows.Forms.TextBox last_SymbolTextBox;
         private System.Windows.Forms.TextBox symbols_ProcessedTextBox;
-        private System.Windows.Forms.TextBox total_SymbolsTextBox;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Potential;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Risk;
+        private System.Windows.Forms.TextBox total_CleanTextBox;
         private BrightIdeasSoftware.ObjectListView OLV_Objects_Filtered;
         private System.Windows.Forms.TextBox textBox_Elev_Average1;
         private System.Windows.Forms.TextBox textBox_Elev_Average2;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Beta_5Y_Monthly;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Reporting_Date;
         private System.Windows.Forms.TabPage tabPage_Settings_Controls_Collumns;
         private System.Windows.Forms.ComboBox comboBox_Existing_Columns;
         private System.Windows.Forms.TextBox textBox_Header_Text;

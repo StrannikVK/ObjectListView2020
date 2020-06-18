@@ -121,6 +121,12 @@
     <Compile Include="ObjectsControllerForm.Designer.cs">
       <DependentUpon>ObjectsControllerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Old_To_Be_Deleted\OLVCleanControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Old_To_Be_Deleted\OLVCleanControl.Designer.cs">
+      <DependentUpon>OLVCleanControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Old_To_Be_Deleted\ObjectListButtonControlOld.cs">
       <SubType>UserControl</SubType>
@@ -146,6 +152,12 @@
     <Compile Include="Old_To_Be_Deleted\OLVMarketSymbolControlOld.Designer.cs">
       <DependentUpon>OLVMarketSymbolControlOld.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\OLVSymbolsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\OLVSymbolsControl.Designer.cs">
+      <DependentUpon>OLVSymbolsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\OLVYahooControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +172,7 @@
     </Compile>
     <Compile Include="Utilities\MyFileSystemInfo.cs" />
     <Compile Include="Utilities\OLVMgr.cs" />
+    <Compile Include="Utilities\OLVMgrObject.cs" />
     <Compile Include="Utilities\Person.cs" />
     <Compile Include="Resource1.Designer.cs" />
     <Compile Include="Utilities\BusinessCardOverlay.cs" />
@@ -191,6 +204,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\PropertieColumn.cs" />
     <Compile Include="Utilities\ShellUtilities.cs" />
     <Compile Include="Old_To_Be_Deleted\TabComplexExample.cs">
       <SubType>UserControl</SubType>
@@ -252,6 +266,7 @@
     <Compile Include="Old_To_Be_Deleted\TabTreeListView.Designer.cs">
       <DependentUpon>TabTreeListView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\TestObject.cs" />
     <EmbeddedResource Include="Examples_Demo\ColumnSelectionForm.resx">
       <DependentUpon>ColumnSelectionForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +276,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ObjectsControllerForm.resx">
       <DependentUpon>ObjectsControllerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old_To_Be_Deleted\OLVCleanControl.resx">
+      <DependentUpon>OLVCleanControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resource1.resx">
       <SubType>Designer</SubType>
@@ -285,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Old_To_Be_Deleted\OLVMarketSymbolControlOld.resx">
       <DependentUpon>OLVMarketSymbolControlOld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\OLVSymbolsControl.resx">
+      <DependentUpon>OLVSymbolsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\OLVYahooControl.resx">
       <DependentUpon>OLVYahooControl.cs</DependentUpon>

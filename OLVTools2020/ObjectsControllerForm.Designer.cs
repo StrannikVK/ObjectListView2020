@@ -48,7 +48,7 @@ namespace OLVTools2020
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(866, 17);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(897, 17);
             this.toolStripStatusLabel3.Spring = true;
             this.toolStripStatusLabel3.Text = "toolStripStatusLabel3";
             this.toolStripStatusLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

@@ -8,24 +8,25 @@ using BrightIdeasSoftware;
 
 namespace OLVTools2020
 {
-    public partial class OLVYahooControl : UserControl
+    public partial class OLVCleanControl : UserControl
     {
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public OLVMgr OLV_Mgr
-        {
-            get { return _OLVMgr; }
-            set
-            {
-                _OLVMgr = value;
-                if (value != null)
-                {
-                    this.InitializeTab();
-                    //this.SetupGeneralListViewEvents();
-                }
-            }
-        }
-        private OLVMgr _OLVMgr;
+        //public OLVMgr OLV_Mgr
+        //{
+        //    get { return _OLVMgr; }
+        //    set
+        //    {
+        //        _OLVMgr = value;
+        //        if (value != null)
+        //        {
+        //            this.InitializeTab();
+        //            //this.SetupGeneralListViewEvents();
+        //        }
+        //    }
+        //}
+        //private OLVMgr _OLVMgr;
+        
         private object _Object_Mgr;
         private GenericTools.Tools Gen_Tools = new GenericTools.Tools();
 
@@ -38,15 +39,35 @@ namespace OLVTools2020
 
         public List<object> List_Of_Objects { get; private set; } = new List<object>();
         public List<object> List_Of_Filtered_Objects { get; private set; } = new List<object>();
+
         public Utilities.OLVMgrObject OLV_Mgr_Object = new Utilities.OLVMgrObject();
 
 
-        public OLVYahooControl()
+        public OLVCleanControl()
         {
             InitializeComponent();
             this.ListView = this.OLV_Objects;
+            //try
+            //{
+            //    List<ColumnHeader> oList_ColumnHeader = new List<ColumnHeader>();
+            //    foreach (OLVColumn oOLVColumn in OLV_Objects.AllColumns)
+            //    {
+            //        //if (oOLVColumn.Name == "olvColumnAction") { continue; }
+            //        OLVColumn oNewOLVColumn = new OLVColumn();
+            //        object oSource = oOLVColumn;
+            //        object oDest = oNewOLVColumn;
+            //        //string oReportLog = "";
+            //        Gen_Tools.Update_All_Properties_By_Object(ref oDest, oSource);//,out  oReportLog);
+            //        OLV_Objects_Filtered.AllColumns.Add(oNewOLVColumn);
+            //        oList_ColumnHeader.Add(oNewOLVColumn);
 
-            
+            //    }
+            //    OLV_Objects_Filtered.Columns.AddRange(oList_ColumnHeader.ToArray());
+            //    OLV_Objects_Filtered.CheckBoxes = false;
+            //}
+            //catch (Exception ex) { string oDebug = ex.Message; }
+
+
 
         }
 
@@ -70,7 +91,7 @@ namespace OLVTools2020
             }
             catch (Exception ex) { string oDebug = ex.Message; }
             
-            SetupColumnWithButton();
+            //SetupColumnWithButton();
             try 
             {
                 List<string> oList = Parameters_List();
@@ -91,9 +112,9 @@ namespace OLVTools2020
             
             try 
             {
-                Gen_Tools.Bind_To_Propertie_Async(total_SymbolsTextBox, "Text", _Object_Mgr, "Total_Symbols", false, oClear: true);
-                Gen_Tools.Bind_To_Propertie_Async(symbols_ProcessedTextBox, "Text", _Object_Mgr, "Symbols_Processed", false, oClear: true);
-                //total_SymbolsTextBox
+                Gen_Tools.Bind_To_Propertie_Async(total_CleanTextBox, "Text", _Object_Mgr, "Total_Clean", false, oClear: true);
+                Gen_Tools.Bind_To_Propertie_Async(symbols_ProcessedTextBox, "Text", _Object_Mgr, "Clean_Processed", false, oClear: true);
+                //total_CleanTextBox
                 //    symbols_ProcessedTextBox
                 
                 Gen_Tools.Bind_To_Propertie_Async(last_SymbolTextBox, "Text", _Object_Mgr, "Last_Symbol", false, oClear: true);
@@ -118,6 +139,8 @@ namespace OLVTools2020
             }
             catch (Exception ex) { string oDebug = ex.Message; }
             List_Of_Colums_AspectName();
+
+            InitializeTab();
             Refresh_Objects();
         }
 
@@ -150,14 +173,17 @@ namespace OLVTools2020
             this.OLV_Objects.UseHotItem = false;
 
             // Make and display a list of tasks
-            this.OLV_Objects.SetObjects(List_Of_Objects);
+            //this.OLV_Objects.SetObjects(List_Of_Objects);
             //try { object objectToControl = List_Of_Objects[0];
             //    if (objectToControl!=null) { Gen_Tools.DataBindings_ChangeDataSource(this, Objects_BindingSource, objectToControl); }
             //}
             //catch (Exception ex) { string oDebug = ex.Message; }
-            
 
-            
+            this.OLV_Objects_Filtered.SmallImageList = imageListSmall;
+            this.OLV_Objects_Filtered.EmptyListMsg = "No tasks match the filter";
+            this.OLV_Objects_Filtered.UseAlternatingBackColors = false;
+            this.OLV_Objects_Filtered.UseHotItem = false;
+
 
         }
 
@@ -211,7 +237,7 @@ namespace OLVTools2020
                         oOLVColumn.EnableButtonWhenItemIsDisabled = true;
                         oOLVColumn.AspectName = "Action";
                         //oOLVColumn.TextAlign = HorizontalAlignment.Center;
-                        return;
+                        break;
                     }
                 }
                 
@@ -264,27 +290,9 @@ namespace OLVTools2020
         }
 
 
-        private void ObjectListButtonControl_Load(object sender, EventArgs e)
+        private void OLVCleanControl_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    List<ColumnHeader> oList_ColumnHeader = new List<ColumnHeader>();
-            //    foreach (OLVColumn oOLVColumn in OLV_Objects.AllColumns)
-            //    {
-            //        if (oOLVColumn.Name == "olvColumnAction") { continue; }
-            //        OLVColumn oNewOLVColumn = new OLVColumn();
-            //        object oSource = oOLVColumn;
-            //        object oDest = oNewOLVColumn;
-            //        //string oReportLog = "";
-            //        Gen_Tools.Update_All_Properties_By_Object(ref oDest, oSource);//,out  oReportLog);
-            //        OLV_Objects_Filtered.AllColumns.Add(oNewOLVColumn);
-            //        oList_ColumnHeader.Add(oNewOLVColumn);
-
-            //    }
-            //    OLV_Objects_Filtered.Columns.AddRange(oList_ColumnHeader.ToArray());
-            //    OLV_Objects_Filtered.CheckBoxes = false;
-            //}
-            //catch (Exception ex) { string oDebug = ex.Message; }
+            
         }
 
         private void OLV_Objects_ButtonClick(object sender, CellClickEventArgs e)
@@ -405,8 +413,8 @@ namespace OLVTools2020
 
             try 
             {
-                TabPage oPropTab = tabControl_Symbols.TabPages["tabPage_Symbol_Properties"];
-                tabControl_Symbols.SelectedTab = oPropTab;
+                TabPage oPropTab = tabControl_Clean.TabPages["tabPage_Symbol_Properties"];
+                tabControl_Clean.SelectedTab = oPropTab;
                 //tabControl_Symbo_Properties
             }
             catch (Exception ex) { string oDebug = ex.Message; }
@@ -513,6 +521,7 @@ namespace OLVTools2020
             catch (Exception ex) { string oDebug = ex.Message; }
 
         }
+
         private void comboBox_Parameters_Columns_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox_Header_Text.Text= comboBox_Parameters_Columns.Text;
@@ -528,6 +537,7 @@ namespace OLVTools2020
         {
             if (OLV_Mgr_Object==null) { return;   }
             string oAspectName = comboBox_Parameters_Columns.Text;
+            string oName = "OLVColumn_" + oAspectName;
             string oHeader_Text = textBox_Header_Text.Text;
             string oAspectToStringFormat = "";
             if (comboBox_AspectToStringFormat.Text == "Number") { oAspectToStringFormat = "{0:N}"; }
@@ -562,42 +572,14 @@ namespace OLVTools2020
 
             oPropertieColumn = new Utilities.PropertieColumn();
             oPropertieColumn.Propertie_Name = oAspectName;
+            oPropertieColumn.Name = oName;
             oPropertieColumn.Text = oHeader_Text;
             oPropertieColumn.Width = oWidth;
-            //oPropertieColumn.MinimumWidth = oMinWidth;
             oPropertieColumn.AspectToStringFormat = oAspectToStringFormat;
             OLV_Mgr_Object.List_Of_PropertieColumn.Add(oPropertieColumn);
             Add_Column(oPropertieColumn);
             List_Of_Colums_AspectName();
             Refresh_Objects();
-
-            //try
-            //{
-
-            //    //List<ColumnHeader> oList_ColumnHeader = new List<ColumnHeader>();
-            //    OLVColumn oNewOLVColumn = new OLVColumn();
-
-            //    object oSource = OLV_Objects.Columns[4];
-            //    object oDest = oNewOLVColumn;
-            //    //string oReportLog = "";
-            //    Gen_Tools.Update_All_Properties_By_Object(ref oDest, oSource);//,out  oReportLog);
-            //    oNewOLVColumn.Name = "olvColumn_" + oAspectName + oColumnNameSuffix;
-            //    oNewOLVColumn.AspectName = oAspectName;
-            //    oNewOLVColumn.AspectToStringFormat = oAspectToStringFormat;
-            //    oNewOLVColumn.Width = oWidth;
-            //    oNewOLVColumn.MinimumWidth = oMinWidth;
-            //    oNewOLVColumn.Text = oHeader_Text;
-            //    oNewOLVColumn.ToolTipText = oAspectName;
-
-            //    OLV_Objects.AllColumns.Add(oNewOLVColumn);
-            //    OLV_Mgr_Object.List_Of_OLVColumns.Add(oNewOLVColumn);
-
-            //    OLV_Objects.Columns.AddRange(OLV_Mgr_Object.List_Of_OLVColumns.ToArray());
-            //    OLV_Objects.CheckBoxes = false;
-            //    Refresh_Objects();
-            //}
-            //catch (Exception ex) { string oDebug = ex.Message; }
-
         }
 
         private void Add_Column(Utilities.PropertieColumn oPropertieColumn, bool oDuplicates_Not_Allowed = true )

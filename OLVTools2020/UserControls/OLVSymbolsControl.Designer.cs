@@ -1,6 +1,6 @@
 ﻿namespace OLVTools2020
 {
-    partial class OLVYahooControl
+    partial class OLVSymbolsControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,56 +34,32 @@
             System.Windows.Forms.Label total_SymbolsLabel;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OLVYahooControl));
+            System.Windows.Forms.Label label12;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OLVSymbolsControl));
             this.olvColumnAction = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.button_Save_Current_Columns2 = new System.Windows.Forms.Button();
             this.textBox_Elev_Average1 = new System.Windows.Forms.TextBox();
             this.last_SymbolTextBox = new System.Windows.Forms.TextBox();
             this.textBox_Generic_Filter = new System.Windows.Forms.TextBox();
-            this.symbols_ProcessedTextBox = new System.Windows.Forms.TextBox();
             this.total_SymbolsTextBox = new System.Windows.Forms.TextBox();
             this.button_Get_All_Forecast_Properties = new System.Windows.Forms.Button();
             this.button_Refresh = new System.Windows.Forms.Button();
             this.button_Stop_Update_All = new System.Windows.Forms.Button();
             this.button_Start_Update_All = new System.Windows.Forms.Button();
             this.button_Load_Browser = new System.Windows.Forms.Button();
+            this.symbols_ProcessedTextBox = new System.Windows.Forms.TextBox();
             this.textBoxFilter = new System.Windows.Forms.TextBox();
             this.imageListTasks = new System.Windows.Forms.ImageList(this.components);
             this.OLV_Objects = new BrightIdeasSoftware.ObjectListView();
             this.olvColumn_Symbol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumnCompanyName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Status = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Potential = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Risk = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Low_Percentage = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Medium_Percentage = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_High_Percentage = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Price_Last = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Medium = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Analysts_Mean = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Elevation_52_Weeks = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations_Rating = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Risk_ESG_Score = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Beta_5Y_Monthly = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Fair_Value = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Estimated_Return_Percentage = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Reporting_Date = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Updated_Local_Time = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Low = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_High = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations_Strong_Buy = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations_Buy = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations_Hold = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations_Sell = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Recommendations_Strong_Sell = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Range_52_Weeks_Max = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Range_52_Weeks_Min = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.imageListSmall = new System.Windows.Forms.ImageList(this.components);
             this.hotItemStyle1 = new BrightIdeasSoftware.HotItemStyle();
             this.tabControl_Symbols = new System.Windows.Forms.TabControl();
             this.tabPage_SymbolsObjects = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage_Filtered_Symbols = new System.Windows.Forms.TabPage();
+            this.textBox_Elev_Average_Filtered = new System.Windows.Forms.TextBox();
             this.textBox_Elev_Average2 = new System.Windows.Forms.TextBox();
             this.OLV_Objects_Filtered = new BrightIdeasSoftware.ObjectListView();
             this.button_Continue_Filter = new System.Windows.Forms.Button();
@@ -96,6 +72,13 @@
             this.tabPage_Symbol_Properties = new System.Windows.Forms.TabPage();
             this.propertyGrid_Symbol = new System.Windows.Forms.PropertyGrid();
             this.tabPage_Settings_Controls_Collumns = new System.Windows.Forms.TabPage();
+            this.button_Import_Replace_Columns = new System.Windows.Forms.Button();
+            this.button_Import_New_Columns = new System.Windows.Forms.Button();
+            this.button_Export_Current_Columns = new System.Windows.Forms.Button();
+            this.textBox_AspectToStringFormat = new System.Windows.Forms.TextBox();
+            this.propertyGrid_Column = new System.Windows.Forms.PropertyGrid();
+            this.textBox_Sorting_Parameter = new System.Windows.Forms.TextBox();
+            this.button_Update_Sorting_Parameter = new System.Windows.Forms.Button();
             this.button_Save_Current_Columns = new System.Windows.Forms.Button();
             this.button_Move_To_New_Index = new System.Windows.Forms.Button();
             this.comboBox_Column_Index = new System.Windows.Forms.ComboBox();
@@ -121,11 +104,12 @@
             total_SymbolsLabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
+            label12 = new System.Windows.Forms.Label();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OLV_Objects)).BeginInit();
             this.tabControl_Symbols.SuspendLayout();
             this.tabPage_SymbolsObjects.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPage_Filtered_Symbols.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OLV_Objects_Filtered)).BeginInit();
             this.tabPage_Symbol_Properties.SuspendLayout();
             this.tabPage_Settings_Controls_Collumns.SuspendLayout();
@@ -134,16 +118,16 @@
             // last_SymbolLabel
             // 
             last_SymbolLabel.AutoSize = true;
-            last_SymbolLabel.Location = new System.Drawing.Point(739, 12);
+            last_SymbolLabel.Location = new System.Drawing.Point(680, 11);
             last_SymbolLabel.Name = "last_SymbolLabel";
-            last_SymbolLabel.Size = new System.Drawing.Size(67, 13);
+            last_SymbolLabel.Size = new System.Drawing.Size(30, 13);
             last_SymbolLabel.TabIndex = 45;
-            last_SymbolLabel.Text = "Last Symbol:";
+            last_SymbolLabel.Text = "Last:";
             // 
             // symbols_ProcessedLabel
             // 
             symbols_ProcessedLabel.AutoSize = true;
-            symbols_ProcessedLabel.Location = new System.Drawing.Point(639, 12);
+            symbols_ProcessedLabel.Location = new System.Drawing.Point(580, 11);
             symbols_ProcessedLabel.Name = "symbols_ProcessedLabel";
             symbols_ProcessedLabel.Size = new System.Drawing.Size(60, 13);
             symbols_ProcessedLabel.TabIndex = 42;
@@ -152,16 +136,16 @@
             // total_SymbolsLabel
             // 
             total_SymbolsLabel.AutoSize = true;
-            total_SymbolsLabel.Location = new System.Drawing.Point(525, 12);
+            total_SymbolsLabel.Location = new System.Drawing.Point(516, 11);
             total_SymbolsLabel.Name = "total_SymbolsLabel";
-            total_SymbolsLabel.Size = new System.Drawing.Size(76, 13);
+            total_SymbolsLabel.Size = new System.Drawing.Size(34, 13);
             total_SymbolsLabel.TabIndex = 41;
-            total_SymbolsLabel.Text = "Total Symbols:";
+            total_SymbolsLabel.Text = "Total:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(851, 12);
+            label2.Location = new System.Drawing.Point(757, 11);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(59, 13);
             label2.TabIndex = 47;
@@ -176,6 +160,15 @@
             label3.TabIndex = 49;
             label3.Text = "Elev_Aver:";
             // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new System.Drawing.Point(787, 9);
+            label12.Name = "label12";
+            label12.Size = new System.Drawing.Size(96, 13);
+            label12.TabIndex = 51;
+            label12.Text = "Elev_Aver Filtered:";
+            // 
             // olvColumnAction
             // 
             this.olvColumnAction.AspectName = "Action";
@@ -187,41 +180,52 @@
             // 
             this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox9.Controls.Add(this.button_Save_Current_Columns2);
             this.groupBox9.Controls.Add(this.textBox_Elev_Average1);
-            this.groupBox9.Controls.Add(label2);
             this.groupBox9.Controls.Add(this.last_SymbolTextBox);
             this.groupBox9.Controls.Add(this.textBox_Generic_Filter);
-            this.groupBox9.Controls.Add(this.symbols_ProcessedTextBox);
-            this.groupBox9.Controls.Add(symbols_ProcessedLabel);
             this.groupBox9.Controls.Add(this.total_SymbolsTextBox);
-            this.groupBox9.Controls.Add(last_SymbolLabel);
             this.groupBox9.Controls.Add(this.button_Get_All_Forecast_Properties);
-            this.groupBox9.Controls.Add(total_SymbolsLabel);
             this.groupBox9.Controls.Add(this.button_Refresh);
             this.groupBox9.Controls.Add(this.button_Stop_Update_All);
             this.groupBox9.Controls.Add(this.button_Start_Update_All);
             this.groupBox9.Controls.Add(this.button_Load_Browser);
+            this.groupBox9.Controls.Add(this.symbols_ProcessedTextBox);
+            this.groupBox9.Controls.Add(symbols_ProcessedLabel);
+            this.groupBox9.Controls.Add(last_SymbolLabel);
+            this.groupBox9.Controls.Add(label2);
+            this.groupBox9.Controls.Add(total_SymbolsLabel);
             this.groupBox9.Location = new System.Drawing.Point(4, -2);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(994, 33);
+            this.groupBox9.Size = new System.Drawing.Size(1176, 33);
             this.groupBox9.TabIndex = 40;
             this.groupBox9.TabStop = false;
             // 
+            // button_Save_Current_Columns2
+            // 
+            this.button_Save_Current_Columns2.Location = new System.Drawing.Point(853, 8);
+            this.button_Save_Current_Columns2.Name = "button_Save_Current_Columns2";
+            this.button_Save_Current_Columns2.Size = new System.Drawing.Size(136, 20);
+            this.button_Save_Current_Columns2.TabIndex = 55;
+            this.button_Save_Current_Columns2.Text = "Save Current LayOut";
+            this.button_Save_Current_Columns2.UseVisualStyleBackColor = true;
+            this.button_Save_Current_Columns2.Click += new System.EventHandler(this.button_Save_Current_Columns2_Click);
+            // 
             // textBox_Elev_Average1
             // 
-            this.textBox_Elev_Average1.Location = new System.Drawing.Point(906, 9);
+            this.textBox_Elev_Average1.Location = new System.Drawing.Point(812, 8);
             this.textBox_Elev_Average1.Name = "textBox_Elev_Average1";
             this.textBox_Elev_Average1.ReadOnly = true;
-            this.textBox_Elev_Average1.Size = new System.Drawing.Size(40, 20);
+            this.textBox_Elev_Average1.Size = new System.Drawing.Size(35, 20);
             this.textBox_Elev_Average1.TabIndex = 48;
             this.textBox_Elev_Average1.Text = "aaaaa";
             // 
             // last_SymbolTextBox
             // 
-            this.last_SymbolTextBox.Location = new System.Drawing.Point(801, 9);
+            this.last_SymbolTextBox.Location = new System.Drawing.Point(707, 8);
             this.last_SymbolTextBox.Name = "last_SymbolTextBox";
             this.last_SymbolTextBox.ReadOnly = true;
-            this.last_SymbolTextBox.Size = new System.Drawing.Size(40, 20);
+            this.last_SymbolTextBox.Size = new System.Drawing.Size(35, 20);
             this.last_SymbolTextBox.TabIndex = 46;
             this.last_SymbolTextBox.Text = "aaaaa";
             // 
@@ -233,30 +237,20 @@
             this.textBox_Generic_Filter.TabIndex = 41;
             this.textBox_Generic_Filter.TextChanged += new System.EventHandler(this.textBox_Generic_Filter_TextChanged);
             // 
-            // symbols_ProcessedTextBox
-            // 
-            this.symbols_ProcessedTextBox.Location = new System.Drawing.Point(694, 9);
-            this.symbols_ProcessedTextBox.Name = "symbols_ProcessedTextBox";
-            this.symbols_ProcessedTextBox.ReadOnly = true;
-            this.symbols_ProcessedTextBox.Size = new System.Drawing.Size(40, 20);
-            this.symbols_ProcessedTextBox.TabIndex = 44;
-            this.symbols_ProcessedTextBox.Text = "9999";
-            // 
             // total_SymbolsTextBox
             // 
-            this.total_SymbolsTextBox.Location = new System.Drawing.Point(597, 9);
+            this.total_SymbolsTextBox.Location = new System.Drawing.Point(547, 8);
             this.total_SymbolsTextBox.Name = "total_SymbolsTextBox";
             this.total_SymbolsTextBox.ReadOnly = true;
-            this.total_SymbolsTextBox.Size = new System.Drawing.Size(40, 20);
+            this.total_SymbolsTextBox.Size = new System.Drawing.Size(35, 20);
             this.total_SymbolsTextBox.TabIndex = 43;
             this.total_SymbolsTextBox.Text = "9999";
             // 
             // button_Get_All_Forecast_Properties
             // 
-            this.button_Get_All_Forecast_Properties.AutoSize = true;
-            this.button_Get_All_Forecast_Properties.Location = new System.Drawing.Point(393, 7);
+            this.button_Get_All_Forecast_Properties.Location = new System.Drawing.Point(393, 8);
             this.button_Get_All_Forecast_Properties.Name = "button_Get_All_Forecast_Properties";
-            this.button_Get_All_Forecast_Properties.Size = new System.Drawing.Size(74, 23);
+            this.button_Get_All_Forecast_Properties.Size = new System.Drawing.Size(67, 20);
             this.button_Get_All_Forecast_Properties.TabIndex = 40;
             this.button_Get_All_Forecast_Properties.Text = "Properties";
             this.button_Get_All_Forecast_Properties.UseVisualStyleBackColor = true;
@@ -264,9 +258,9 @@
             // 
             // button_Refresh
             // 
-            this.button_Refresh.Location = new System.Drawing.Point(466, 7);
+            this.button_Refresh.Location = new System.Drawing.Point(462, 8);
             this.button_Refresh.Name = "button_Refresh";
-            this.button_Refresh.Size = new System.Drawing.Size(60, 23);
+            this.button_Refresh.Size = new System.Drawing.Size(53, 20);
             this.button_Refresh.TabIndex = 3;
             this.button_Refresh.Text = "Refresh";
             this.button_Refresh.UseVisualStyleBackColor = true;
@@ -274,10 +268,9 @@
             // 
             // button_Stop_Update_All
             // 
-            this.button_Stop_Update_All.AutoSize = true;
-            this.button_Stop_Update_All.Location = new System.Drawing.Point(221, 7);
+            this.button_Stop_Update_All.Location = new System.Drawing.Point(221, 8);
             this.button_Stop_Update_All.Name = "button_Stop_Update_All";
-            this.button_Stop_Update_All.Size = new System.Drawing.Size(91, 23);
+            this.button_Stop_Update_All.Size = new System.Drawing.Size(89, 20);
             this.button_Stop_Update_All.TabIndex = 39;
             this.button_Stop_Update_All.Text = "Stop Update All";
             this.button_Stop_Update_All.UseVisualStyleBackColor = true;
@@ -285,10 +278,9 @@
             // 
             // button_Start_Update_All
             // 
-            this.button_Start_Update_All.AutoSize = true;
-            this.button_Start_Update_All.Location = new System.Drawing.Point(131, 7);
+            this.button_Start_Update_All.Location = new System.Drawing.Point(131, 8);
             this.button_Start_Update_All.Name = "button_Start_Update_All";
-            this.button_Start_Update_All.Size = new System.Drawing.Size(91, 23);
+            this.button_Start_Update_All.Size = new System.Drawing.Size(91, 20);
             this.button_Start_Update_All.TabIndex = 38;
             this.button_Start_Update_All.Text = "Start Update All";
             this.button_Start_Update_All.UseVisualStyleBackColor = true;
@@ -296,14 +288,22 @@
             // 
             // button_Load_Browser
             // 
-            this.button_Load_Browser.AutoSize = true;
-            this.button_Load_Browser.Location = new System.Drawing.Point(310, 7);
+            this.button_Load_Browser.Location = new System.Drawing.Point(310, 8);
             this.button_Load_Browser.Name = "button_Load_Browser";
-            this.button_Load_Browser.Size = new System.Drawing.Size(82, 23);
+            this.button_Load_Browser.Size = new System.Drawing.Size(84, 20);
             this.button_Load_Browser.TabIndex = 37;
             this.button_Load_Browser.Text = "Load Browser";
             this.button_Load_Browser.UseVisualStyleBackColor = true;
             this.button_Load_Browser.Click += new System.EventHandler(this.button_Load_Browser_Click);
+            // 
+            // symbols_ProcessedTextBox
+            // 
+            this.symbols_ProcessedTextBox.Location = new System.Drawing.Point(635, 8);
+            this.symbols_ProcessedTextBox.Name = "symbols_ProcessedTextBox";
+            this.symbols_ProcessedTextBox.ReadOnly = true;
+            this.symbols_ProcessedTextBox.Size = new System.Drawing.Size(35, 20);
+            this.symbols_ProcessedTextBox.TabIndex = 44;
+            this.symbols_ProcessedTextBox.Text = "9999";
             // 
             // textBoxFilter
             // 
@@ -332,71 +332,18 @@
             this.OLV_Objects.AllColumns.Add(this.olvColumn_Symbol);
             this.OLV_Objects.AllColumns.Add(this.olvColumnAction);
             this.OLV_Objects.AllColumns.Add(this.olvColumnCompanyName);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Status);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Potential);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Risk);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Low_Percentage);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Medium_Percentage);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_High_Percentage);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Price_Last);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Medium);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Analysts_Mean);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Elevation_52_Weeks);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations_Rating);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Risk_ESG_Score);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Beta_5Y_Monthly);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Fair_Value);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Estimated_Return_Percentage);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Reporting_Date);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Updated_Local_Time);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Low);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_High);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations_Strong_Buy);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations_Buy);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations_Hold);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations_Sell);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Recommendations_Strong_Sell);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Range_52_Weeks_Max);
-            this.OLV_Objects.AllColumns.Add(this.olvColumn_Range_52_Weeks_Min);
             this.OLV_Objects.AllowColumnReorder = true;
             this.OLV_Objects.AllowDrop = true;
             this.OLV_Objects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.OLV_Objects.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.OLV_Objects.CheckBoxes = true;
             this.OLV_Objects.CheckedAspectName = "";
             this.OLV_Objects.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.olvColumn_Symbol,
             this.olvColumnAction,
-            this.olvColumnCompanyName,
-            this.olvColumn_Status,
-            this.olvColumn_Potential,
-            this.olvColumn_Risk,
-            this.olvColumn_Low_Percentage,
-            this.olvColumn_Medium_Percentage,
-            this.olvColumn_High_Percentage,
-            this.olvColumn_Price_Last,
-            this.olvColumn_Medium,
-            this.olvColumn_Analysts_Mean,
-            this.olvColumn_Elevation_52_Weeks,
-            this.olvColumn_Recommendations_Rating,
-            this.olvColumn_Recommendations,
-            this.olvColumn_Risk_ESG_Score,
-            this.olvColumn_Beta_5Y_Monthly,
-            this.olvColumn_Fair_Value,
-            this.olvColumn_Estimated_Return_Percentage,
-            this.olvColumn_Reporting_Date,
-            this.olvColumn_Updated_Local_Time,
-            this.olvColumn_Low,
-            this.olvColumn_High,
-            this.olvColumn_Recommendations_Strong_Buy,
-            this.olvColumn_Recommendations_Buy,
-            this.olvColumn_Recommendations_Hold,
-            this.olvColumn_Recommendations_Sell,
-            this.olvColumn_Recommendations_Strong_Sell,
-            this.olvColumn_Range_52_Weeks_Max,
-            this.olvColumn_Range_52_Weeks_Min});
+            this.olvColumnCompanyName});
             this.OLV_Objects.Cursor = System.Windows.Forms.Cursors.Default;
             this.OLV_Objects.FullRowSelect = true;
             this.OLV_Objects.GridLines = true;
@@ -415,7 +362,7 @@
             this.OLV_Objects.ShowGroups = false;
             this.OLV_Objects.ShowHeaderInAllViews = false;
             this.OLV_Objects.ShowItemToolTips = true;
-            this.OLV_Objects.Size = new System.Drawing.Size(997, 434);
+            this.OLV_Objects.Size = new System.Drawing.Size(1179, 434);
             this.OLV_Objects.SortGroupItemsByPrimaryColumn = false;
             this.OLV_Objects.TabIndex = 36;
             this.OLV_Objects.TriStateCheckBoxes = true;
@@ -427,6 +374,7 @@
             this.OLV_Objects.UseHotItem = true;
             this.OLV_Objects.View = System.Windows.Forms.View.Details;
             this.OLV_Objects.ButtonClick += new System.EventHandler<BrightIdeasSoftware.CellClickEventArgs>(this.OLV_Objects_ButtonClick);
+            this.OLV_Objects.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.OLV_Objects_ColumnClick);
             this.OLV_Objects.SelectedIndexChanged += new System.EventHandler(this.OLV_Objects_SelectedIndexChanged);
             // 
             // olvColumn_Symbol
@@ -443,178 +391,6 @@
             this.olvColumnCompanyName.Text = "Company Name";
             this.olvColumnCompanyName.ToolTipText = "CompanyName";
             this.olvColumnCompanyName.Width = 119;
-            // 
-            // olvColumn_Status
-            // 
-            this.olvColumn_Status.AspectName = "Status";
-            this.olvColumn_Status.Text = "Status";
-            this.olvColumn_Status.ToolTipText = "Status";
-            this.olvColumn_Status.Width = 80;
-            // 
-            // olvColumn_Potential
-            // 
-            this.olvColumn_Potential.AspectName = "Potential";
-            this.olvColumn_Potential.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Potential.Text = "U";
-            this.olvColumn_Potential.ToolTipText = "Potential";
-            this.olvColumn_Potential.Width = 40;
-            // 
-            // olvColumn_Risk
-            // 
-            this.olvColumn_Risk.AspectName = "Risk";
-            this.olvColumn_Risk.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Risk.Text = "Risk";
-            this.olvColumn_Risk.Width = 40;
-            // 
-            // olvColumn_Low_Percentage
-            // 
-            this.olvColumn_Low_Percentage.AspectName = "Low_Percentage";
-            this.olvColumn_Low_Percentage.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Low_Percentage.Text = "Low%";
-            this.olvColumn_Low_Percentage.ToolTipText = "Low_Percentage";
-            this.olvColumn_Low_Percentage.Width = 45;
-            // 
-            // olvColumn_Medium_Percentage
-            // 
-            this.olvColumn_Medium_Percentage.AspectName = "Medium_Percentage";
-            this.olvColumn_Medium_Percentage.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Medium_Percentage.IsTileViewColumn = true;
-            this.olvColumn_Medium_Percentage.MinimumWidth = 30;
-            this.olvColumn_Medium_Percentage.Text = "Med%";
-            this.olvColumn_Medium_Percentage.ToolTipText = "Medium_Percentage";
-            this.olvColumn_Medium_Percentage.Width = 45;
-            // 
-            // olvColumn_High_Percentage
-            // 
-            this.olvColumn_High_Percentage.AspectName = "High_Percentage";
-            this.olvColumn_High_Percentage.AspectToStringFormat = "{0:N}";
-            this.olvColumn_High_Percentage.Text = "High%";
-            this.olvColumn_High_Percentage.ToolTipText = "High_Percentage";
-            this.olvColumn_High_Percentage.Width = 45;
-            // 
-            // olvColumn_Price_Last
-            // 
-            this.olvColumn_Price_Last.AspectName = "Price_Last";
-            this.olvColumn_Price_Last.Text = "Price";
-            this.olvColumn_Price_Last.Width = 50;
-            // 
-            // olvColumn_Medium
-            // 
-            this.olvColumn_Medium.AspectName = "Medium";
-            this.olvColumn_Medium.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Medium.Text = "F12M";
-            this.olvColumn_Medium.Width = 40;
-            // 
-            // olvColumn_Analysts_Mean
-            // 
-            this.olvColumn_Analysts_Mean.AspectName = "Analysts_Mean";
-            this.olvColumn_Analysts_Mean.Text = "A12M";
-            this.olvColumn_Analysts_Mean.Width = 45;
-            // 
-            // olvColumn_Elevation_52_Weeks
-            // 
-            this.olvColumn_Elevation_52_Weeks.AspectName = "Elevation_52_Weeks";
-            this.olvColumn_Elevation_52_Weeks.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Elevation_52_Weeks.Text = "Elev52";
-            this.olvColumn_Elevation_52_Weeks.Width = 50;
-            // 
-            // olvColumn_Recommendations_Rating
-            // 
-            this.olvColumn_Recommendations_Rating.AspectName = "Recommendations_Rating";
-            this.olvColumn_Recommendations_Rating.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Recommendations_Rating.Text = "ElevR";
-            this.olvColumn_Recommendations_Rating.Width = 50;
-            // 
-            // olvColumn_Recommendations
-            // 
-            this.olvColumn_Recommendations.AspectName = "Recommendations";
-            this.olvColumn_Recommendations.Text = "Buy/Sell";
-            // 
-            // olvColumn_Risk_ESG_Score
-            // 
-            this.olvColumn_Risk_ESG_Score.AspectName = "Risk_ESG_Score";
-            this.olvColumn_Risk_ESG_Score.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Risk_ESG_Score.Text = "ESG";
-            // 
-            // olvColumn_Beta_5Y_Monthly
-            // 
-            this.olvColumn_Beta_5Y_Monthly.AspectName = "Beta_5Y_Monthly";
-            this.olvColumn_Beta_5Y_Monthly.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Beta_5Y_Monthly.Text = "Beta";
-            // 
-            // olvColumn_Fair_Value
-            // 
-            this.olvColumn_Fair_Value.AspectName = "Fair_Value";
-            this.olvColumn_Fair_Value.Text = "Fair_Value";
-            this.olvColumn_Fair_Value.Width = 100;
-            // 
-            // olvColumn_Estimated_Return_Percentage
-            // 
-            this.olvColumn_Estimated_Return_Percentage.AspectName = "Estimated_Return_Percentage";
-            this.olvColumn_Estimated_Return_Percentage.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Estimated_Return_Percentage.Text = "Return%";
-            // 
-            // olvColumn_Reporting_Date
-            // 
-            this.olvColumn_Reporting_Date.AspectName = "Reporting_Date";
-            this.olvColumn_Reporting_Date.Text = "Earnings Date";
-            this.olvColumn_Reporting_Date.Width = 80;
-            // 
-            // olvColumn_Updated_Local_Time
-            // 
-            this.olvColumn_Updated_Local_Time.AspectName = "Updated_Local_Time";
-            this.olvColumn_Updated_Local_Time.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Updated_Local_Time.DisplayIndex = 22;
-            this.olvColumn_Updated_Local_Time.Text = "Updated_Time";
-            this.olvColumn_Updated_Local_Time.Width = 100;
-            // 
-            // olvColumn_Low
-            // 
-            this.olvColumn_Low.AspectName = "Low";
-            this.olvColumn_Low.AspectToStringFormat = "{0:N}";
-            this.olvColumn_Low.DisplayIndex = 20;
-            this.olvColumn_Low.Text = "F12L";
-            // 
-            // olvColumn_High
-            // 
-            this.olvColumn_High.AspectName = "High";
-            this.olvColumn_High.DisplayIndex = 21;
-            this.olvColumn_High.Text = "F12H";
-            // 
-            // olvColumn_Recommendations_Strong_Buy
-            // 
-            this.olvColumn_Recommendations_Strong_Buy.AspectName = "Recommendations_Strong_Buy";
-            this.olvColumn_Recommendations_Strong_Buy.Text = "BuyS#";
-            // 
-            // olvColumn_Recommendations_Buy
-            // 
-            this.olvColumn_Recommendations_Buy.AspectName = "Recommendations_Buy";
-            this.olvColumn_Recommendations_Buy.Text = "Buy#";
-            // 
-            // olvColumn_Recommendations_Hold
-            // 
-            this.olvColumn_Recommendations_Hold.AspectName = "Recommendations_Hold";
-            this.olvColumn_Recommendations_Hold.Text = "Hold#";
-            // 
-            // olvColumn_Recommendations_Sell
-            // 
-            this.olvColumn_Recommendations_Sell.AspectName = "Recommendations_Sell";
-            this.olvColumn_Recommendations_Sell.Text = "#Sell";
-            // 
-            // olvColumn_Recommendations_Strong_Sell
-            // 
-            this.olvColumn_Recommendations_Strong_Sell.AspectName = "Recommendations_Strong_Sell";
-            this.olvColumn_Recommendations_Strong_Sell.Text = "SellS#";
-            // 
-            // olvColumn_Range_52_Weeks_Max
-            // 
-            this.olvColumn_Range_52_Weeks_Max.AspectName = "Range_52_Weeks_Max";
-            this.olvColumn_Range_52_Weeks_Max.Text = "52_Max";
-            // 
-            // olvColumn_Range_52_Weeks_Min
-            // 
-            this.olvColumn_Range_52_Weeks_Min.AspectName = "Range_52_Weeks_Min";
-            this.olvColumn_Range_52_Weeks_Min.Text = "52_Min";
             // 
             // imageListSmall
             // 
@@ -634,15 +410,16 @@
             // tabControl_Symbols
             // 
             this.tabControl_Symbols.Controls.Add(this.tabPage_SymbolsObjects);
-            this.tabControl_Symbols.Controls.Add(this.tabPage1);
+            this.tabControl_Symbols.Controls.Add(this.tabPage_Filtered_Symbols);
             this.tabControl_Symbols.Controls.Add(this.tabPage_Symbol_Properties);
             this.tabControl_Symbols.Controls.Add(this.tabPage_Settings_Controls_Collumns);
             this.tabControl_Symbols.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl_Symbols.Location = new System.Drawing.Point(0, 0);
             this.tabControl_Symbols.Name = "tabControl_Symbols";
             this.tabControl_Symbols.SelectedIndex = 0;
-            this.tabControl_Symbols.Size = new System.Drawing.Size(1011, 497);
+            this.tabControl_Symbols.Size = new System.Drawing.Size(1193, 497);
             this.tabControl_Symbols.TabIndex = 41;
+            this.tabControl_Symbols.SelectedIndexChanged += new System.EventHandler(this.tabControl_Symbols_SelectedIndexChanged);
             // 
             // tabPage_SymbolsObjects
             // 
@@ -651,31 +428,42 @@
             this.tabPage_SymbolsObjects.Location = new System.Drawing.Point(4, 22);
             this.tabPage_SymbolsObjects.Name = "tabPage_SymbolsObjects";
             this.tabPage_SymbolsObjects.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_SymbolsObjects.Size = new System.Drawing.Size(1003, 471);
+            this.tabPage_SymbolsObjects.Size = new System.Drawing.Size(1185, 471);
             this.tabPage_SymbolsObjects.TabIndex = 0;
-            this.tabPage_SymbolsObjects.Text = "Yahooo";
+            this.tabPage_SymbolsObjects.Text = "Symbols";
             this.tabPage_SymbolsObjects.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
+            // tabPage_Filtered_Symbols
             // 
-            this.tabPage1.Controls.Add(this.textBox_Elev_Average2);
-            this.tabPage1.Controls.Add(label3);
-            this.tabPage1.Controls.Add(this.OLV_Objects_Filtered);
-            this.tabPage1.Controls.Add(this.button_Continue_Filter);
-            this.tabPage1.Controls.Add(this.textBoxFilter);
-            this.tabPage1.Controls.Add(this.comboBox_Condition);
-            this.tabPage1.Controls.Add(this.textBox_Filter_Value);
-            this.tabPage1.Controls.Add(this.comboBox_Parameters);
-            this.tabPage1.Controls.Add(this.button_Apply_Filter);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1003, 471);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Filtered Symbols";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage_Filtered_Symbols.Controls.Add(this.textBox_Elev_Average_Filtered);
+            this.tabPage_Filtered_Symbols.Controls.Add(label12);
+            this.tabPage_Filtered_Symbols.Controls.Add(this.textBox_Elev_Average2);
+            this.tabPage_Filtered_Symbols.Controls.Add(label3);
+            this.tabPage_Filtered_Symbols.Controls.Add(this.OLV_Objects_Filtered);
+            this.tabPage_Filtered_Symbols.Controls.Add(this.button_Continue_Filter);
+            this.tabPage_Filtered_Symbols.Controls.Add(this.textBoxFilter);
+            this.tabPage_Filtered_Symbols.Controls.Add(this.comboBox_Condition);
+            this.tabPage_Filtered_Symbols.Controls.Add(this.textBox_Filter_Value);
+            this.tabPage_Filtered_Symbols.Controls.Add(this.comboBox_Parameters);
+            this.tabPage_Filtered_Symbols.Controls.Add(this.button_Apply_Filter);
+            this.tabPage_Filtered_Symbols.Controls.Add(this.label1);
+            this.tabPage_Filtered_Symbols.Controls.Add(this.label5);
+            this.tabPage_Filtered_Symbols.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Filtered_Symbols.Name = "tabPage_Filtered_Symbols";
+            this.tabPage_Filtered_Symbols.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Filtered_Symbols.Size = new System.Drawing.Size(1185, 471);
+            this.tabPage_Filtered_Symbols.TabIndex = 2;
+            this.tabPage_Filtered_Symbols.Text = "Filtered Symbols";
+            this.tabPage_Filtered_Symbols.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Elev_Average_Filtered
+            // 
+            this.textBox_Elev_Average_Filtered.Location = new System.Drawing.Point(878, 6);
+            this.textBox_Elev_Average_Filtered.Name = "textBox_Elev_Average_Filtered";
+            this.textBox_Elev_Average_Filtered.ReadOnly = true;
+            this.textBox_Elev_Average_Filtered.Size = new System.Drawing.Size(40, 20);
+            this.textBox_Elev_Average_Filtered.TabIndex = 52;
+            this.textBox_Elev_Average_Filtered.Text = "aaaaa";
             // 
             // textBox_Elev_Average2
             // 
@@ -713,7 +501,7 @@
             this.OLV_Objects_Filtered.ShowGroups = false;
             this.OLV_Objects_Filtered.ShowHeaderInAllViews = false;
             this.OLV_Objects_Filtered.ShowItemToolTips = true;
-            this.OLV_Objects_Filtered.Size = new System.Drawing.Size(997, 434);
+            this.OLV_Objects_Filtered.Size = new System.Drawing.Size(969, 434);
             this.OLV_Objects_Filtered.SortGroupItemsByPrimaryColumn = false;
             this.OLV_Objects_Filtered.TabIndex = 37;
             this.OLV_Objects_Filtered.TriStateCheckBoxes = true;
@@ -727,7 +515,7 @@
             // 
             // button_Continue_Filter
             // 
-            this.button_Continue_Filter.Location = new System.Drawing.Point(583, 5);
+            this.button_Continue_Filter.Location = new System.Drawing.Point(591, 5);
             this.button_Continue_Filter.Name = "button_Continue_Filter";
             this.button_Continue_Filter.Size = new System.Drawing.Size(90, 23);
             this.button_Continue_Filter.TabIndex = 33;
@@ -743,16 +531,16 @@
             ">",
             "<",
             "<>",
-            "Like"});
-            this.comboBox_Condition.Location = new System.Drawing.Point(289, 6);
+            "Contains"});
+            this.comboBox_Condition.Location = new System.Drawing.Point(287, 6);
             this.comboBox_Condition.Name = "comboBox_Condition";
-            this.comboBox_Condition.Size = new System.Drawing.Size(42, 21);
+            this.comboBox_Condition.Size = new System.Drawing.Size(65, 21);
             this.comboBox_Condition.TabIndex = 31;
-            this.comboBox_Condition.Text = "=";
+            this.comboBox_Condition.Text = ">";
             // 
             // textBox_Filter_Value
             // 
-            this.textBox_Filter_Value.Location = new System.Drawing.Point(394, 6);
+            this.textBox_Filter_Value.Location = new System.Drawing.Point(408, 6);
             this.textBox_Filter_Value.Name = "textBox_Filter_Value";
             this.textBox_Filter_Value.Size = new System.Drawing.Size(100, 20);
             this.textBox_Filter_Value.TabIndex = 29;
@@ -760,15 +548,15 @@
             // comboBox_Parameters
             // 
             this.comboBox_Parameters.FormattingEnabled = true;
-            this.comboBox_Parameters.Location = new System.Drawing.Point(123, 6);
+            this.comboBox_Parameters.Location = new System.Drawing.Point(117, 5);
             this.comboBox_Parameters.Name = "comboBox_Parameters";
             this.comboBox_Parameters.Size = new System.Drawing.Size(131, 21);
             this.comboBox_Parameters.TabIndex = 28;
-            this.comboBox_Parameters.Text = "Do Nothing";
+            this.comboBox_Parameters.Text = "Select Parameter";
             // 
             // button_Apply_Filter
             // 
-            this.button_Apply_Filter.Location = new System.Drawing.Point(497, 5);
+            this.button_Apply_Filter.Location = new System.Drawing.Point(508, 5);
             this.button_Apply_Filter.Name = "button_Apply_Filter";
             this.button_Apply_Filter.Size = new System.Drawing.Size(84, 23);
             this.button_Apply_Filter.TabIndex = 27;
@@ -779,7 +567,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(336, 10);
+            this.label1.Location = new System.Drawing.Point(350, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 30;
@@ -788,7 +576,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(255, 10);
+            this.label5.Location = new System.Drawing.Point(251, 10);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 32;
@@ -800,7 +588,7 @@
             this.tabPage_Symbol_Properties.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Symbol_Properties.Name = "tabPage_Symbol_Properties";
             this.tabPage_Symbol_Properties.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Symbol_Properties.Size = new System.Drawing.Size(1003, 471);
+            this.tabPage_Symbol_Properties.Size = new System.Drawing.Size(1185, 471);
             this.tabPage_Symbol_Properties.TabIndex = 3;
             this.tabPage_Symbol_Properties.Text = "Symbol Properties";
             this.tabPage_Symbol_Properties.UseVisualStyleBackColor = true;
@@ -817,6 +605,13 @@
             // 
             // tabPage_Settings_Controls_Collumns
             // 
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.button_Import_Replace_Columns);
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.button_Import_New_Columns);
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.button_Export_Current_Columns);
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.textBox_AspectToStringFormat);
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.propertyGrid_Column);
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.textBox_Sorting_Parameter);
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.button_Update_Sorting_Parameter);
             this.tabPage_Settings_Controls_Collumns.Controls.Add(this.button_Save_Current_Columns);
             this.tabPage_Settings_Controls_Collumns.Controls.Add(this.button_Move_To_New_Index);
             this.tabPage_Settings_Controls_Collumns.Controls.Add(this.comboBox_Column_Index);
@@ -840,14 +635,81 @@
             this.tabPage_Settings_Controls_Collumns.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Settings_Controls_Collumns.Name = "tabPage_Settings_Controls_Collumns";
             this.tabPage_Settings_Controls_Collumns.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Settings_Controls_Collumns.Size = new System.Drawing.Size(1003, 471);
+            this.tabPage_Settings_Controls_Collumns.Size = new System.Drawing.Size(1185, 471);
             this.tabPage_Settings_Controls_Collumns.TabIndex = 4;
-            this.tabPage_Settings_Controls_Collumns.Text = "Settings_Controls_Collumns";
+            this.tabPage_Settings_Controls_Collumns.Text = "Settings/Properties/Controls";
             this.tabPage_Settings_Controls_Collumns.UseVisualStyleBackColor = true;
+            // 
+            // button_Import_Replace_Columns
+            // 
+            this.button_Import_Replace_Columns.Location = new System.Drawing.Point(66, 368);
+            this.button_Import_Replace_Columns.Name = "button_Import_Replace_Columns";
+            this.button_Import_Replace_Columns.Size = new System.Drawing.Size(168, 23);
+            this.button_Import_Replace_Columns.TabIndex = 62;
+            this.button_Import_Replace_Columns.Text = "Import_Replace_Columns";
+            this.button_Import_Replace_Columns.UseVisualStyleBackColor = true;
+            this.button_Import_Replace_Columns.Click += new System.EventHandler(this.button_Import_Replace_Columns_Click);
+            // 
+            // button_Import_New_Columns
+            // 
+            this.button_Import_New_Columns.Location = new System.Drawing.Point(66, 339);
+            this.button_Import_New_Columns.Name = "button_Import_New_Columns";
+            this.button_Import_New_Columns.Size = new System.Drawing.Size(168, 23);
+            this.button_Import_New_Columns.TabIndex = 61;
+            this.button_Import_New_Columns.Text = "Import Add New Columns";
+            this.button_Import_New_Columns.UseVisualStyleBackColor = true;
+            this.button_Import_New_Columns.Click += new System.EventHandler(this.button_Import_New_Columns_Click);
+            // 
+            // button_Export_Current_Columns
+            // 
+            this.button_Export_Current_Columns.Location = new System.Drawing.Point(66, 310);
+            this.button_Export_Current_Columns.Name = "button_Export_Current_Columns";
+            this.button_Export_Current_Columns.Size = new System.Drawing.Size(168, 23);
+            this.button_Export_Current_Columns.TabIndex = 60;
+            this.button_Export_Current_Columns.Text = "Export_Current_Columns";
+            this.button_Export_Current_Columns.UseVisualStyleBackColor = true;
+            this.button_Export_Current_Columns.Click += new System.EventHandler(this.button_Export_Current_Columns_Click);
+            // 
+            // textBox_AspectToStringFormat
+            // 
+            this.textBox_AspectToStringFormat.Location = new System.Drawing.Point(240, 85);
+            this.textBox_AspectToStringFormat.Name = "textBox_AspectToStringFormat";
+            this.textBox_AspectToStringFormat.ReadOnly = true;
+            this.textBox_AspectToStringFormat.Size = new System.Drawing.Size(168, 20);
+            this.textBox_AspectToStringFormat.TabIndex = 59;
+            this.textBox_AspectToStringFormat.Text = "{0:N}";
+            // 
+            // propertyGrid_Column
+            // 
+            this.propertyGrid_Column.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.propertyGrid_Column.Location = new System.Drawing.Point(414, 4);
+            this.propertyGrid_Column.Name = "propertyGrid_Column";
+            this.propertyGrid_Column.Size = new System.Drawing.Size(524, 465);
+            this.propertyGrid_Column.TabIndex = 57;
+            // 
+            // textBox_Sorting_Parameter
+            // 
+            this.textBox_Sorting_Parameter.Location = new System.Drawing.Point(240, 29);
+            this.textBox_Sorting_Parameter.Name = "textBox_Sorting_Parameter";
+            this.textBox_Sorting_Parameter.ReadOnly = true;
+            this.textBox_Sorting_Parameter.Size = new System.Drawing.Size(168, 20);
+            this.textBox_Sorting_Parameter.TabIndex = 56;
+            // 
+            // button_Update_Sorting_Parameter
+            // 
+            this.button_Update_Sorting_Parameter.Location = new System.Drawing.Point(240, 4);
+            this.button_Update_Sorting_Parameter.Name = "button_Update_Sorting_Parameter";
+            this.button_Update_Sorting_Parameter.Size = new System.Drawing.Size(168, 23);
+            this.button_Update_Sorting_Parameter.TabIndex = 55;
+            this.button_Update_Sorting_Parameter.Text = "Update Sorting Parameter:";
+            this.button_Update_Sorting_Parameter.UseVisualStyleBackColor = true;
+            this.button_Update_Sorting_Parameter.Click += new System.EventHandler(this.button_Update_Sorting_Parameter_Click);
             // 
             // button_Save_Current_Columns
             // 
-            this.button_Save_Current_Columns.Location = new System.Drawing.Point(431, 41);
+            this.button_Save_Current_Columns.Location = new System.Drawing.Point(66, 222);
             this.button_Save_Current_Columns.Name = "button_Save_Current_Columns";
             this.button_Save_Current_Columns.Size = new System.Drawing.Size(168, 23);
             this.button_Save_Current_Columns.TabIndex = 54;
@@ -857,7 +719,7 @@
             // 
             // button_Move_To_New_Index
             // 
-            this.button_Move_To_New_Index.Location = new System.Drawing.Point(431, 94);
+            this.button_Move_To_New_Index.Location = new System.Drawing.Point(240, 254);
             this.button_Move_To_New_Index.Name = "button_Move_To_New_Index";
             this.button_Move_To_New_Index.Size = new System.Drawing.Size(168, 23);
             this.button_Move_To_New_Index.TabIndex = 53;
@@ -868,7 +730,7 @@
             // comboBox_Column_Index
             // 
             this.comboBox_Column_Index.FormattingEnabled = true;
-            this.comboBox_Column_Index.Location = new System.Drawing.Point(257, 95);
+            this.comboBox_Column_Index.Location = new System.Drawing.Point(66, 283);
             this.comboBox_Column_Index.Name = "comboBox_Column_Index";
             this.comboBox_Column_Index.Size = new System.Drawing.Size(168, 21);
             this.comboBox_Column_Index.TabIndex = 52;
@@ -877,7 +739,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(37, 126);
+            this.label6.Location = new System.Drawing.Point(32, 115);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 51;
@@ -885,7 +747,7 @@
             // 
             // textBox_Column_Index
             // 
-            this.textBox_Column_Index.Location = new System.Drawing.Point(90, 123);
+            this.textBox_Column_Index.Location = new System.Drawing.Point(85, 112);
             this.textBox_Column_Index.Name = "textBox_Column_Index";
             this.textBox_Column_Index.Size = new System.Drawing.Size(149, 20);
             this.textBox_Column_Index.TabIndex = 50;
@@ -893,7 +755,7 @@
             // 
             // button_Delete_Column
             // 
-            this.button_Delete_Column.Location = new System.Drawing.Point(431, 67);
+            this.button_Delete_Column.Location = new System.Drawing.Point(240, 225);
             this.button_Delete_Column.Name = "button_Delete_Column";
             this.button_Delete_Column.Size = new System.Drawing.Size(168, 23);
             this.button_Delete_Column.TabIndex = 49;
@@ -903,7 +765,7 @@
             // 
             // textBox_Minimal_Width
             // 
-            this.textBox_Minimal_Width.Location = new System.Drawing.Point(90, 175);
+            this.textBox_Minimal_Width.Location = new System.Drawing.Point(85, 164);
             this.textBox_Minimal_Width.Name = "textBox_Minimal_Width";
             this.textBox_Minimal_Width.Size = new System.Drawing.Size(149, 20);
             this.textBox_Minimal_Width.TabIndex = 47;
@@ -912,7 +774,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 178);
+            this.label11.Location = new System.Drawing.Point(3, 167);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 13);
             this.label11.TabIndex = 48;
@@ -920,7 +782,7 @@
             // 
             // textBox_Width
             // 
-            this.textBox_Width.Location = new System.Drawing.Point(90, 149);
+            this.textBox_Width.Location = new System.Drawing.Point(85, 138);
             this.textBox_Width.Name = "textBox_Width";
             this.textBox_Width.Size = new System.Drawing.Size(149, 20);
             this.textBox_Width.TabIndex = 45;
@@ -929,7 +791,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(37, 152);
+            this.label10.Location = new System.Drawing.Point(32, 141);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(38, 13);
             this.label10.TabIndex = 46;
@@ -942,15 +804,16 @@
             "String/Text",
             "Number",
             "N/A"});
-            this.comboBox_AspectToStringFormat.Location = new System.Drawing.Point(71, 96);
+            this.comboBox_AspectToStringFormat.Location = new System.Drawing.Point(66, 85);
             this.comboBox_AspectToStringFormat.Name = "comboBox_AspectToStringFormat";
             this.comboBox_AspectToStringFormat.Size = new System.Drawing.Size(168, 21);
             this.comboBox_AspectToStringFormat.TabIndex = 43;
             this.comboBox_AspectToStringFormat.Text = "N/A";
+            this.comboBox_AspectToStringFormat.SelectedIndexChanged += new System.EventHandler(this.comboBox_AspectToStringFormat_SelectedIndexChanged);
             // 
             // textBox_ToolTipText
             // 
-            this.textBox_ToolTipText.Location = new System.Drawing.Point(71, 70);
+            this.textBox_ToolTipText.Location = new System.Drawing.Point(66, 59);
             this.textBox_ToolTipText.Name = "textBox_ToolTipText";
             this.textBox_ToolTipText.Size = new System.Drawing.Size(168, 20);
             this.textBox_ToolTipText.TabIndex = 41;
@@ -958,16 +821,19 @@
             // 
             // comboBox_Existing_Columns
             // 
+            this.comboBox_Existing_Columns.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox_Existing_Columns.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox_Existing_Columns.FormattingEnabled = true;
-            this.comboBox_Existing_Columns.Location = new System.Drawing.Point(257, 69);
+            this.comboBox_Existing_Columns.Location = new System.Drawing.Point(66, 257);
             this.comboBox_Existing_Columns.Name = "comboBox_Existing_Columns";
             this.comboBox_Existing_Columns.Size = new System.Drawing.Size(168, 21);
             this.comboBox_Existing_Columns.TabIndex = 39;
             this.comboBox_Existing_Columns.Text = "Select Existing Column";
+            this.comboBox_Existing_Columns.SelectedIndexChanged += new System.EventHandler(this.comboBox_Existing_Columns_SelectedIndexChanged);
             // 
             // textBox_Header_Text
             // 
-            this.textBox_Header_Text.Location = new System.Drawing.Point(71, 44);
+            this.textBox_Header_Text.Location = new System.Drawing.Point(66, 33);
             this.textBox_Header_Text.Name = "textBox_Header_Text";
             this.textBox_Header_Text.Size = new System.Drawing.Size(168, 20);
             this.textBox_Header_Text.TabIndex = 35;
@@ -976,17 +842,20 @@
             // 
             // comboBox_Parameters_Columns
             // 
+            this.comboBox_Parameters_Columns.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox_Parameters_Columns.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox_Parameters_Columns.FormattingEnabled = true;
-            this.comboBox_Parameters_Columns.Location = new System.Drawing.Point(71, 17);
+            this.comboBox_Parameters_Columns.Location = new System.Drawing.Point(66, 6);
             this.comboBox_Parameters_Columns.Name = "comboBox_Parameters_Columns";
             this.comboBox_Parameters_Columns.Size = new System.Drawing.Size(168, 21);
+            this.comboBox_Parameters_Columns.Sorted = true;
             this.comboBox_Parameters_Columns.TabIndex = 34;
             this.comboBox_Parameters_Columns.Text = "Select Propertie To display";
             this.comboBox_Parameters_Columns.SelectedIndexChanged += new System.EventHandler(this.comboBox_Parameters_Columns_SelectedIndexChanged);
             // 
             // button_Add_Column_For_Propertie
             // 
-            this.button_Add_Column_For_Propertie.Location = new System.Drawing.Point(71, 201);
+            this.button_Add_Column_For_Propertie.Location = new System.Drawing.Point(66, 190);
             this.button_Add_Column_For_Propertie.Name = "button_Add_Column_For_Propertie";
             this.button_Add_Column_For_Propertie.Size = new System.Drawing.Size(168, 23);
             this.button_Add_Column_For_Propertie.TabIndex = 33;
@@ -997,7 +866,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 73);
+            this.label8.Location = new System.Drawing.Point(3, 62);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 13);
             this.label8.TabIndex = 42;
@@ -1006,7 +875,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 20);
+            this.label4.Location = new System.Drawing.Point(13, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 36;
@@ -1015,7 +884,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 47);
+            this.label7.Location = new System.Drawing.Point(1, 36);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 13);
             this.label7.TabIndex = 40;
@@ -1024,29 +893,29 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(28, 99);
+            this.label9.Location = new System.Drawing.Point(23, 88);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 13);
             this.label9.TabIndex = 44;
             this.label9.Text = "Formats:";
             // 
-            // OLVYahooControl
+            // OLVSymbolsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.tabControl_Symbols);
-            this.Name = "OLVYahooControl";
-            this.Size = new System.Drawing.Size(1011, 497);
+            this.Name = "OLVSymbolsControl";
+            this.Size = new System.Drawing.Size(1193, 497);
             this.Load += new System.EventHandler(this.ObjectListButtonControl_Load);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OLV_Objects)).EndInit();
             this.tabControl_Symbols.ResumeLayout(false);
             this.tabPage_SymbolsObjects.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabPage_Filtered_Symbols.ResumeLayout(false);
+            this.tabPage_Filtered_Symbols.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OLV_Objects_Filtered)).EndInit();
             this.tabPage_Symbol_Properties.ResumeLayout(false);
             this.tabPage_Settings_Controls_Collumns.ResumeLayout(false);
@@ -1061,33 +930,19 @@
         private System.Windows.Forms.TextBox textBoxFilter;
         private BrightIdeasSoftware.ObjectListView OLV_Objects;
         private BrightIdeasSoftware.OLVColumn olvColumn_Symbol;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Medium_Percentage;
         private System.Windows.Forms.ImageList imageListTasks;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations_Rating;
         private BrightIdeasSoftware.OLVColumn olvColumnAction;
         private System.Windows.Forms.ImageList imageListSmall;
         private BrightIdeasSoftware.HotItemStyle hotItemStyle1;
         private System.Windows.Forms.Button button_Refresh;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Updated_Local_Time;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations_Buy;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations_Hold;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations_Sell;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Range_52_Weeks_Max;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Range_52_Weeks_Min;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations_Strong_Sell;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Recommendations_Strong_Buy;
         private System.Windows.Forms.Button button_Load_Browser;
         private System.Windows.Forms.Button button_Stop_Update_All;
         private System.Windows.Forms.Button button_Start_Update_All;
         private BrightIdeasSoftware.OLVColumn olvColumnCompanyName;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Low_Percentage;
-        private BrightIdeasSoftware.OLVColumn olvColumn_High_Percentage;
         private System.Windows.Forms.Button button_Get_All_Forecast_Properties;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Elevation_52_Weeks;
         private System.Windows.Forms.TabControl tabControl_Symbols;
         private System.Windows.Forms.TabPage tabPage_SymbolsObjects;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage_Filtered_Symbols;
         private System.Windows.Forms.Button button_Continue_Filter;
         private System.Windows.Forms.ComboBox comboBox_Condition;
         private System.Windows.Forms.TextBox textBox_Filter_Value;
@@ -1095,28 +950,15 @@
         private System.Windows.Forms.Button button_Apply_Filter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Price_Last;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Low;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Medium;
-        private BrightIdeasSoftware.OLVColumn olvColumn_High;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Status;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Analysts_Mean;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Risk_ESG_Score;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Fair_Value;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Estimated_Return_Percentage;
         private System.Windows.Forms.TextBox textBox_Generic_Filter;
         private System.Windows.Forms.TabPage tabPage_Symbol_Properties;
         private System.Windows.Forms.PropertyGrid propertyGrid_Symbol;
         private System.Windows.Forms.TextBox last_SymbolTextBox;
         private System.Windows.Forms.TextBox symbols_ProcessedTextBox;
         private System.Windows.Forms.TextBox total_SymbolsTextBox;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Potential;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Risk;
         private BrightIdeasSoftware.ObjectListView OLV_Objects_Filtered;
         private System.Windows.Forms.TextBox textBox_Elev_Average1;
         private System.Windows.Forms.TextBox textBox_Elev_Average2;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Beta_5Y_Monthly;
-        private BrightIdeasSoftware.OLVColumn olvColumn_Reporting_Date;
         private System.Windows.Forms.TabPage tabPage_Settings_Controls_Collumns;
         private System.Windows.Forms.ComboBox comboBox_Existing_Columns;
         private System.Windows.Forms.TextBox textBox_Header_Text;
@@ -1137,6 +979,15 @@
         private System.Windows.Forms.TextBox textBox_Column_Index;
         private System.Windows.Forms.ComboBox comboBox_Column_Index;
         private System.Windows.Forms.Button button_Move_To_New_Index;
+        private System.Windows.Forms.Button button_Update_Sorting_Parameter;
+        private System.Windows.Forms.TextBox textBox_Sorting_Parameter;
+        private System.Windows.Forms.PropertyGrid propertyGrid_Column;
+        private System.Windows.Forms.TextBox textBox_AspectToStringFormat;
+        private System.Windows.Forms.Button button_Save_Current_Columns2;
         private System.Windows.Forms.Button button_Save_Current_Columns;
+        private System.Windows.Forms.Button button_Import_New_Columns;
+        private System.Windows.Forms.Button button_Export_Current_Columns;
+        private System.Windows.Forms.Button button_Import_Replace_Columns;
+        private System.Windows.Forms.TextBox textBox_Elev_Average_Filtered;
     }
 }
