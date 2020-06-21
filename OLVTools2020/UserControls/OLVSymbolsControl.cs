@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using GenericTools.Controllers;
 using BrightIdeasSoftware;
 using OLVTools2020.Utilities;
+using System.Linq;
 
 namespace OLVTools2020
 {
@@ -18,6 +19,13 @@ namespace OLVTools2020
         public GenericTools.Files.FileObject File_Object { get; set; } = new GenericTools.Files.FileObject();
         public string Current_Directory { get { return System.IO.Directory.GetCurrentDirectory(); } }
         public string Parent_Directory { get { return System.IO.Directory.GetParent(Current_Directory).FullName; } }
+
+        private System.Drawing.Color Green_Color = System.Drawing.Color.Green;
+        private System.Drawing.Color Yellow_Color = System.Drawing.Color.Yellow;
+        private System.Drawing.Color Red_Color = System.Drawing.Color.Salmon;
+        private System.Drawing.Color Original_Button_BackColor = System.Drawing.Color.Transparent;
+        public bool Symbols_Update_InProgress { get; private set; } = false;
+        public bool Symbols_Update_Paused { get; private set; } = false;
 
         public GenericTools.SettingsManager Settings_Mgr;
 
@@ -40,7 +48,8 @@ namespace OLVTools2020
         public OLVSymbolsControl()
         {
             InitializeComponent();
-
+            Symbols_Update_InProgress = false;
+            Symbols_Update_Paused = false;
             try 
             {
                 File_Object.Name_No_Extension =DateTime.Now.ToString(TimeFormat_yyyy_MM_dd)+ "-Columns_Layout";
@@ -60,6 +69,7 @@ namespace OLVTools2020
                 
                 this.OLV_Objects.SetObjects(List_Of_Objects);
                 OLV_Objects.CheckBoxes = false;
+                Original_Button_BackColor = button_Start_Q.BackColor;
             }
             catch (Exception ex) { string oDebug = ex.Message; }
             
@@ -137,17 +147,32 @@ namespace OLVTools2020
         }
 
 
-        public void Update_List_Of_Object(List<object> oList_Of_Object)//, object oObject_Mgr)
+        public void Update_List_Of_Object() //List<object> oList_Of_Object)//, object oObject_Mgr)
         {
             try
             {
-                //_Object_Mgr = oObject_Mgr;
+                List<GenericTools.SymbolObject> oList_Of_SymbolObject;// = new List<GenericTools.SymbolObject>();
+                object oList_Of_Objects_Temp;
+                object[] oArg = { };
+                Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Get_List_Of_Object", oArg, out oList_Of_Objects_Temp);
+                oList_Of_SymbolObject = oList_Of_Objects_Temp as List<GenericTools.SymbolObject>;
+                List_Of_Objects= oList_Of_SymbolObject.Cast<object>().ToList();
+                this.OLV_Objects.SetObjects(List_Of_Objects);
 
-                List_Of_Objects = oList_Of_Object;
-                
-                List<object> oListTemp = oList_Of_Object as List<object>;
-                this.OLV_Objects.SetObjects(oListTemp);
-                //OLV_Objects.CheckBoxes = false;
+
+                //List<object> oTemp = oList_Of_SymbolObject.Cast<object>().ToList();
+
+                //List_Of_Objects = oTemp;
+                //this.OLV_Objects.SetObjects(oTemp);
+
+
+                //// workign public void Update_List_Of_Object(List<object> oList_Of_Object)//, object oObject_Mgr)
+                ////-Workign 
+                //List_Of_Objects = oList_Of_Object;
+
+                //List<object> oListTemp = oList_Of_Object as List<object>;
+                //this.OLV_Objects.SetObjects(oListTemp);
+                ////-Workign 
             }
             catch (Exception ex) { string oDebug = ex.Message; }
 
@@ -159,7 +184,6 @@ namespace OLVTools2020
                 Refresh_Objects();
             }
             catch (Exception ex) { string oDebug = ex.Message; }
-
 
         }
 
@@ -182,28 +206,50 @@ namespace OLVTools2020
         {
             try
             {
+                bool oResutl = false;
+
                 Gen_Tools.Bind_To_Propertie_Async(total_SymbolsTextBox, "Text", OLV_Mgr_Object, "Total_Symbols", false, oClear: true);
+
                 Gen_Tools.Bind_To_Propertie_Async(symbols_ProcessedTextBox, "Text", OLV_Mgr_Object, "Symbols_Processed", false, oClear: true);
-                //total_SymbolsTextBox
-                //    symbols_ProcessedTextBox
 
                 Gen_Tools.Bind_To_Propertie_Async(last_SymbolTextBox, "Text", OLV_Mgr_Object, "Last_Symbol", false, oClear: true);
-                //last_SymbolTextBox
-                //comboBox_Parameters
+
                 Gen_Tools.Bind_To_Propertie_Async(textBox_Elev_Average1, "Text", OLV_Mgr_Object, "Elevation_Average", true, oClear: true);
 
                 Gen_Tools.Bind_To_Propertie_Async(textBox_Elev_Average2, "Text", OLV_Mgr_Object, "Elevation_Average", true, oClear: true);
 
                 Gen_Tools.Bind_To_Propertie_Async(comboBox_Parameters, "Text", OLV_Mgr_Object, "Filter_Name", false, oClear: true);
-                //comboBox_Condition
+
                 Gen_Tools.Bind_To_Propertie_Async(comboBox_Condition, "Text", OLV_Mgr_Object, "Filter_Condition", false, oClear: true);
-                //textBox_Filter_Value
+
                 Gen_Tools.Bind_To_Propertie_Async(textBox_Filter_Value, "Text", OLV_Mgr_Object, "Filter_Value", false, oClear: true);
                 
                 Gen_Tools.Bind_To_Propertie_Async(textBox_Sorting_Parameter, "Text", OLV_Mgr_Object, "Sorting_Parameter", false, oClear: true);
 
-                //Gen_Tools.Bind_To_Propertie_Async(checkBox_Save_Current_Columns_On_Closing, "Checked", OLV_Mgr_Object, "Save_Current_Columns", false, oClear: true);
-                //checkBox_Save_Current_Columns_On_Closing.Checked
+                Gen_Tools.Bind_To_Propertie_Async(textBox_In_Q, "Text", OLV_Mgr_Object, "In_Q", false, oClear: true);
+
+                Gen_Tools.Bind_To_Propertie_Async(textBox_Updating_Seconds, "Text", OLV_Mgr_Object, "Updating_Seconds", true, oClear: true);
+
+                Gen_Tools.Bind_To_Propertie_Async(textBox_Updating_Minutes, "Text", OLV_Mgr_Object, "Updating_Minutess", true, oClear: true);
+
+                Symbols_Update_InProgress = (bool) Gen_Tools.GetValue_ByPropertieName_As_Object(_Object_Mgr, "Symbols_Update_InProgress",out oResutl);
+
+                Symbols_Update_Paused = (bool)Gen_Tools.GetValue_ByPropertieName_As_Object(_Object_Mgr, "Symbols_Update_Paused", out oResutl);
+
+                if (Symbols_Update_InProgress) 
+                { 
+                    Gen_Tools.Update_Control_BackColor(button_Start_Q, Green_Color);
+                    Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
+                    Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor);
+                }
+                else 
+                {
+                    Gen_Tools.Update_Control_BackColor(button_Start_Q, Original_Button_BackColor);
+                    Gen_Tools.Update_Control_BackColor(button_Stop_Q, Red_Color);
+                   
+                    if (Symbols_Update_Paused) { Gen_Tools.Update_Control_BackColor(button_Pause_Q, Red_Color); }
+                    else { Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor); }
+                }
 
             }
             catch (Exception ex) { string oDebug = ex.Message; }
@@ -395,7 +441,7 @@ namespace OLVTools2020
                 string oSymbol = Gen_Tools.Get_Properie_String_By_Name(oobject, "Symbol");
                 string oAction = Gen_Tools.Get_Properie_String_By_Name(oobject, "Action");
                 
-                object[] oArg = { oAction + oSymbol };
+                object[] oArg = { oAction + oSymbol,null };
                 Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
 
 
@@ -436,7 +482,7 @@ namespace OLVTools2020
                 string oSymbol = Gen_Tools.Get_Properie_String_By_Name(oobject, "Symbol");
                 string oAction = "Load_Browser";
 
-                object[] oArg = { oAction + oSymbol };
+                object[] oArg = { oAction + oSymbol,null };
                 object oResult = null;
                 Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
 
@@ -445,22 +491,99 @@ namespace OLVTools2020
             catch (Exception ex) { string oDebug = ex.Message; }
         }
 
-        private void button_Start_Update_All_Click(object sender, EventArgs e)
+        private void button_Add_All_To_Q_Click(object sender, EventArgs e)
         {
-            string oAction = "Start_Updating_All_Symbols";
+            string oAction = "Add_All_To_Q";
 
-            object[] oArg = { oAction };
+            object[] oArg = { oAction,null };
             object oResult = null;
             Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
+            Gen_Tools.Update_Control_BackColor(button_Start_Q, Green_Color);
+            Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
+            Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor);
+
+
+            if (Symbols_Update_InProgress)
+            {
+                Gen_Tools.Update_Control_BackColor(button_Start_Q, Green_Color);
+                Gen_Tools.Update_Control_BackColor(button_Stop_Q, Red_Color);
+                Gen_Tools.Update_Control_BackColor(button_Pause_Q, Yellow_Color);
+            }
+            else
+            {
+                Gen_Tools.Update_Control_BackColor(button_Start_Q, Original_Button_BackColor);
+                Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
+
+                if (Symbols_Update_Paused) { Gen_Tools.Update_Control_BackColor(button_Pause_Q, Red_Color); }
+                else { Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor); }
+            }
+
         }
+
+        private void button_Start_Q_Click(object sender, EventArgs e)
+        {
+            string oAction = "Start_Q";
+
+            object[] oArg = { oAction,null };
+            object oResult = null;
+            Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
+            Gen_Tools.Update_Control_BackColor(button_Start_Q, Green_Color);
+            Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
+            Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor);
+        }
+
+        private void button_Pause_Q_Click(object sender, EventArgs e)
+        {
+            string oAction = "Pause_Q";
+
+            object[] oArg = { oAction,null };
+            object oResult = null;
+            Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
+            Gen_Tools.Update_Control_BackColor(button_Start_Q, Original_Button_BackColor);
+            Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
+            Gen_Tools.Update_Control_BackColor(button_Pause_Q, Yellow_Color);
+
+        }
+
+        private void button_Add_To_Update_Q_Click(object sender, EventArgs e)
+        {
+            string oAction = "Add_Symbols_To_Updating_Q";
+
+            object[] oArg = { oAction , List_Of_Filtered_Objects};
+            object oResult = null;
+            Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
+
+            Gen_Tools.Update_Control_BackColor(button_Start_Q, Green_Color);
+            Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
+            Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor);
+        }
+
+        private void button_Incert_To_Update_Q_Click(object sender, EventArgs e)
+        {
+            string oAction = "Insert_Symbols_To_Updating_Q";
+
+            object[] oArg = { oAction, List_Of_Filtered_Objects };
+            object oResult = null;
+            Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
+
+            Gen_Tools.Update_Control_BackColor(button_Start_Q, Green_Color);
+            Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
+            Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor);
+        }
+
 
         private void button_Stop_Update_All_Click(object sender, EventArgs e)
         {
-            string oAction = "Stop_Updating_All_Symbols";
+            string oAction = "Stop_Updating_Symbols_Q";
 
-            object[] oArg = { oAction };
+            object[] oArg = { oAction,null };
             object oResult = null;
             Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
+
+            Gen_Tools.Update_Control_BackColor(button_Start_Q, Original_Button_BackColor);
+            Gen_Tools.Update_Control_BackColor(button_Stop_Q, Red_Color);
+            Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor);
+            
         }
 
         private void button_Get_All_Forecast_Properties_Click(object sender, EventArgs e)
@@ -964,6 +1087,7 @@ namespace OLVTools2020
             MessageBox.Show("Restart Requred");
         }
 
+       
     }
 
 

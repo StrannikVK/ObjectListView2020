@@ -35,9 +35,17 @@
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label12;
+            System.Windows.Forms.Label label13;
+            System.Windows.Forms.Label label1122;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OLVSymbolsControl));
             this.olvColumnAction = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.textBox_Updating_Seconds = new System.Windows.Forms.TextBox();
+            this.button_Pause_Q = new System.Windows.Forms.Button();
+            this.button_Start_Q = new System.Windows.Forms.Button();
+            this.button_Stop_Q = new System.Windows.Forms.Button();
+            this.button_Add_All_To_Q = new System.Windows.Forms.Button();
+            this.textBox_In_Q = new System.Windows.Forms.TextBox();
             this.button_Save_Current_Columns2 = new System.Windows.Forms.Button();
             this.textBox_Elev_Average1 = new System.Windows.Forms.TextBox();
             this.last_SymbolTextBox = new System.Windows.Forms.TextBox();
@@ -45,8 +53,6 @@
             this.total_SymbolsTextBox = new System.Windows.Forms.TextBox();
             this.button_Get_All_Forecast_Properties = new System.Windows.Forms.Button();
             this.button_Refresh = new System.Windows.Forms.Button();
-            this.button_Stop_Update_All = new System.Windows.Forms.Button();
-            this.button_Start_Update_All = new System.Windows.Forms.Button();
             this.button_Load_Browser = new System.Windows.Forms.Button();
             this.symbols_ProcessedTextBox = new System.Windows.Forms.TextBox();
             this.textBoxFilter = new System.Windows.Forms.TextBox();
@@ -59,6 +65,8 @@
             this.tabControl_Symbols = new System.Windows.Forms.TabControl();
             this.tabPage_SymbolsObjects = new System.Windows.Forms.TabPage();
             this.tabPage_Filtered_Symbols = new System.Windows.Forms.TabPage();
+            this.button_Incert_To_Update_Q = new System.Windows.Forms.Button();
+            this.button_Add_To_Update_Q = new System.Windows.Forms.Button();
             this.textBox_Elev_Average_Filtered = new System.Windows.Forms.TextBox();
             this.textBox_Elev_Average2 = new System.Windows.Forms.TextBox();
             this.OLV_Objects_Filtered = new BrightIdeasSoftware.ObjectListView();
@@ -99,12 +107,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.textBox_Updating_Minutes = new System.Windows.Forms.TextBox();
             last_SymbolLabel = new System.Windows.Forms.Label();
             symbols_ProcessedLabel = new System.Windows.Forms.Label();
             total_SymbolsLabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label12 = new System.Windows.Forms.Label();
+            label13 = new System.Windows.Forms.Label();
+            label1122 = new System.Windows.Forms.Label();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OLV_Objects)).BeginInit();
             this.tabControl_Symbols.SuspendLayout();
@@ -118,7 +129,7 @@
             // last_SymbolLabel
             // 
             last_SymbolLabel.AutoSize = true;
-            last_SymbolLabel.Location = new System.Drawing.Point(680, 11);
+            last_SymbolLabel.Location = new System.Drawing.Point(685, 12);
             last_SymbolLabel.Name = "last_SymbolLabel";
             last_SymbolLabel.Size = new System.Drawing.Size(30, 13);
             last_SymbolLabel.TabIndex = 45;
@@ -127,16 +138,16 @@
             // symbols_ProcessedLabel
             // 
             symbols_ProcessedLabel.AutoSize = true;
-            symbols_ProcessedLabel.Location = new System.Drawing.Point(580, 11);
+            symbols_ProcessedLabel.Location = new System.Drawing.Point(610, 12);
             symbols_ProcessedLabel.Name = "symbols_ProcessedLabel";
-            symbols_ProcessedLabel.Size = new System.Drawing.Size(60, 13);
+            symbols_ProcessedLabel.Size = new System.Drawing.Size(36, 13);
             symbols_ProcessedLabel.TabIndex = 42;
-            symbols_ProcessedLabel.Text = "Processed:";
+            symbols_ProcessedLabel.Text = "Done:";
             // 
             // total_SymbolsLabel
             // 
             total_SymbolsLabel.AutoSize = true;
-            total_SymbolsLabel.Location = new System.Drawing.Point(516, 11);
+            total_SymbolsLabel.Location = new System.Drawing.Point(471, 12);
             total_SymbolsLabel.Name = "total_SymbolsLabel";
             total_SymbolsLabel.Size = new System.Drawing.Size(34, 13);
             total_SymbolsLabel.TabIndex = 41;
@@ -145,11 +156,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(757, 11);
+            label2.Location = new System.Drawing.Point(751, 12);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(59, 13);
+            label2.Size = new System.Drawing.Size(31, 13);
             label2.TabIndex = 47;
-            label2.Text = "Elev_Aver:";
+            label2.Text = "Elev:";
             // 
             // label3
             // 
@@ -169,6 +180,25 @@
             label12.TabIndex = 51;
             label12.Text = "Elev_Aver Filtered:";
             // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new System.Drawing.Point(541, 12);
+            label13.Name = "label13";
+            label13.Size = new System.Drawing.Size(33, 13);
+            label13.TabIndex = 56;
+            label13.Text = "In_Q:";
+            // 
+            // label1122
+            // 
+            label1122.AutoSize = true;
+            label1122.Location = new System.Drawing.Point(865, 12);
+            label1122.Name = "label1122";
+            label1122.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            label1122.Size = new System.Drawing.Size(84, 13);
+            label1122.TabIndex = 60;
+            label1122.Text = ":S_Updating_M:";
+            // 
             // olvColumnAction
             // 
             this.olvColumnAction.AspectName = "Action";
@@ -180,6 +210,15 @@
             // 
             this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox9.Controls.Add(this.textBox_Updating_Minutes);
+            this.groupBox9.Controls.Add(this.textBox_Updating_Seconds);
+            this.groupBox9.Controls.Add(label1122);
+            this.groupBox9.Controls.Add(this.button_Pause_Q);
+            this.groupBox9.Controls.Add(this.button_Start_Q);
+            this.groupBox9.Controls.Add(this.button_Stop_Q);
+            this.groupBox9.Controls.Add(this.button_Add_All_To_Q);
+            this.groupBox9.Controls.Add(this.textBox_In_Q);
+            this.groupBox9.Controls.Add(label13);
             this.groupBox9.Controls.Add(this.button_Save_Current_Columns2);
             this.groupBox9.Controls.Add(this.textBox_Elev_Average1);
             this.groupBox9.Controls.Add(this.last_SymbolTextBox);
@@ -187,8 +226,6 @@
             this.groupBox9.Controls.Add(this.total_SymbolsTextBox);
             this.groupBox9.Controls.Add(this.button_Get_All_Forecast_Properties);
             this.groupBox9.Controls.Add(this.button_Refresh);
-            this.groupBox9.Controls.Add(this.button_Stop_Update_All);
-            this.groupBox9.Controls.Add(this.button_Start_Update_All);
             this.groupBox9.Controls.Add(this.button_Load_Browser);
             this.groupBox9.Controls.Add(this.symbols_ProcessedTextBox);
             this.groupBox9.Controls.Add(symbols_ProcessedLabel);
@@ -201,11 +238,78 @@
             this.groupBox9.TabIndex = 40;
             this.groupBox9.TabStop = false;
             // 
+            // textBox_Updating_Seconds
+            // 
+            this.textBox_Updating_Seconds.Location = new System.Drawing.Point(822, 8);
+            this.textBox_Updating_Seconds.Name = "textBox_Updating_Seconds";
+            this.textBox_Updating_Seconds.ReadOnly = true;
+            this.textBox_Updating_Seconds.Size = new System.Drawing.Size(46, 20);
+            this.textBox_Updating_Seconds.TabIndex = 61;
+            this.textBox_Updating_Seconds.Text = "aaaaa";
+            // 
+            // button_Pause_Q
+            // 
+            this.button_Pause_Q.AutoSize = true;
+            this.button_Pause_Q.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_Pause_Q.Location = new System.Drawing.Point(185, 7);
+            this.button_Pause_Q.Name = "button_Pause_Q";
+            this.button_Pause_Q.Size = new System.Drawing.Size(47, 23);
+            this.button_Pause_Q.TabIndex = 59;
+            this.button_Pause_Q.Text = "Pause";
+            this.button_Pause_Q.UseVisualStyleBackColor = true;
+            this.button_Pause_Q.Click += new System.EventHandler(this.button_Pause_Q_Click);
+            // 
+            // button_Start_Q
+            // 
+            this.button_Start_Q.AutoSize = true;
+            this.button_Start_Q.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_Start_Q.Location = new System.Drawing.Point(147, 7);
+            this.button_Start_Q.Name = "button_Start_Q";
+            this.button_Start_Q.Size = new System.Drawing.Size(39, 23);
+            this.button_Start_Q.TabIndex = 58;
+            this.button_Start_Q.Text = "Start";
+            this.button_Start_Q.UseVisualStyleBackColor = true;
+            this.button_Start_Q.Click += new System.EventHandler(this.button_Start_Q_Click);
+            // 
+            // button_Stop_Q
+            // 
+            this.button_Stop_Q.AutoSize = true;
+            this.button_Stop_Q.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_Stop_Q.Location = new System.Drawing.Point(231, 7);
+            this.button_Stop_Q.Name = "button_Stop_Q";
+            this.button_Stop_Q.Size = new System.Drawing.Size(39, 23);
+            this.button_Stop_Q.TabIndex = 39;
+            this.button_Stop_Q.Text = "Stop";
+            this.button_Stop_Q.UseVisualStyleBackColor = true;
+            this.button_Stop_Q.Click += new System.EventHandler(this.button_Stop_Update_All_Click);
+            // 
+            // button_Add_All_To_Q
+            // 
+            this.button_Add_All_To_Q.AutoSize = true;
+            this.button_Add_All_To_Q.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_Add_All_To_Q.BackColor = System.Drawing.Color.Transparent;
+            this.button_Add_All_To_Q.Location = new System.Drawing.Point(76, 7);
+            this.button_Add_All_To_Q.Name = "button_Add_All_To_Q";
+            this.button_Add_All_To_Q.Size = new System.Drawing.Size(72, 23);
+            this.button_Add_All_To_Q.TabIndex = 38;
+            this.button_Add_All_To_Q.Text = "Add all to Q";
+            this.button_Add_All_To_Q.UseVisualStyleBackColor = false;
+            this.button_Add_All_To_Q.Click += new System.EventHandler(this.button_Add_All_To_Q_Click);
+            // 
+            // textBox_In_Q
+            // 
+            this.textBox_In_Q.Location = new System.Drawing.Point(572, 8);
+            this.textBox_In_Q.Name = "textBox_In_Q";
+            this.textBox_In_Q.ReadOnly = true;
+            this.textBox_In_Q.Size = new System.Drawing.Size(35, 20);
+            this.textBox_In_Q.TabIndex = 57;
+            this.textBox_In_Q.Text = "9999";
+            // 
             // button_Save_Current_Columns2
             // 
-            this.button_Save_Current_Columns2.Location = new System.Drawing.Point(853, 8);
+            this.button_Save_Current_Columns2.Location = new System.Drawing.Point(985, 8);
             this.button_Save_Current_Columns2.Name = "button_Save_Current_Columns2";
-            this.button_Save_Current_Columns2.Size = new System.Drawing.Size(136, 20);
+            this.button_Save_Current_Columns2.Size = new System.Drawing.Size(116, 20);
             this.button_Save_Current_Columns2.TabIndex = 55;
             this.button_Save_Current_Columns2.Text = "Save Current LayOut";
             this.button_Save_Current_Columns2.UseVisualStyleBackColor = true;
@@ -213,7 +317,7 @@
             // 
             // textBox_Elev_Average1
             // 
-            this.textBox_Elev_Average1.Location = new System.Drawing.Point(812, 8);
+            this.textBox_Elev_Average1.Location = new System.Drawing.Point(781, 8);
             this.textBox_Elev_Average1.Name = "textBox_Elev_Average1";
             this.textBox_Elev_Average1.ReadOnly = true;
             this.textBox_Elev_Average1.Size = new System.Drawing.Size(35, 20);
@@ -222,7 +326,7 @@
             // 
             // last_SymbolTextBox
             // 
-            this.last_SymbolTextBox.Location = new System.Drawing.Point(707, 8);
+            this.last_SymbolTextBox.Location = new System.Drawing.Point(712, 8);
             this.last_SymbolTextBox.Name = "last_SymbolTextBox";
             this.last_SymbolTextBox.ReadOnly = true;
             this.last_SymbolTextBox.Size = new System.Drawing.Size(35, 20);
@@ -233,13 +337,13 @@
             // 
             this.textBox_Generic_Filter.Location = new System.Drawing.Point(1, 9);
             this.textBox_Generic_Filter.Name = "textBox_Generic_Filter";
-            this.textBox_Generic_Filter.Size = new System.Drawing.Size(124, 20);
+            this.textBox_Generic_Filter.Size = new System.Drawing.Size(73, 20);
             this.textBox_Generic_Filter.TabIndex = 41;
             this.textBox_Generic_Filter.TextChanged += new System.EventHandler(this.textBox_Generic_Filter_TextChanged);
             // 
             // total_SymbolsTextBox
             // 
-            this.total_SymbolsTextBox.Location = new System.Drawing.Point(547, 8);
+            this.total_SymbolsTextBox.Location = new System.Drawing.Point(502, 8);
             this.total_SymbolsTextBox.Name = "total_SymbolsTextBox";
             this.total_SymbolsTextBox.ReadOnly = true;
             this.total_SymbolsTextBox.Size = new System.Drawing.Size(35, 20);
@@ -248,7 +352,7 @@
             // 
             // button_Get_All_Forecast_Properties
             // 
-            this.button_Get_All_Forecast_Properties.Location = new System.Drawing.Point(393, 8);
+            this.button_Get_All_Forecast_Properties.Location = new System.Drawing.Point(351, 8);
             this.button_Get_All_Forecast_Properties.Name = "button_Get_All_Forecast_Properties";
             this.button_Get_All_Forecast_Properties.Size = new System.Drawing.Size(67, 20);
             this.button_Get_All_Forecast_Properties.TabIndex = 40;
@@ -258,7 +362,7 @@
             // 
             // button_Refresh
             // 
-            this.button_Refresh.Location = new System.Drawing.Point(462, 8);
+            this.button_Refresh.Location = new System.Drawing.Point(417, 8);
             this.button_Refresh.Name = "button_Refresh";
             this.button_Refresh.Size = new System.Drawing.Size(53, 20);
             this.button_Refresh.TabIndex = 3;
@@ -266,31 +370,11 @@
             this.button_Refresh.UseVisualStyleBackColor = true;
             this.button_Refresh.Click += new System.EventHandler(this.button_Refresh_Click);
             // 
-            // button_Stop_Update_All
-            // 
-            this.button_Stop_Update_All.Location = new System.Drawing.Point(221, 8);
-            this.button_Stop_Update_All.Name = "button_Stop_Update_All";
-            this.button_Stop_Update_All.Size = new System.Drawing.Size(89, 20);
-            this.button_Stop_Update_All.TabIndex = 39;
-            this.button_Stop_Update_All.Text = "Stop Update All";
-            this.button_Stop_Update_All.UseVisualStyleBackColor = true;
-            this.button_Stop_Update_All.Click += new System.EventHandler(this.button_Stop_Update_All_Click);
-            // 
-            // button_Start_Update_All
-            // 
-            this.button_Start_Update_All.Location = new System.Drawing.Point(131, 8);
-            this.button_Start_Update_All.Name = "button_Start_Update_All";
-            this.button_Start_Update_All.Size = new System.Drawing.Size(91, 20);
-            this.button_Start_Update_All.TabIndex = 38;
-            this.button_Start_Update_All.Text = "Start Update All";
-            this.button_Start_Update_All.UseVisualStyleBackColor = true;
-            this.button_Start_Update_All.Click += new System.EventHandler(this.button_Start_Update_All_Click);
-            // 
             // button_Load_Browser
             // 
-            this.button_Load_Browser.Location = new System.Drawing.Point(310, 8);
+            this.button_Load_Browser.Location = new System.Drawing.Point(273, 8);
             this.button_Load_Browser.Name = "button_Load_Browser";
-            this.button_Load_Browser.Size = new System.Drawing.Size(84, 20);
+            this.button_Load_Browser.Size = new System.Drawing.Size(80, 20);
             this.button_Load_Browser.TabIndex = 37;
             this.button_Load_Browser.Text = "Load Browser";
             this.button_Load_Browser.UseVisualStyleBackColor = true;
@@ -298,7 +382,7 @@
             // 
             // symbols_ProcessedTextBox
             // 
-            this.symbols_ProcessedTextBox.Location = new System.Drawing.Point(635, 8);
+            this.symbols_ProcessedTextBox.Location = new System.Drawing.Point(642, 8);
             this.symbols_ProcessedTextBox.Name = "symbols_ProcessedTextBox";
             this.symbols_ProcessedTextBox.ReadOnly = true;
             this.symbols_ProcessedTextBox.Size = new System.Drawing.Size(35, 20);
@@ -350,7 +434,7 @@
             this.OLV_Objects.HeaderWordWrap = true;
             this.OLV_Objects.HideSelection = false;
             this.OLV_Objects.IncludeColumnHeadersInCopy = true;
-            this.OLV_Objects.Location = new System.Drawing.Point(3, 34);
+            this.OLV_Objects.Location = new System.Drawing.Point(3, 32);
             this.OLV_Objects.Name = "OLV_Objects";
             this.OLV_Objects.OverlayText.Alignment = System.Drawing.ContentAlignment.BottomLeft;
             this.OLV_Objects.OverlayText.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -362,7 +446,7 @@
             this.OLV_Objects.ShowGroups = false;
             this.OLV_Objects.ShowHeaderInAllViews = false;
             this.OLV_Objects.ShowItemToolTips = true;
-            this.OLV_Objects.Size = new System.Drawing.Size(1179, 434);
+            this.OLV_Objects.Size = new System.Drawing.Size(1179, 436);
             this.OLV_Objects.SortGroupItemsByPrimaryColumn = false;
             this.OLV_Objects.TabIndex = 36;
             this.OLV_Objects.TriStateCheckBoxes = true;
@@ -435,6 +519,8 @@
             // 
             // tabPage_Filtered_Symbols
             // 
+            this.tabPage_Filtered_Symbols.Controls.Add(this.button_Incert_To_Update_Q);
+            this.tabPage_Filtered_Symbols.Controls.Add(this.button_Add_To_Update_Q);
             this.tabPage_Filtered_Symbols.Controls.Add(this.textBox_Elev_Average_Filtered);
             this.tabPage_Filtered_Symbols.Controls.Add(label12);
             this.tabPage_Filtered_Symbols.Controls.Add(this.textBox_Elev_Average2);
@@ -455,6 +541,30 @@
             this.tabPage_Filtered_Symbols.TabIndex = 2;
             this.tabPage_Filtered_Symbols.Text = "Filtered Symbols";
             this.tabPage_Filtered_Symbols.UseVisualStyleBackColor = true;
+            // 
+            // button_Incert_To_Update_Q
+            // 
+            this.button_Incert_To_Update_Q.AutoSize = true;
+            this.button_Incert_To_Update_Q.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_Incert_To_Update_Q.Location = new System.Drawing.Point(921, 4);
+            this.button_Incert_To_Update_Q.Name = "button_Incert_To_Update_Q";
+            this.button_Incert_To_Update_Q.Size = new System.Drawing.Size(118, 23);
+            this.button_Incert_To_Update_Q.TabIndex = 54;
+            this.button_Incert_To_Update_Q.Text = "Incert_To_Update_Q";
+            this.button_Incert_To_Update_Q.UseVisualStyleBackColor = true;
+            this.button_Incert_To_Update_Q.Click += new System.EventHandler(this.button_Incert_To_Update_Q_Click);
+            // 
+            // button_Add_To_Update_Q
+            // 
+            this.button_Add_To_Update_Q.AutoSize = true;
+            this.button_Add_To_Update_Q.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_Add_To_Update_Q.Location = new System.Drawing.Point(1045, 4);
+            this.button_Add_To_Update_Q.Name = "button_Add_To_Update_Q";
+            this.button_Add_To_Update_Q.Size = new System.Drawing.Size(110, 23);
+            this.button_Add_To_Update_Q.TabIndex = 53;
+            this.button_Add_To_Update_Q.Text = "Add_To_Update_Q";
+            this.button_Add_To_Update_Q.UseVisualStyleBackColor = true;
+            this.button_Add_To_Update_Q.Click += new System.EventHandler(this.button_Add_To_Update_Q_Click);
             // 
             // textBox_Elev_Average_Filtered
             // 
@@ -501,7 +611,7 @@
             this.OLV_Objects_Filtered.ShowGroups = false;
             this.OLV_Objects_Filtered.ShowHeaderInAllViews = false;
             this.OLV_Objects_Filtered.ShowItemToolTips = true;
-            this.OLV_Objects_Filtered.Size = new System.Drawing.Size(969, 434);
+            this.OLV_Objects_Filtered.Size = new System.Drawing.Size(1179, 434);
             this.OLV_Objects_Filtered.SortGroupItemsByPrimaryColumn = false;
             this.OLV_Objects_Filtered.TabIndex = 37;
             this.OLV_Objects_Filtered.TriStateCheckBoxes = true;
@@ -515,9 +625,11 @@
             // 
             // button_Continue_Filter
             // 
-            this.button_Continue_Filter.Location = new System.Drawing.Point(591, 5);
+            this.button_Continue_Filter.AutoSize = true;
+            this.button_Continue_Filter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_Continue_Filter.Location = new System.Drawing.Point(585, 5);
             this.button_Continue_Filter.Name = "button_Continue_Filter";
-            this.button_Continue_Filter.Size = new System.Drawing.Size(90, 23);
+            this.button_Continue_Filter.Size = new System.Drawing.Size(87, 23);
             this.button_Continue_Filter.TabIndex = 33;
             this.button_Continue_Filter.Text = "Continue_Filter";
             this.button_Continue_Filter.UseVisualStyleBackColor = true;
@@ -556,9 +668,11 @@
             // 
             // button_Apply_Filter
             // 
+            this.button_Apply_Filter.AutoSize = true;
+            this.button_Apply_Filter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_Apply_Filter.Location = new System.Drawing.Point(508, 5);
             this.button_Apply_Filter.Name = "button_Apply_Filter";
-            this.button_Apply_Filter.Size = new System.Drawing.Size(84, 23);
+            this.button_Apply_Filter.Size = new System.Drawing.Size(71, 23);
             this.button_Apply_Filter.TabIndex = 27;
             this.button_Apply_Filter.Text = "Apply_Filter";
             this.button_Apply_Filter.UseVisualStyleBackColor = true;
@@ -899,6 +1013,15 @@
             this.label9.TabIndex = 44;
             this.label9.Text = "Formats:";
             // 
+            // textBox_Updating_Minutes
+            // 
+            this.textBox_Updating_Minutes.Location = new System.Drawing.Point(944, 8);
+            this.textBox_Updating_Minutes.Name = "textBox_Updating_Minutes";
+            this.textBox_Updating_Minutes.ReadOnly = true;
+            this.textBox_Updating_Minutes.Size = new System.Drawing.Size(35, 20);
+            this.textBox_Updating_Minutes.TabIndex = 62;
+            this.textBox_Updating_Minutes.Text = "aaaaa";
+            // 
             // OLVSymbolsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -936,8 +1059,7 @@
         private BrightIdeasSoftware.HotItemStyle hotItemStyle1;
         private System.Windows.Forms.Button button_Refresh;
         private System.Windows.Forms.Button button_Load_Browser;
-        private System.Windows.Forms.Button button_Stop_Update_All;
-        private System.Windows.Forms.Button button_Start_Update_All;
+        private System.Windows.Forms.Button button_Add_All_To_Q;
         private BrightIdeasSoftware.OLVColumn olvColumnCompanyName;
         private System.Windows.Forms.Button button_Get_All_Forecast_Properties;
         private System.Windows.Forms.TabControl tabControl_Symbols;
@@ -989,5 +1111,13 @@
         private System.Windows.Forms.Button button_Export_Current_Columns;
         private System.Windows.Forms.Button button_Import_Replace_Columns;
         private System.Windows.Forms.TextBox textBox_Elev_Average_Filtered;
+        private System.Windows.Forms.TextBox textBox_In_Q;
+        private System.Windows.Forms.Button button_Add_To_Update_Q;
+        private System.Windows.Forms.Button button_Stop_Q;
+        private System.Windows.Forms.Button button_Pause_Q;
+        private System.Windows.Forms.Button button_Start_Q;
+        private System.Windows.Forms.Button button_Incert_To_Update_Q;
+        private System.Windows.Forms.TextBox textBox_Updating_Seconds;
+        private System.Windows.Forms.TextBox textBox_Updating_Minutes;
     }
 }
