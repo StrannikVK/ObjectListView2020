@@ -21,6 +21,7 @@ namespace OLVTools2020.Utilities
         public double Updating_Minutess { get { return Updating_Seconds / 60; } }
         public string Last_Symbol { get; set; } = "N/A";
         public double Elevation_Average { get; set; } = 0;
+        public double Elev_Average_Filtered { get;  set; } = 0;
         public string Sorting_Parameter { get; set; } = "Low_Percentage";
         public List<PropertieColumn> List_Of_PropertieColumn { get; set; } = new List<PropertieColumn>();
 

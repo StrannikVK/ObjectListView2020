@@ -40,6 +40,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OLVSymbolsControl));
             this.olvColumnAction = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.textBox_Updating_Minutes = new System.Windows.Forms.TextBox();
             this.textBox_Updating_Seconds = new System.Windows.Forms.TextBox();
             this.button_Pause_Q = new System.Windows.Forms.Button();
             this.button_Start_Q = new System.Windows.Forms.Button();
@@ -107,7 +108,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox_Updating_Minutes = new System.Windows.Forms.TextBox();
             last_SymbolLabel = new System.Windows.Forms.Label();
             symbols_ProcessedLabel = new System.Windows.Forms.Label();
             total_SymbolsLabel = new System.Windows.Forms.Label();
@@ -237,6 +237,15 @@
             this.groupBox9.Size = new System.Drawing.Size(1176, 33);
             this.groupBox9.TabIndex = 40;
             this.groupBox9.TabStop = false;
+            // 
+            // textBox_Updating_Minutes
+            // 
+            this.textBox_Updating_Minutes.Location = new System.Drawing.Point(944, 8);
+            this.textBox_Updating_Minutes.Name = "textBox_Updating_Minutes";
+            this.textBox_Updating_Minutes.ReadOnly = true;
+            this.textBox_Updating_Minutes.Size = new System.Drawing.Size(35, 20);
+            this.textBox_Updating_Minutes.TabIndex = 62;
+            this.textBox_Updating_Minutes.Text = "aaaaa";
             // 
             // textBox_Updating_Seconds
             // 
@@ -659,6 +668,8 @@
             // 
             // comboBox_Parameters
             // 
+            this.comboBox_Parameters.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox_Parameters.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox_Parameters.FormattingEnabled = true;
             this.comboBox_Parameters.Location = new System.Drawing.Point(117, 5);
             this.comboBox_Parameters.Name = "comboBox_Parameters";
@@ -1012,15 +1023,6 @@
             this.label9.Size = new System.Drawing.Size(47, 13);
             this.label9.TabIndex = 44;
             this.label9.Text = "Formats:";
-            // 
-            // textBox_Updating_Minutes
-            // 
-            this.textBox_Updating_Minutes.Location = new System.Drawing.Point(944, 8);
-            this.textBox_Updating_Minutes.Name = "textBox_Updating_Minutes";
-            this.textBox_Updating_Minutes.ReadOnly = true;
-            this.textBox_Updating_Minutes.Size = new System.Drawing.Size(35, 20);
-            this.textBox_Updating_Minutes.TabIndex = 62;
-            this.textBox_Updating_Minutes.Text = "aaaaa";
             // 
             // OLVSymbolsControl
             // 

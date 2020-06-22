@@ -13,19 +13,19 @@ namespace OLVTools2020
     public partial class OLVSymbolsControl : UserControl
     {
 
-        public const string TimeFormat_yyyy_MM_dd = "yyyy'-'MM'-'dd";
+        private const string TimeFormat_yyyy_MM_dd = "yyyy'-'MM'-'dd";
         private object _Object_Mgr;
         private GenericTools.Tools Gen_Tools = new GenericTools.Tools();
-        public GenericTools.Files.FileObject File_Object { get; set; } = new GenericTools.Files.FileObject();
-        public string Current_Directory { get { return System.IO.Directory.GetCurrentDirectory(); } }
-        public string Parent_Directory { get { return System.IO.Directory.GetParent(Current_Directory).FullName; } }
+        private GenericTools.Files.FileObject File_Object { get; set; } = new GenericTools.Files.FileObject();
+        private string Current_Directory { get { return System.IO.Directory.GetCurrentDirectory(); } }
+        private string Parent_Directory { get { return System.IO.Directory.GetParent(Current_Directory).FullName; } }
 
         private System.Drawing.Color Green_Color = System.Drawing.Color.Green;
         private System.Drawing.Color Yellow_Color = System.Drawing.Color.Yellow;
         private System.Drawing.Color Red_Color = System.Drawing.Color.Salmon;
         private System.Drawing.Color Original_Button_BackColor = System.Drawing.Color.Transparent;
-        public bool Symbols_Update_InProgress { get; private set; } = false;
-        public bool Symbols_Update_Paused { get; private set; } = false;
+        private bool Symbols_Update_InProgress { get;  set; } = false;
+        private bool Symbols_Update_Paused { get;  set; } = false;
 
         public GenericTools.SettingsManager Settings_Mgr;
 
@@ -37,11 +37,11 @@ namespace OLVTools2020
             SelectedIndexChanged_Event?.Invoke(sender,e);
         }
 
-        public List<object> List_Of_Objects { get; private set; } = new List<object>();
-        public List<object> List_Of_Filtered_Objects { get; private set; } = new List<object>();
+        private List<object> List_Of_Objects { get; /*private*/ set; } = new List<object>();
+        private List<object> List_Of_Filtered_Objects { get; /*private*/ set; } = new List<object>();
 
         public Utilities.OLVMgrObject OLV_Mgr_Object = new Utilities.OLVMgrObject();
-        public double Elev_Average_Filtered { get;  set; } = 0;
+        //protected double Elev_Average_Filtered { get; private set; } = 0;
         
         
 
@@ -218,6 +218,8 @@ namespace OLVTools2020
 
                 Gen_Tools.Bind_To_Propertie_Async(textBox_Elev_Average2, "Text", OLV_Mgr_Object, "Elevation_Average", true, oClear: true);
 
+                Gen_Tools.Bind_To_Propertie_Async(textBox_Elev_Average_Filtered, "Text", OLV_Mgr_Object, "Elev_Average_Filtered", true, oClear: true);
+
                 Gen_Tools.Bind_To_Propertie_Async(comboBox_Parameters, "Text", OLV_Mgr_Object, "Filter_Name", false, oClear: true);
 
                 Gen_Tools.Bind_To_Propertie_Async(comboBox_Condition, "Text", OLV_Mgr_Object, "Filter_Condition", false, oClear: true);
@@ -325,8 +327,8 @@ namespace OLVTools2020
                         oSum = oSum + oSymbolObject.Elevation_52_Weeks;
                         if (oSymbolObject.Elevation_52_Weeks != 0) { oDevider = oDevider + 1; }
                     }
-                    if (oDevider > 0) { ovalue = oSum / oDevider; Elev_Average_Filtered = ovalue; }
-                    Gen_Tools.Bind_To_Propertie_Async(textBox_Elev_Average_Filtered, "Text", this, "Elev_Average_Filtered", true, oClear: true);
+                    if (oDevider > 0) { ovalue = oSum / oDevider; OLV_Mgr_Object.Elev_Average_Filtered = ovalue; }
+                    
 
                 }
                 catch (Exception ex) { string oDebug = ex.Message; }
@@ -561,14 +563,25 @@ namespace OLVTools2020
         private void button_Incert_To_Update_Q_Click(object sender, EventArgs e)
         {
             string oAction = "Insert_Symbols_To_Updating_Q";
+            try 
+            {
+                List<object> oList_Of_Filtered_Objects = new List<object>();
+                foreach (OLVListItem oItem in OLV_Objects_Filtered.Items)
+                {
+                    oList_Of_Filtered_Objects.Add(oItem.RowObject);
+                }
+                //OLV_Objects_Filtered.LastSortOrder
 
-            object[] oArg = { oAction, List_Of_Filtered_Objects };
-            object oResult = null;
-            Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
+                object[] oArg = { oAction, oList_Of_Filtered_Objects };
+                object oResult = null;
+                Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
 
-            Gen_Tools.Update_Control_BackColor(button_Start_Q, Green_Color);
-            Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
-            Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor);
+                Gen_Tools.Update_Control_BackColor(button_Start_Q, Green_Color);
+                Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
+                Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor);
+            }
+            catch (Exception ex) { string oDebug = ex.Message; }
+            
         }
 
 
