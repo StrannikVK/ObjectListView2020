@@ -24,7 +24,14 @@ namespace OLVTools2020.Utilities
         public double Elev_Average_Filtered { get;  set; } = 0;
         public string Sorting_Parameter { get; set; } = "Low_Percentage";
         public List<PropertieColumn> List_Of_PropertieColumn { get; set; } = new List<PropertieColumn>();
+        public List<OLVFilterObject> List_Of_OLVFiltersObject { get; set; } = new List<OLVFilterObject>();
 
+    }
+    public class OLVFilterObject
+    {
+        public string Filter_Name { get; set; } = "Name";
+        public string Filter_Condition { get; set; } = "=";
+        public string Filter_Value { get; set; } = "0";
     }
 
 }

@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace OLVTools2020
 {
-    public partial class OLVSymbolsControl : UserControl
+    public partial class OLVForecastControl : UserControl
     {
 
         private const string TimeFormat_yyyy_MM_dd = "yyyy'-'MM'-'dd";
@@ -45,7 +45,7 @@ namespace OLVTools2020
         
         
 
-        public OLVSymbolsControl()
+        public OLVForecastControl()
         {
             InitializeComponent();
             Symbols_Update_InProgress = false;
@@ -80,12 +80,7 @@ namespace OLVTools2020
             {
                 bool oGood = false;
                 object oObject = Gen_Tools.GetValue_ByPropertieName_As_Object(_Object_Mgr, "OLV_Mgr_Object", out oGood);
-                if (oGood) 
-                { 
-                    OLV_Mgr_Object = oObject as Utilities.OLVMgrObject;
-                    OLV_Fast_Filters.SetObjects(OLV_Mgr_Object.List_Of_OLVFiltersObject);
-                    OLV_Fast_Filters.CheckBoxes = false;
-                }
+                if (oGood) { OLV_Mgr_Object = oObject as Utilities.OLVMgrObject; }
                 //                List_Of_SymbolObject.Sort((x, y) => Gen_Tools.GetValue_ByPropertieName_As_Double(x, oSortingParameter).CompareTo(Gen_Tools.GetValue_ByPropertieName_As_Double(y, oSortingParameter)));
 
                 OLV_Mgr_Object.List_Of_PropertieColumn.Sort((x,y)=> (x.DisplayIndex).CompareTo(y.DisplayIndex));
@@ -126,10 +121,7 @@ namespace OLVTools2020
                 List<string> oList = Parameters_List();
                 if (oList.Count > 0)
                 {
-                    Gen_Tools.ComboBox_Create_Items_List_of_String(comboBox_Parameters, oList);
-                    comboBox_Parameters.SelectedIndex = 0;
-                    comboBox_Condition.SelectedIndex = 1;
-
+                   
                     Gen_Tools.ComboBox_Create_Items_List_of_String(comboBox_Parameters_Columns, oList);
                     comboBox_Parameters_Columns.SelectedIndex = 0;
                     comboBox_Parameters_Columns.SelectedIndex = 1;
@@ -144,11 +136,11 @@ namespace OLVTools2020
             {
                 SetupColumnWithButton();
                 List_Of_Colums_AspectName();
-                Refresh_Objects();
+               
             }
             catch (Exception ex) { string oDebug = ex.Message; }
+            Refresh_Objects();
 
-            
         }
 
 
@@ -213,31 +205,31 @@ namespace OLVTools2020
             {
                 bool oResutl = false;
 
-                Gen_Tools.Bind_To_Propertie_Async(total_SymbolsTextBox, "Text", OLV_Mgr_Object, "Total_Symbols", false, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(total_SymbolsTextBox, "Text", OLV_Mgr_Object, "Total_Symbols", false, oClear: true);
 
-                Gen_Tools.Bind_To_Propertie_Async(symbols_ProcessedTextBox, "Text", OLV_Mgr_Object, "Symbols_Processed", false, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(symbols_ProcessedTextBox, "Text", OLV_Mgr_Object, "Symbols_Processed", false, oClear: true);
 
-                Gen_Tools.Bind_To_Propertie_Async(last_SymbolTextBox, "Text", OLV_Mgr_Object, "Last_Symbol", false, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(last_SymbolTextBox, "Text", OLV_Mgr_Object, "Last_Symbol", false, oClear: true);
 
-                Gen_Tools.Bind_To_Propertie_Async(textBox_Elev_Average1, "Text", OLV_Mgr_Object, "Elevation_Average", true, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(textBox_Elev_Average1, "Text", OLV_Mgr_Object, "Elevation_Average", true, oClear: true);
 
-                Gen_Tools.Bind_To_Propertie_Async(textBox_Elev_Average2, "Text", OLV_Mgr_Object, "Elevation_Average", true, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(textBox_Elev_Average2, "Text", OLV_Mgr_Object, "Elevation_Average", true, oClear: true);
 
-                Gen_Tools.Bind_To_Propertie_Async(textBox_Elev_Average_Filtered, "Text", OLV_Mgr_Object, "Elev_Average_Filtered", true, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(textBox_Elev_Average_Filtered, "Text", OLV_Mgr_Object, "Elev_Average_Filtered", true, oClear: true);
 
-                Gen_Tools.Bind_To_Propertie_Async(comboBox_Parameters, "Text", OLV_Mgr_Object, "Filter_Name", false, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(comboBox_Parameters, "Text", OLV_Mgr_Object, "Filter_Name", false, oClear: true);
 
-                Gen_Tools.Bind_To_Propertie_Async(comboBox_Condition, "Text", OLV_Mgr_Object, "Filter_Condition", false, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(comboBox_Condition, "Text", OLV_Mgr_Object, "Filter_Condition", false, oClear: true);
 
-                Gen_Tools.Bind_To_Propertie_Async(textBox_Filter_Value, "Text", OLV_Mgr_Object, "Filter_Value", false, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(textBox_Filter_Value, "Text", OLV_Mgr_Object, "Filter_Value", false, oClear: true);
                 
-                Gen_Tools.Bind_To_Propertie_Async(textBox_Sorting_Parameter, "Text", OLV_Mgr_Object, "Sorting_Parameter", false, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(textBox_Sorting_Parameter, "Text", OLV_Mgr_Object, "Sorting_Parameter", false, oClear: true);
 
-                Gen_Tools.Bind_To_Propertie_Async(textBox_In_Q, "Text", OLV_Mgr_Object, "In_Q", false, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(textBox_In_Q, "Text", OLV_Mgr_Object, "In_Q", false, oClear: true);
 
-                Gen_Tools.Bind_To_Propertie_Async(textBox_Updating_Seconds, "Text", OLV_Mgr_Object, "Updating_Seconds", true, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(textBox_Updating_Seconds, "Text", OLV_Mgr_Object, "Updating_Seconds", true, oClear: true);
 
-                Gen_Tools.Bind_To_Propertie_Async(textBox_Updating_Minutes, "Text", OLV_Mgr_Object, "Updating_Minutess", true, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(textBox_Updating_Minutes, "Text", OLV_Mgr_Object, "Updating_Minutess", true, oClear: true);
 
                 Symbols_Update_InProgress = (bool) Gen_Tools.GetValue_ByPropertieName_As_Object(_Object_Mgr, "Symbols_Update_InProgress",out oResutl);
 
@@ -262,102 +254,11 @@ namespace OLVTools2020
             catch (Exception ex) { string oDebug = ex.Message; }
 
             OLV_Objects.RefreshObjects(List_Of_Objects);
-            OLV_Fast_Filters.RefreshObjects(List_Of_Objects);
             //OLV_Objects_Filtered.RefreshObjects(List_Of_Filtered_Objects);
 
         }
 
-        public void Refresh_Filtered_Objects()
-        {
-            OLV_Objects_Filtered.RefreshObjects(List_Of_Filtered_Objects);
-        }
-        private void button_Refresh_Filtered_Objects_Click(object sender, EventArgs e)
-        {
 
-            Refresh_Filtered_Objects();
-        }
-
-
-        private bool OLV_Objects_Filtered_Initilized=false;
-
-        public void Setup_OLV_Objects_Filtered()
-        {
-            if (OLV_Objects_Filtered_Initilized) { return;  }
-            OLV_Objects_Filtered_Initilized = true;
-            try
-            {
-                List<ColumnHeader> oList_ColumnHeader = new List<ColumnHeader>();
-                foreach (OLVColumn oOLVColumn in OLV_Objects.AllColumns)
-                {
-                    //if (oOLVColumn.Name == "olvColumnAction") { continue; }
-                    OLVColumn oNewOLVColumn = new OLVColumn();
-                    object oSource = oOLVColumn;
-                    object oDest = oNewOLVColumn;
-                    //string oReportLog = "";
-                    Gen_Tools.Update_All_Properties_By_Object( oDest, oSource);//,out  oReportLog);
-                    OLV_Objects_Filtered.AllColumns.Add(oNewOLVColumn);
-                    oList_ColumnHeader.Add(oNewOLVColumn);
-
-                }
-                OLV_Objects_Filtered.Columns.AddRange(oList_ColumnHeader.ToArray());
-                OLV_Objects_Filtered.CheckBoxes = false;
-                OLV_Objects_Filtered.ButtonClick += OLV_Objects_ButtonClick;
-                List_Of_Filtered_Objects = List_Of_Objects;
-            }
-            catch (Exception ex) { string oDebug = ex.Message; }
-
-        }
-
-
-        public bool Apply_Filter(string oParameter_Name, string oParameter_Value, string oCondition)
-        {
-            //WalletInvestorObject oObject = new WalletInvestorObject();
-            bool oIsSucsecfull = false;
-            double oDouble_Value = 0;
-            try
-            {
-                oDouble_Value = Gen_Tools.String_To_Double(oParameter_Value, 5, ref oIsSucsecfull);
-                if (oIsSucsecfull)
-                {
-                    if (oCondition == ">") { List_Of_Filtered_Objects = List_Of_Objects.FindAll(X => Gen_Tools.GetValue_ByPropertieName_As_Double(X, oParameter_Name) > oDouble_Value); }
-                    if (oCondition == "<") { List_Of_Filtered_Objects = List_Of_Objects.FindAll(X => Gen_Tools.GetValue_ByPropertieName_As_Double(X, oParameter_Name) < oDouble_Value); }
-                    if (oCondition == "=") { List_Of_Filtered_Objects = List_Of_Objects.FindAll(X => Gen_Tools.GetValue_ByPropertieName_As_Double(X, oParameter_Name) == oDouble_Value); }
-                    if (oCondition == "<>") { List_Of_Filtered_Objects = List_Of_Objects.FindAll(X => Gen_Tools.GetValue_ByPropertieName_As_Double(X, oParameter_Name) != oDouble_Value); }
-
-                }
-                else
-                {
-                    if (oCondition == "=") { List_Of_Filtered_Objects = List_Of_Objects.FindAll(X => Gen_Tools.GetValue_ByPropertieName_As_Object(X, oParameter_Name, out oIsSucsecfull).ToString().ToUpper() == oParameter_Value.ToUpper()); }
-                    if (oCondition == "<>") { List_Of_Filtered_Objects = List_Of_Objects.FindAll(X => Gen_Tools.GetValue_ByPropertieName_As_Object(X, oParameter_Name, out oIsSucsecfull).ToString().ToUpper() != oParameter_Value.ToUpper()); }
-                    if (oCondition == "Contains") { List_Of_Filtered_Objects = List_Of_Objects.FindAll(X => Gen_Tools.GetValue_ByPropertieName_As_Object(X, oParameter_Name, out oIsSucsecfull).ToString().ToUpper().Contains(oParameter_Value.ToUpper())); }
-
-                }
-
-                double ovalue = 0;
-                try
-                {
-                    int oDevider = 0;
-                    double oSum = 0;
-                    foreach (GenericTools.SymbolObject oSymbolObject in List_Of_Filtered_Objects)
-                    {
-                        oSum = oSum + oSymbolObject.Elevation_52_Weeks;
-                        if (oSymbolObject.Elevation_52_Weeks != 0) { oDevider = oDevider + 1; }
-                    }
-                    if (oDevider > 0) { ovalue = oSum / oDevider; OLV_Mgr_Object.Elev_Average_Filtered = ovalue; }
-                    
-
-                }
-                catch (Exception ex) { string oDebug = ex.Message; }
-
-
-
-
-                return true;
-            }
-            catch (Exception ex) { string oDebug = ex.Message; }
-
-            return true;
-        }
 
         private void SetupColumnWithButton() {
 
@@ -422,8 +323,8 @@ namespace OLVTools2020
                 //if (this.checkBox_LowPotential.Checked)
                 //    filters.Add(new ModelFilter(delegate (object model) { return ((object)model).Filter_Value <= ((object)model).Filter_Level; }));
 
-                if (!String.IsNullOrEmpty(this.textBoxFilter.Text))
-                    filters.Add(new TextMatchFilter(this.OLV_Objects, this.textBoxFilter.Text));
+                if (!String.IsNullOrEmpty(this.textBox_Generic_Filter.Text))
+                    filters.Add(new TextMatchFilter(this.OLV_Objects, this.textBox_Generic_Filter.Text));
 
                 // Use AdditionalFilter (instead of ModelFilter) since AdditionalFilter plays well with any
                 // extra filtering the user might specify via the column header
@@ -435,10 +336,6 @@ namespace OLVTools2020
             catch (Exception ex) { string oDebug = ex.Message; }
 
             
-        }
-
-        private void textBoxFilter_Validated(object sender, EventArgs e) {
-            this.RebuildFilters();
         }
 
         private void ObjectListButtonControl_Load(object sender, EventArgs e)
@@ -456,10 +353,10 @@ namespace OLVTools2020
                 object oModel = e.Model;
                 object oobject = (object)e.Model;
                 object oResult = null;
-                string oSymbol = Gen_Tools.Get_Properie_String_By_Name(oobject, "Symbol");
-                string oAction = Gen_Tools.Get_Properie_String_By_Name(oobject, "Action");
+                //string oSymbol = Gen_Tools.Get_Properie_String_By_Name(oobject, "Symbol");
+                string oAction = "Forecast_Browser"; /*Gen_Tools.Get_Properie_String_By_Name(oobject, "Action");*/
                 
-                object[] oArg = { oAction + oSymbol,null };
+                object[] oArg = { oAction , oobject };
                 Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
 
 
@@ -471,11 +368,6 @@ namespace OLVTools2020
 
         }
 
-        private void OLV_Objects_Filtered_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            object oModel = OLV_Objects_Filtered.SelectedObject;
-            Raise_SelectedIndexChanged_Event(oModel, e);
-        }
         private void OLV_Objects_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -514,54 +406,6 @@ namespace OLVTools2020
             catch (Exception ex) { string oDebug = ex.Message; }
         }
 
-        private void button_Add_All_To_Q_Click(object sender, EventArgs e)
-        {
-            string oAction = "Add_All_To_Q";
-            try
-            {
-                List<object> oList_Of_Filtered_Objects = new List<object>();
-                foreach (OLVListItem oItem in OLV_Objects.Items)
-                {
-                    oList_Of_Filtered_Objects.Add(oItem.RowObject);
-                }
-                //OLV_Objects_Filtered.LastSortOrder
-
-                object[] oArg = { oAction, oList_Of_Filtered_Objects };
-                object oResult = null;
-                Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
-
-                Gen_Tools.Update_Control_BackColor(button_Start_Q, Green_Color);
-                Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
-                Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor);
-            }
-            catch { };
-
-            
-
-            //object[] oArg = { oAction,null };
-            //object oResult = null;
-            //Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
-            //Gen_Tools.Update_Control_BackColor(button_Start_Q, Green_Color);
-            //Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
-            //Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor);
-
-
-            //if (Symbols_Update_InProgress)
-            //{
-            //    Gen_Tools.Update_Control_BackColor(button_Start_Q, Green_Color);
-            //    Gen_Tools.Update_Control_BackColor(button_Stop_Q, Red_Color);
-            //    Gen_Tools.Update_Control_BackColor(button_Pause_Q, Yellow_Color);
-            //}
-            //else
-            //{
-            //    Gen_Tools.Update_Control_BackColor(button_Start_Q, Original_Button_BackColor);
-            //    Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
-
-            //    if (Symbols_Update_Paused) { Gen_Tools.Update_Control_BackColor(button_Pause_Q, Red_Color); }
-            //    else { Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor); }
-            //}
-
-        }
 
         private void button_Start_Q_Click(object sender, EventArgs e)
         {
@@ -586,44 +430,6 @@ namespace OLVTools2020
             Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
             Gen_Tools.Update_Control_BackColor(button_Pause_Q, Yellow_Color);
 
-        }
-
-        private void button_Add_To_Update_Q_Click(object sender, EventArgs e)
-        {
-            string oAction = "Add_Symbols_To_Updating_Q";
-
-            object[] oArg = { oAction , List_Of_Filtered_Objects};
-            object oResult = null;
-            Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
-
-            Gen_Tools.Update_Control_BackColor(button_Start_Q, Green_Color);
-            Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
-            Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor);
-            Refresh_Filtered_Objects();
-        }
-
-        private void button_Incert_To_Update_Q_Click(object sender, EventArgs e)
-        {
-            string oAction = "Insert_Symbols_To_Updating_Q";
-            try 
-            {
-                List<object> oList_Of_Filtered_Objects = new List<object>();
-                foreach (OLVListItem oItem in OLV_Objects_Filtered.Items)
-                {
-                    oList_Of_Filtered_Objects.Add(oItem.RowObject);
-                }
-                //OLV_Objects_Filtered.LastSortOrder
-
-                object[] oArg = { oAction, oList_Of_Filtered_Objects };
-                object oResult = null;
-                Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
-
-                Gen_Tools.Update_Control_BackColor(button_Start_Q, Green_Color);
-                Gen_Tools.Update_Control_BackColor(button_Stop_Q, Original_Button_BackColor);
-                Gen_Tools.Update_Control_BackColor(button_Pause_Q, Original_Button_BackColor);
-            }
-            catch (Exception ex) { string oDebug = ex.Message; }
-            Refresh_Filtered_Objects();
         }
 
 
@@ -668,104 +474,7 @@ namespace OLVTools2020
             //Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
         }
 
-        private void button_Apply_Filter_Click(object sender, EventArgs e)
-        {
-            Apply_Filter(comboBox_Parameters.Text, textBox_Filter_Value.Text, comboBox_Condition.Text);
-
-            OLV_Objects_Filtered.SetObjects(List_Of_Filtered_Objects);
-
-            foreach (OLVColumn oOLVColumn in OLV_Objects_Filtered.Columns)
-            {
-                if (oOLVColumn.AspectName == "Action")
-                {
-                    oOLVColumn.IsButton = true;
-
-                    // How will the button be sized? That can either be:
-                    //   - FixedBounds. Each button is ButtonSize in size
-                    //   - CellBounds. Each button is as wide as the cell, inset by CellPadding
-                    //   - TextBounds. Each button resizes to match the width of the text plus ButtonPadding
-                    oOLVColumn.ButtonSizing = OLVColumn.ButtonSizingMode.CellBounds;
-                    oOLVColumn.ButtonSize = new Size(80, 26);
-
-                    // Make the buttons clickable even if the row itself is disabled
-                    oOLVColumn.EnableButtonWhenItemIsDisabled = true;
-                    //oOLVColumn.AspectName = "Action";
-                    oOLVColumn.TextAlign = HorizontalAlignment.Center;
-
-                    break;
-                }
-            }
-            Refresh_Filtered_Objects();
-        }
-
-        private void button_Continue_Filter_Click(object sender, EventArgs e)
-        {
-            Continue_Filter(comboBox_Parameters.Text, textBox_Filter_Value.Text, comboBox_Condition.Text);
-
-            OLV_Objects_Filtered.SetObjects(List_Of_Filtered_Objects);
-            Refresh_Filtered_Objects();
-        }
-
-        private void button_Apply_Saved_Filters_Click(object sender, EventArgs e)
-        {
-            int i = 0;
-            if (OLV_Mgr_Object.List_Of_OLVFiltersObject==null || OLV_Mgr_Object.List_Of_OLVFiltersObject.Count<1) { button_Apply_Filter_Click(sender, e); return ;   }
-            foreach (OLVFilterObject oOLVFilterObject in OLV_Mgr_Object.List_Of_OLVFiltersObject)
-            {
-                if (i==0) 
-                {
-                    i = i + 1;
-                    Apply_Filter(oOLVFilterObject.Filter_Name, oOLVFilterObject.Filter_Value, oOLVFilterObject.Filter_Condition);
-                }
-                else
-                {
-                    Continue_Filter(oOLVFilterObject.Filter_Name, oOLVFilterObject.Filter_Value, oOLVFilterObject.Filter_Condition);
-                }
-                
-            }
-            OLV_Objects_Filtered.SetObjects(List_Of_Filtered_Objects);
-            Refresh_Filtered_Objects();
-        }
-
-        private void button_Continue_Filter_Add_To_Saved_Click(object sender, EventArgs e)
-        {
-
-            OLVFilterObject oOLVFilterObject = new OLVFilterObject();
-            oOLVFilterObject.Filter_Name = comboBox_Parameters.Text;
-            oOLVFilterObject.Filter_Value = textBox_Filter_Value.Text;
-            oOLVFilterObject.Filter_Condition = comboBox_Condition.Text;
-            OLV_Mgr_Object.List_Of_OLVFiltersObject.Add(oOLVFilterObject);
-            Continue_Filter(oOLVFilterObject.Filter_Name, oOLVFilterObject.Filter_Value, oOLVFilterObject.Filter_Condition);
-            
-
-            OLV_Objects_Filtered.SetObjects(List_Of_Filtered_Objects);
-            Refresh_Filtered_Objects();
-        }
-
-        private void button_Clear_Saved_Filters_Click(object sender, EventArgs e)
-        {
-            OLV_Mgr_Object.List_Of_OLVFiltersObject.Clear();
-        }
-
-        public bool Continue_Filter(string oParameter_Name, string oParameter_Value, string oCondition)
-        {
-            List<object> oList_Of_Filtered_Objects = new List<object>();
-            bool oIsSucsecfull = false;
-            double oDouble_Value = 0;
-            try
-            {
-                oDouble_Value = Gen_Tools.String_To_Double(oParameter_Value, 5, ref oIsSucsecfull);
-                if (oCondition == ">") { oList_Of_Filtered_Objects = List_Of_Filtered_Objects.FindAll(X => Gen_Tools.GetValue_ByPropertieName_As_Double(X, oParameter_Name) > oDouble_Value); }
-                if (oCondition == "<") { oList_Of_Filtered_Objects = List_Of_Filtered_Objects.FindAll(X => Gen_Tools.GetValue_ByPropertieName_As_Double(X, oParameter_Name) < oDouble_Value); }
-                if (oCondition == "=") { oList_Of_Filtered_Objects = List_Of_Filtered_Objects.FindAll(X => Gen_Tools.GetValue_ByPropertieName_As_Double(X, oParameter_Name) == oDouble_Value); }
-                List_Of_Filtered_Objects = oList_Of_Filtered_Objects;
-                return true;
-            }
-            catch (Exception ex) { string oDebug = ex.Message; }
-
-            return true;
-        }
-
+      
         private void textBox_Generic_Filter_TextChanged(object sender, EventArgs e)
         {
             try
@@ -775,22 +484,6 @@ namespace OLVTools2020
                     filters.Add(new TextMatchFilter(this.OLV_Objects, this.textBox_Generic_Filter.Text));
 
                 this.OLV_Objects.AdditionalFilter = filters.Count == 0 ? null : new CompositeAllFilter(filters);
-
-            }
-
-            catch (Exception ex) { string oDebug = ex.Message; }
-
-        }
-
-        private void textBoxFilter_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                List<IModelFilter> filters = new List<IModelFilter>();
-                if (!String.IsNullOrEmpty(this.textBoxFilter.Text))
-                    filters.Add(new TextMatchFilter(this.OLV_Objects_Filtered, this.textBoxFilter.Text));
-
-                this.OLV_Objects_Filtered.AdditionalFilter = filters.Count == 0 ? null : new CompositeAllFilter(filters);
 
             }
 
@@ -859,7 +552,6 @@ namespace OLVTools2020
                 oPropertieColumn.AspectToStringFormat = oAspectToStringFormat;
                 OLV_Mgr_Object.List_Of_PropertieColumn.Add(oPropertieColumn);
                 OLV_Add_Column(OLV_Objects, oPropertieColumn);
-                if (OLV_Objects_Filtered_Initilized) { OLV_Add_Column(OLV_Objects_Filtered, oPropertieColumn); }
             }
             catch (Exception ex) { string oDebug = ex.Message; return; }
 
@@ -975,17 +667,6 @@ namespace OLVTools2020
                
             }
             
-            foreach (OLVColumn oOLVColumn in OLV_Objects_Filtered.Columns)
-            {
-                if (oOLVColumn.AspectName == comboBox_Existing_Columns.Text)
-                {
-                    OLV_Objects_Filtered.Columns.Remove(oOLVColumn);
-                    OLV_Objects_Filtered.AllColumns.Remove(oOLVColumn);
-
-                    break;
-                }
-
-            }
             foreach (Utilities.PropertieColumn oOLVColumn in OLV_Mgr_Object.List_Of_PropertieColumn)
             {
                 if (oOLVColumn.AspectName == comboBox_Existing_Columns.Text)
@@ -1027,17 +708,17 @@ namespace OLVTools2020
                 
             }
 
-            foreach (OLVColumn oOLVColumn in OLV_Objects_Filtered.Columns)
-            {
-                if (oOLVColumn.AspectName == comboBox_Existing_Columns.Text)
-                {
-                    oOLVColumn.DisplayIndex = oIndex;
+            //foreach (OLVColumn oOLVColumn in OLV_Objects_Filtered.Columns)
+            //{
+            //    if (oOLVColumn.AspectName == comboBox_Existing_Columns.Text)
+            //    {
+            //        oOLVColumn.DisplayIndex = oIndex;
                    
-                    break;
-                }
+            //        break;
+            //    }
 
 
-            }
+            //}
 
             List_Of_Colums_AspectName();
             Refresh_Objects();
@@ -1079,6 +760,7 @@ namespace OLVTools2020
         {
             button_Save_Current_Columns_Click(sender, e);
         }
+
         private void button_Update_Sorting_Parameter_Click(object sender, EventArgs e)
         {
             textBox_Sorting_Parameter.Text = comboBox_Parameters_Columns.Text;
@@ -1089,33 +771,33 @@ namespace OLVTools2020
         {
             try 
             {
-                if (tabControl_Symbols.SelectedTab.Name== "tabPage_Filtered_Symbols") 
-                { Setup_OLV_Objects_Filtered();
-                    OLV_Objects_Filtered.SetObjects(List_Of_Filtered_Objects);
+                //if (tabControl_Symbols.SelectedTab.Name== "tabPage_Filtered_Symbols") 
+                //{ Setup_OLV_Objects_Filtered();
+                //    OLV_Objects_Filtered.SetObjects(List_Of_Filtered_Objects);
 
-                    foreach (OLVColumn oOLVColumn in OLV_Objects_Filtered.Columns)
-                    {
-                        if (oOLVColumn.AspectName == "Action")
-                        {
-                            oOLVColumn.IsButton = true;
+                //    foreach (OLVColumn oOLVColumn in OLV_Objects_Filtered.Columns)
+                //    {
+                //        if (oOLVColumn.AspectName == "Action")
+                //        {
+                //            oOLVColumn.IsButton = true;
 
-                            // How will the button be sized? That can either be:
-                            //   - FixedBounds. Each button is ButtonSize in size
-                            //   - CellBounds. Each button is as wide as the cell, inset by CellPadding
-                            //   - TextBounds. Each button resizes to match the width of the text plus ButtonPadding
-                            oOLVColumn.ButtonSizing = OLVColumn.ButtonSizingMode.CellBounds;
-                            oOLVColumn.ButtonSize = new Size(80, 26);
+                //            // How will the button be sized? That can either be:
+                //            //   - FixedBounds. Each button is ButtonSize in size
+                //            //   - CellBounds. Each button is as wide as the cell, inset by CellPadding
+                //            //   - TextBounds. Each button resizes to match the width of the text plus ButtonPadding
+                //            oOLVColumn.ButtonSizing = OLVColumn.ButtonSizingMode.CellBounds;
+                //            oOLVColumn.ButtonSize = new Size(80, 26);
 
-                            // Make the buttons clickable even if the row itself is disabled
-                            oOLVColumn.EnableButtonWhenItemIsDisabled = true;
-                            //oOLVColumn.AspectName = "Action";
-                            oOLVColumn.TextAlign = HorizontalAlignment.Center;
+                //            // Make the buttons clickable even if the row itself is disabled
+                //            oOLVColumn.EnableButtonWhenItemIsDisabled = true;
+                //            //oOLVColumn.AspectName = "Action";
+                //            oOLVColumn.TextAlign = HorizontalAlignment.Center;
 
-                            break;
-                        }
-                    }
-                    Refresh_Objects();
-                }
+                //            break;
+                //        }
+                //    }
+                //    Refresh_Objects();
+                //}
                 //tabPage_Filtered_Symbols
             }
             catch (Exception ex) { string oDebug = ex.Message; }
@@ -1182,6 +864,7 @@ namespace OLVTools2020
             MessageBox.Show("Restart Requred");
         }
 
+       
     }
 
 

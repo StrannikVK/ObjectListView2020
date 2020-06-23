@@ -37,6 +37,7 @@ namespace OLVTools2020
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.olvSymbolsControl1 = new OLVTools2020.OLVSymbolsControl();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,11 +72,21 @@ namespace OLVTools2020
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // olvSymbolsControl1
+            // 
+            this.olvSymbolsControl1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.olvSymbolsControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.olvSymbolsControl1.Location = new System.Drawing.Point(12, 44);
+            this.olvSymbolsControl1.Name = "olvSymbolsControl1";
+            this.olvSymbolsControl1.Size = new System.Drawing.Size(806, 497);
+            this.olvSymbolsControl1.TabIndex = 4;
+            // 
             // ObjectsControllerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 566);
+            this.Controls.Add(this.olvSymbolsControl1);
             this.Controls.Add(this.statusStrip1);
             this.Name = "ObjectsControllerForm";
             this.Text = "ObjectListView Demo";
@@ -92,5 +103,6 @@ namespace OLVTools2020
         public ToolStripStatusLabel toolStripStatusLabel1;
         private OLVForecastCNNControl olvForecastCNNControl1;
         private OLVYahooControl olvMarketSymbolControl1;
+        private OLVSymbolsControl olvSymbolsControl1;
     }
 }

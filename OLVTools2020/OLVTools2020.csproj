@@ -152,6 +152,12 @@
     <Compile Include="Old_To_Be_Deleted\OLVMarketSymbolControlOld.Designer.cs">
       <DependentUpon>OLVMarketSymbolControlOld.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\OLVForecastControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\OLVForecastControl.Designer.cs">
+      <DependentUpon>OLVForecastControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\OLVSymbolsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -304,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Old_To_Be_Deleted\OLVMarketSymbolControlOld.resx">
       <DependentUpon>OLVMarketSymbolControlOld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\OLVForecastControl.resx">
+      <DependentUpon>OLVForecastControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\OLVSymbolsControl.resx">
       <DependentUpon>OLVSymbolsControl.cs</DependentUpon>
