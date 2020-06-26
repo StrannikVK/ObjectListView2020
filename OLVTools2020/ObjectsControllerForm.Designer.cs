@@ -33,53 +33,17 @@ namespace OLVTools2020
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:DoNotPassLiteralsAsLocalizedParameters", MessageId = "System.Windows.Forms.Control.set_Text(System.String)")]
 		private void InitializeComponent()
 		{
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.olvSymbolsControl1 = new OLVTools2020.OLVSymbolsControl();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
-            // 
-            // toolStripStatusLabel3
-            // 
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(897, 17);
-            this.toolStripStatusLabel3.Spring = true;
-            this.toolStripStatusLabel3.Text = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(0, 0);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(200, 100);
-            this.tabPage7.TabIndex = 0;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel3});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 544);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(912, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // olvSymbolsControl1
             // 
             this.olvSymbolsControl1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.olvSymbolsControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.olvSymbolsControl1.Location = new System.Drawing.Point(12, 44);
+            this.olvSymbolsControl1.Location = new System.Drawing.Point(12, 40);
             this.olvSymbolsControl1.Name = "olvSymbolsControl1";
-            this.olvSymbolsControl1.Size = new System.Drawing.Size(806, 497);
-            this.olvSymbolsControl1.TabIndex = 4;
+            this.olvSymbolsControl1.Size = new System.Drawing.Size(792, 497);
+            this.olvSymbolsControl1.TabIndex = 0;
             // 
             // ObjectsControllerForm
             // 
@@ -87,22 +51,13 @@ namespace OLVTools2020
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 566);
             this.Controls.Add(this.olvSymbolsControl1);
-            this.Controls.Add(this.statusStrip1);
             this.Name = "ObjectsControllerForm";
             this.Text = "ObjectListView Demo";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private TabPage tabPage7;
-        public ToolStripStatusLabel toolStripStatusLabel3;
-        public ToolStripStatusLabel toolStripStatusLabel1;
-        private OLVForecastCNNControl olvForecastCNNControl1;
-        private OLVYahooControl olvMarketSymbolControl1;
-        private OLVSymbolsControl olvSymbolsControl1;
-    }
+
+		private OLVSymbolsControl olvSymbolsControl1;
+	}
 }

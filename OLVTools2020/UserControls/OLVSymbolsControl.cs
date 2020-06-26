@@ -20,13 +20,15 @@ namespace OLVTools2020
         private string Current_Directory { get { return System.IO.Directory.GetCurrentDirectory(); } }
         private string Parent_Directory { get { return System.IO.Directory.GetParent(Current_Directory).FullName; } }
 
+        private HeaderFormatStyle _Header_Format_Style;
         private System.Drawing.Color Green_Color = System.Drawing.Color.Green;
         private System.Drawing.Color Yellow_Color = System.Drawing.Color.Yellow;
         private System.Drawing.Color Red_Color = System.Drawing.Color.Salmon;
         private System.Drawing.Color Original_Button_BackColor = System.Drawing.Color.Transparent;
         private bool Symbols_Update_InProgress { get;  set; } = false;
         private bool Symbols_Update_Paused { get;  set; } = false;
-
+        private string _Result_Text = "";
+        private bool _Result_Bool =false;
         private GenericTools.SettingsManager Settings_Mgr;
 
         //public List<PropertieColumn> List_Of_Visible_Columns_Sorted { get; set; } = new List<PropertieColumn>();
@@ -48,6 +50,8 @@ namespace OLVTools2020
         public OLVSymbolsControl()
         {
             InitializeComponent();
+            _Header_Format_Style = new HeaderFormatStyle();
+            _Header_Format_Style.SetBackColor(Color.LightGray);
             Symbols_Update_InProgress = false;
             Symbols_Update_Paused = false;
             try 
@@ -58,6 +62,28 @@ namespace OLVTools2020
                 Settings_Mgr = new GenericTools.SettingsManager(File_Object.FullFile_Name);
             }
             catch (Exception ex) { string oDebug = ex.Message; }
+
+           
+        }
+
+        private void button_Fill_Update_From_DT_Click(object sender, EventArgs e)
+        {
+            string oAction = "Fill_Update_From_DT";
+            try
+            {
+                List<object> oList_Of_Filtered_Objects = new List<object>();
+                foreach (OLVListItem oItem in OLV_Objects.Items)
+                {
+                    oList_Of_Filtered_Objects.Add(oItem.RowObject);
+                }
+                //OLV_Objects_Filtered.LastSortOrder
+
+                object[] oArg = { oAction, null };
+                object oResult = null;
+                Gen_Tools.Start_Generic_Methods(_Object_Mgr, "Action_Execute", oArg, out oResult);
+
+            }
+            catch { };
         }
 
         public void Initial_Set_List_Of_Object(List<object> oList_Of_Object, object oObject_Mgr)
@@ -132,7 +158,9 @@ namespace OLVTools2020
 
                     Gen_Tools.ComboBox_Create_Items_List_of_String(comboBox_Parameters_Columns, oList);
                     comboBox_Parameters_Columns.SelectedIndex = 0;
-                    comboBox_Parameters_Columns.SelectedIndex = 1;
+
+                    Gen_Tools.ComboBox_Create_Items_List_of_String(comboBox_Select_Propertie_To_Edit, oList);
+                    comboBox_Select_Propertie_To_Edit.SelectedIndex = 0;
                 }
 
 
@@ -235,7 +263,7 @@ namespace OLVTools2020
 
                 Gen_Tools.Bind_To_Propertie_Async(textBox_In_Q, "Text", OLV_Mgr_Object, "In_Q", false, oClear: true);
 
-                Gen_Tools.Bind_To_Propertie_Async(textBox_Updating_Seconds, "Text", OLV_Mgr_Object, "Updating_Seconds", true, oClear: true);
+                //Gen_Tools.Bind_To_Propertie_Async(textBox_Updating_Seconds, "Text", OLV_Mgr_Object, "Updating_Seconds", true, oClear: true);
 
                 Gen_Tools.Bind_To_Propertie_Async(textBox_Updating_Minutes, "Text", OLV_Mgr_Object, "Updating_Minutess", true, oClear: true);
 
@@ -307,7 +335,6 @@ namespace OLVTools2020
             catch (Exception ex) { string oDebug = ex.Message; }
 
         }
-
 
         public bool Apply_Filter(string oParameter_Name, string oParameter_Value, string oCondition)
         {
@@ -879,6 +906,7 @@ namespace OLVTools2020
                 {
                     foreach (OLVColumn oOLVColumn in oObjectListView.AllColumns)
                     {
+                        oOLVColumn.HeaderFormatStyle = _Header_Format_Style;
                         if (oOLVColumn.AspectName == oPropertieColumn.AspectName) { return null; }
                     }
                 }
@@ -895,11 +923,13 @@ namespace OLVTools2020
 
                 oObjectListView.AllColumns.Add(oNewOLVColumn);
                 //oObjectListView.Columns.Add(oNewOLVColumn);
-                if(oPropertieColumn.IsVisible) { oObjectListView.Columns.Add(oNewOLVColumn); } 
+                if(oPropertieColumn.IsVisible) { oObjectListView.Columns.Add(oNewOLVColumn); }
+                oNewOLVColumn.ToolTipText = oNewOLVColumn.AspectName;
                 //oNewOLVColumn.Text = oPropertieColumn.Text;
                 //oNewOLVColumn.DisplayIndex = oPropertieColumn.DisplayIndex;
                 //oNewOLVColumn.Width = oPropertieColumn.Width;
-               // oObjectListView.CheckBoxes = false;
+                // oObjectListView.CheckBoxes = false;
+                oNewOLVColumn.HeaderFormatStyle = _Header_Format_Style;
 
                 return oNewOLVColumn;
             }
@@ -1182,6 +1212,33 @@ namespace OLVTools2020
             MessageBox.Show("Restart Requred");
         }
 
+        private void comboBox_Select_Propertie_To_Edit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try 
+            {
+                textBox_Old_Propertie_Value.Text = Gen_Tools.GetValue_ByPropertieName_As_Object(List_Of_Objects[0], comboBox_Select_Propertie_To_Edit.Text,out _Result_Bool).ToString();
+            }
+            catch (Exception ex) { string oDebug = ex.Message; }
+
+        }
+
+        private void button_Replace_Update_Propertie_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                foreach (object item in List_Of_Objects)
+                {
+                    if (Gen_Tools.GetValue_ByPropertieName_As_Object(item, comboBox_Select_Propertie_To_Edit.Text, out _Result_Bool).ToString()== textBox_Old_Propertie_Value.Text
+                        || textBox_Old_Propertie_Value.Text=="*") 
+                    {
+                        if (textBox_New_Propertie_Value.Text=="") { return;   }//more work needed for double and etc
+                        Gen_Tools.Set_Propertie_By_Name_And_Value(item, comboBox_Select_Propertie_To_Edit.Text, textBox_New_Propertie_Value.Text);
+                    }
+                }
+            
+            }
+            catch (Exception ex) { string oDebug = ex.Message; }
+        }
     }
 
 

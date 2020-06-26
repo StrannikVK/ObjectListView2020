@@ -35,14 +35,12 @@
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label12;
             System.Windows.Forms.Label label13;
-            System.Windows.Forms.Label label1122;
             System.Windows.Forms.Label label14;
             System.Windows.Forms.Label label16;
             this.olvColumnAction = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.button_Fill_Update_From_DT = new System.Windows.Forms.Button();
             this.textBox_Updating_Minutes = new System.Windows.Forms.TextBox();
-            this.textBox_Updating_Seconds = new System.Windows.Forms.TextBox();
             this.button_Pause_Q = new System.Windows.Forms.Button();
             this.button_Start_Q = new System.Windows.Forms.Button();
             this.button_Stop_Q = new System.Windows.Forms.Button();
@@ -65,7 +63,12 @@
             this.tabControl_Symbols = new System.Windows.Forms.TabControl();
             this.tabPage_SymbolsObjects = new System.Windows.Forms.TabPage();
             this.tabPage_Filtered_Symbols = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
             this.button_Refresh_Filtered_Objects = new System.Windows.Forms.Button();
+            this.OLV_Fast_Filters = new BrightIdeasSoftware.FastObjectListView();
+            this.olvColumn_Filter_Name = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn_Filter_Condition = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn_Filter_Value = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.button_Clear_Saved_Filters = new System.Windows.Forms.Button();
             this.button_Apply_Saved_Filters = new System.Windows.Forms.Button();
             this.button_Continue_Filter_Add_To_Saved = new System.Windows.Forms.Button();
@@ -82,11 +85,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage_Settings_Controls_Collumns = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
-            this.OLV_Fast_Filters = new BrightIdeasSoftware.FastObjectListView();
-            this.olvColumn_Filter_Name = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Filter_Condition = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn_Filter_Value = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.button_Replace_Update_Propertie = new System.Windows.Forms.Button();
+            this.textBox_New_Propertie_Value = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox_Old_Propertie_Value = new System.Windows.Forms.TextBox();
+            this.comboBox_Select_Propertie_To_Edit = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.button_Import_Replace_Columns = new System.Windows.Forms.Button();
             this.button_Import_New_Columns = new System.Windows.Forms.Button();
             this.button_Export_Current_Columns = new System.Windows.Forms.Button();
@@ -123,7 +128,6 @@
             label3 = new System.Windows.Forms.Label();
             label12 = new System.Windows.Forms.Label();
             label13 = new System.Windows.Forms.Label();
-            label1122 = new System.Windows.Forms.Label();
             label14 = new System.Windows.Forms.Label();
             label16 = new System.Windows.Forms.Label();
             this.groupBox9.SuspendLayout();
@@ -131,16 +135,16 @@
             this.tabControl_Symbols.SuspendLayout();
             this.tabPage_SymbolsObjects.SuspendLayout();
             this.tabPage_Filtered_Symbols.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OLV_Fast_Filters)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OLV_Objects_Filtered)).BeginInit();
             this.tabPage_Settings_Controls_Collumns.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OLV_Fast_Filters)).BeginInit();
             this.tabPage_Symbol_Properties.SuspendLayout();
             this.SuspendLayout();
             // 
             // last_SymbolLabel
             // 
             last_SymbolLabel.AutoSize = true;
-            last_SymbolLabel.Location = new System.Drawing.Point(482, 12);
+            last_SymbolLabel.Location = new System.Drawing.Point(490, 12);
             last_SymbolLabel.Name = "last_SymbolLabel";
             last_SymbolLabel.Size = new System.Drawing.Size(30, 13);
             last_SymbolLabel.TabIndex = 45;
@@ -149,7 +153,7 @@
             // symbols_ProcessedLabel
             // 
             symbols_ProcessedLabel.AutoSize = true;
-            symbols_ProcessedLabel.Location = new System.Drawing.Point(477, 32);
+            symbols_ProcessedLabel.Location = new System.Drawing.Point(485, 32);
             symbols_ProcessedLabel.Name = "symbols_ProcessedLabel";
             symbols_ProcessedLabel.Size = new System.Drawing.Size(36, 13);
             symbols_ProcessedLabel.TabIndex = 42;
@@ -158,7 +162,7 @@
             // total_SymbolsLabel
             // 
             total_SymbolsLabel.AutoSize = true;
-            total_SymbolsLabel.Location = new System.Drawing.Point(408, 12);
+            total_SymbolsLabel.Location = new System.Drawing.Point(416, 12);
             total_SymbolsLabel.Name = "total_SymbolsLabel";
             total_SymbolsLabel.Size = new System.Drawing.Size(34, 13);
             total_SymbolsLabel.TabIndex = 41;
@@ -167,7 +171,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(334, 12);
+            label2.Location = new System.Drawing.Point(342, 12);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(31, 13);
             label2.TabIndex = 47;
@@ -194,25 +198,16 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new System.Drawing.Point(408, 32);
+            label13.Location = new System.Drawing.Point(416, 32);
             label13.Name = "label13";
             label13.Size = new System.Drawing.Size(33, 13);
             label13.TabIndex = 56;
             label13.Text = "In_Q:";
             // 
-            // label1122
-            // 
-            label1122.AutoSize = true;
-            label1122.Location = new System.Drawing.Point(552, 10);
-            label1122.Name = "label1122";
-            label1122.Size = new System.Drawing.Size(66, 13);
-            label1122.TabIndex = 60;
-            label1122.Text = "Updating_S:";
-            // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new System.Drawing.Point(44, 30);
+            label14.Location = new System.Drawing.Point(8, 73);
             label14.Name = "label14";
             label14.Size = new System.Drawing.Size(72, 13);
             label14.TabIndex = 58;
@@ -221,7 +216,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new System.Drawing.Point(550, 33);
+            label16.Location = new System.Drawing.Point(568, 13);
             label16.Name = "label16";
             label16.Size = new System.Drawing.Size(68, 13);
             label16.TabIndex = 64;
@@ -240,7 +235,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox9.Controls.Add(this.button_Fill_Update_From_DT);
             this.groupBox9.Controls.Add(this.textBox_Updating_Minutes);
-            this.groupBox9.Controls.Add(this.textBox_Updating_Seconds);
             this.groupBox9.Controls.Add(this.button_Pause_Q);
             this.groupBox9.Controls.Add(this.button_Start_Q);
             this.groupBox9.Controls.Add(this.button_Stop_Q);
@@ -260,7 +254,6 @@
             this.groupBox9.Controls.Add(label2);
             this.groupBox9.Controls.Add(total_SymbolsLabel);
             this.groupBox9.Controls.Add(label16);
-            this.groupBox9.Controls.Add(label1122);
             this.groupBox9.Controls.Add(this.button_Add_All_To_Q);
             this.groupBox9.Location = new System.Drawing.Point(4, -2);
             this.groupBox9.Name = "groupBox9";
@@ -270,38 +263,29 @@
             // 
             // button_Fill_Update_From_DT
             // 
-            this.button_Fill_Update_From_DT.AutoSize = true;
             this.button_Fill_Update_From_DT.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_Fill_Update_From_DT.BackColor = System.Drawing.Color.Transparent;
             this.button_Fill_Update_From_DT.Location = new System.Drawing.Point(2, 8);
             this.button_Fill_Update_From_DT.Name = "button_Fill_Update_From_DT";
-            this.button_Fill_Update_From_DT.Size = new System.Drawing.Size(113, 23);
+            this.button_Fill_Update_From_DT.Size = new System.Drawing.Size(113, 20);
             this.button_Fill_Update_From_DT.TabIndex = 63;
             this.button_Fill_Update_From_DT.Text = "Fill/Update From DT";
             this.button_Fill_Update_From_DT.UseVisualStyleBackColor = false;
+            this.button_Fill_Update_From_DT.Click += new System.EventHandler(this.button_Fill_Update_From_DT_Click);
             // 
             // textBox_Updating_Minutes
             // 
-            this.textBox_Updating_Minutes.Location = new System.Drawing.Point(613, 28);
+            this.textBox_Updating_Minutes.Location = new System.Drawing.Point(631, 8);
             this.textBox_Updating_Minutes.Name = "textBox_Updating_Minutes";
             this.textBox_Updating_Minutes.ReadOnly = true;
             this.textBox_Updating_Minutes.Size = new System.Drawing.Size(46, 20);
             this.textBox_Updating_Minutes.TabIndex = 62;
             this.textBox_Updating_Minutes.Text = "aaaaa";
             // 
-            // textBox_Updating_Seconds
-            // 
-            this.textBox_Updating_Seconds.Location = new System.Drawing.Point(613, 8);
-            this.textBox_Updating_Seconds.Name = "textBox_Updating_Seconds";
-            this.textBox_Updating_Seconds.ReadOnly = true;
-            this.textBox_Updating_Seconds.Size = new System.Drawing.Size(46, 20);
-            this.textBox_Updating_Seconds.TabIndex = 61;
-            this.textBox_Updating_Seconds.Text = "aaaaa";
-            // 
             // button_Pause_Q
             // 
             this.button_Pause_Q.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_Pause_Q.Location = new System.Drawing.Point(205, 28);
+            this.button_Pause_Q.Location = new System.Drawing.Point(211, 28);
             this.button_Pause_Q.Name = "button_Pause_Q";
             this.button_Pause_Q.Size = new System.Drawing.Size(45, 20);
             this.button_Pause_Q.TabIndex = 59;
@@ -312,7 +296,7 @@
             // button_Start_Q
             // 
             this.button_Start_Q.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_Start_Q.Location = new System.Drawing.Point(114, 28);
+            this.button_Start_Q.Location = new System.Drawing.Point(120, 28);
             this.button_Start_Q.Name = "button_Start_Q";
             this.button_Start_Q.Size = new System.Drawing.Size(45, 20);
             this.button_Start_Q.TabIndex = 58;
@@ -323,7 +307,7 @@
             // button_Stop_Q
             // 
             this.button_Stop_Q.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_Stop_Q.Location = new System.Drawing.Point(159, 28);
+            this.button_Stop_Q.Location = new System.Drawing.Point(165, 28);
             this.button_Stop_Q.Name = "button_Stop_Q";
             this.button_Stop_Q.Size = new System.Drawing.Size(45, 20);
             this.button_Stop_Q.TabIndex = 39;
@@ -333,7 +317,7 @@
             // 
             // textBox_In_Q
             // 
-            this.textBox_In_Q.Location = new System.Drawing.Point(439, 28);
+            this.textBox_In_Q.Location = new System.Drawing.Point(447, 28);
             this.textBox_In_Q.Name = "textBox_In_Q";
             this.textBox_In_Q.ReadOnly = true;
             this.textBox_In_Q.Size = new System.Drawing.Size(35, 20);
@@ -342,7 +326,7 @@
             // 
             // button_Save_Current_Columns2
             // 
-            this.button_Save_Current_Columns2.Location = new System.Drawing.Point(665, 9);
+            this.button_Save_Current_Columns2.Location = new System.Drawing.Point(561, 28);
             this.button_Save_Current_Columns2.Name = "button_Save_Current_Columns2";
             this.button_Save_Current_Columns2.Size = new System.Drawing.Size(116, 20);
             this.button_Save_Current_Columns2.TabIndex = 55;
@@ -352,7 +336,7 @@
             // 
             // textBox_Elev_Average1
             // 
-            this.textBox_Elev_Average1.Location = new System.Drawing.Point(364, 8);
+            this.textBox_Elev_Average1.Location = new System.Drawing.Point(372, 8);
             this.textBox_Elev_Average1.Name = "textBox_Elev_Average1";
             this.textBox_Elev_Average1.ReadOnly = true;
             this.textBox_Elev_Average1.Size = new System.Drawing.Size(35, 20);
@@ -361,7 +345,7 @@
             // 
             // last_SymbolTextBox
             // 
-            this.last_SymbolTextBox.Location = new System.Drawing.Point(509, 8);
+            this.last_SymbolTextBox.Location = new System.Drawing.Point(517, 8);
             this.last_SymbolTextBox.Name = "last_SymbolTextBox";
             this.last_SymbolTextBox.ReadOnly = true;
             this.last_SymbolTextBox.Size = new System.Drawing.Size(35, 20);
@@ -378,7 +362,7 @@
             // 
             // total_SymbolsTextBox
             // 
-            this.total_SymbolsTextBox.Location = new System.Drawing.Point(439, 8);
+            this.total_SymbolsTextBox.Location = new System.Drawing.Point(447, 8);
             this.total_SymbolsTextBox.Name = "total_SymbolsTextBox";
             this.total_SymbolsTextBox.ReadOnly = true;
             this.total_SymbolsTextBox.Size = new System.Drawing.Size(35, 20);
@@ -387,7 +371,7 @@
             // 
             // button_Get_All_Forecast_Properties
             // 
-            this.button_Get_All_Forecast_Properties.Location = new System.Drawing.Point(332, 28);
+            this.button_Get_All_Forecast_Properties.Location = new System.Drawing.Point(340, 28);
             this.button_Get_All_Forecast_Properties.Name = "button_Get_All_Forecast_Properties";
             this.button_Get_All_Forecast_Properties.Size = new System.Drawing.Size(67, 20);
             this.button_Get_All_Forecast_Properties.TabIndex = 40;
@@ -397,7 +381,7 @@
             // 
             // button_Refresh
             // 
-            this.button_Refresh.Location = new System.Drawing.Point(249, 28);
+            this.button_Refresh.Location = new System.Drawing.Point(257, 28);
             this.button_Refresh.Name = "button_Refresh";
             this.button_Refresh.Size = new System.Drawing.Size(80, 20);
             this.button_Refresh.TabIndex = 3;
@@ -407,7 +391,7 @@
             // 
             // button_Load_Browser
             // 
-            this.button_Load_Browser.Location = new System.Drawing.Point(249, 8);
+            this.button_Load_Browser.Location = new System.Drawing.Point(257, 8);
             this.button_Load_Browser.Name = "button_Load_Browser";
             this.button_Load_Browser.Size = new System.Drawing.Size(80, 20);
             this.button_Load_Browser.TabIndex = 37;
@@ -417,7 +401,7 @@
             // 
             // symbols_ProcessedTextBox
             // 
-            this.symbols_ProcessedTextBox.Location = new System.Drawing.Point(509, 28);
+            this.symbols_ProcessedTextBox.Location = new System.Drawing.Point(517, 28);
             this.symbols_ProcessedTextBox.Name = "symbols_ProcessedTextBox";
             this.symbols_ProcessedTextBox.ReadOnly = true;
             this.symbols_ProcessedTextBox.Size = new System.Drawing.Size(35, 20);
@@ -426,12 +410,11 @@
             // 
             // button_Add_All_To_Q
             // 
-            this.button_Add_All_To_Q.AutoSize = true;
             this.button_Add_All_To_Q.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_Add_All_To_Q.BackColor = System.Drawing.Color.Transparent;
-            this.button_Add_All_To_Q.Location = new System.Drawing.Point(114, 8);
+            this.button_Add_All_To_Q.Location = new System.Drawing.Point(120, 8);
             this.button_Add_All_To_Q.Name = "button_Add_All_To_Q";
-            this.button_Add_All_To_Q.Size = new System.Drawing.Size(136, 23);
+            this.button_Add_All_To_Q.Size = new System.Drawing.Size(136, 20);
             this.button_Add_All_To_Q.TabIndex = 38;
             this.button_Add_All_To_Q.Text = "Add all to Update Web Q";
             this.button_Add_All_To_Q.UseVisualStyleBackColor = false;
@@ -439,7 +422,7 @@
             // 
             // textBoxFilter
             // 
-            this.textBoxFilter.Location = new System.Drawing.Point(122, 27);
+            this.textBoxFilter.Location = new System.Drawing.Point(86, 70);
             this.textBoxFilter.Name = "textBoxFilter";
             this.textBoxFilter.Size = new System.Drawing.Size(131, 20);
             this.textBoxFilter.TabIndex = 0;
@@ -453,6 +436,7 @@
             this.OLV_Objects.AllColumns.Add(this.olvColumnCompanyName);
             this.OLV_Objects.AllowColumnReorder = true;
             this.OLV_Objects.AllowDrop = true;
+            this.OLV_Objects.AlternateRowBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.OLV_Objects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -464,6 +448,7 @@
             this.olvColumnAction,
             this.olvColumnCompanyName});
             this.OLV_Objects.Cursor = System.Windows.Forms.Cursors.Default;
+            this.OLV_Objects.EmptyListMsg = "No Objects Loaded";
             this.OLV_Objects.FullRowSelect = true;
             this.OLV_Objects.GridLines = true;
             this.OLV_Objects.HeaderWordWrap = true;
@@ -544,8 +529,10 @@
             // tabPage_Filtered_Symbols
             // 
             this.tabPage_Filtered_Symbols.BackColor = System.Drawing.Color.Khaki;
+            this.tabPage_Filtered_Symbols.Controls.Add(this.label15);
             this.tabPage_Filtered_Symbols.Controls.Add(this.button_Refresh_Filtered_Objects);
             this.tabPage_Filtered_Symbols.Controls.Add(label14);
+            this.tabPage_Filtered_Symbols.Controls.Add(this.OLV_Fast_Filters);
             this.tabPage_Filtered_Symbols.Controls.Add(this.button_Clear_Saved_Filters);
             this.tabPage_Filtered_Symbols.Controls.Add(this.button_Apply_Saved_Filters);
             this.tabPage_Filtered_Symbols.Controls.Add(this.button_Continue_Filter_Add_To_Saved);
@@ -571,6 +558,16 @@
             this.tabPage_Filtered_Symbols.TabIndex = 2;
             this.tabPage_Filtered_Symbols.Text = "Filtered Symbols";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(801, 49);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(137, 24);
+            this.label15.TabIndex = 64;
+            this.label15.Text = "Saved Filters:";
+            // 
             // button_Refresh_Filtered_Objects
             // 
             this.button_Refresh_Filtered_Objects.Location = new System.Drawing.Point(684, 25);
@@ -580,6 +577,81 @@
             this.button_Refresh_Filtered_Objects.Text = "Refresh";
             this.button_Refresh_Filtered_Objects.UseVisualStyleBackColor = true;
             this.button_Refresh_Filtered_Objects.Click += new System.EventHandler(this.button_Refresh_Filtered_Objects_Click);
+            // 
+            // OLV_Fast_Filters
+            // 
+            this.OLV_Fast_Filters.AllColumns.Add(this.olvColumn_Filter_Name);
+            this.OLV_Fast_Filters.AllColumns.Add(this.olvColumn_Filter_Condition);
+            this.OLV_Fast_Filters.AllColumns.Add(this.olvColumn_Filter_Value);
+            this.OLV_Fast_Filters.AllowColumnReorder = true;
+            this.OLV_Fast_Filters.AllowDrop = true;
+            this.OLV_Fast_Filters.AlternateRowBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.OLV_Fast_Filters.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OLV_Fast_Filters.BackgroundImageTiled = true;
+            this.OLV_Fast_Filters.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.OLV_Fast_Filters.CellEditActivation = BrightIdeasSoftware.ObjectListView.CellEditActivateMode.DoubleClick;
+            this.OLV_Fast_Filters.CellEditEnterChangesRows = true;
+            this.OLV_Fast_Filters.CellEditTabChangesRows = true;
+            this.OLV_Fast_Filters.CellEditUseWholeCell = false;
+            this.OLV_Fast_Filters.CheckBoxes = true;
+            this.OLV_Fast_Filters.CheckedAspectName = "";
+            this.OLV_Fast_Filters.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvColumn_Filter_Name,
+            this.olvColumn_Filter_Condition,
+            this.olvColumn_Filter_Value});
+            this.OLV_Fast_Filters.Cursor = System.Windows.Forms.Cursors.Default;
+            this.OLV_Fast_Filters.EmptyListMsg = "This fast list is empty";
+            this.OLV_Fast_Filters.FullRowSelect = true;
+            this.OLV_Fast_Filters.GridLines = true;
+            this.OLV_Fast_Filters.HideSelection = false;
+            this.OLV_Fast_Filters.Location = new System.Drawing.Point(939, 3);
+            this.OLV_Fast_Filters.Name = "OLV_Fast_Filters";
+            this.OLV_Fast_Filters.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.OLV_Fast_Filters.SelectColumnsOnRightClickBehaviour = BrightIdeasSoftware.ObjectListView.ColumnSelectBehaviour.Submenu;
+            this.OLV_Fast_Filters.SelectedColumnTint = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.OLV_Fast_Filters.ShowCommandMenuOnRightClick = true;
+            this.OLV_Fast_Filters.ShowGroups = false;
+            this.OLV_Fast_Filters.ShowImagesOnSubItems = true;
+            this.OLV_Fast_Filters.ShowItemToolTips = true;
+            this.OLV_Fast_Filters.Size = new System.Drawing.Size(165, 101);
+            this.OLV_Fast_Filters.SpaceBetweenGroups = 20;
+            this.OLV_Fast_Filters.TabIndex = 63;
+            this.OLV_Fast_Filters.TintSortColumn = true;
+            this.OLV_Fast_Filters.TriStateCheckBoxes = true;
+            this.OLV_Fast_Filters.UseAlternatingBackColors = true;
+            this.OLV_Fast_Filters.UseCompatibleStateImageBehavior = false;
+            this.OLV_Fast_Filters.UseFilterIndicator = true;
+            this.OLV_Fast_Filters.UseFiltering = true;
+            this.OLV_Fast_Filters.UseHotControls = false;
+            this.OLV_Fast_Filters.View = System.Windows.Forms.View.Details;
+            this.OLV_Fast_Filters.VirtualMode = true;
+            // 
+            // olvColumn_Filter_Name
+            // 
+            this.olvColumn_Filter_Name.AspectName = "Filter_Name";
+            this.olvColumn_Filter_Name.Sortable = false;
+            this.olvColumn_Filter_Name.Text = "Propertie";
+            this.olvColumn_Filter_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.olvColumn_Filter_Name.Width = 200;
+            // 
+            // olvColumn_Filter_Condition
+            // 
+            this.olvColumn_Filter_Condition.AspectName = "Filter_Condition";
+            this.olvColumn_Filter_Condition.IsTileViewColumn = true;
+            this.olvColumn_Filter_Condition.Sortable = false;
+            this.olvColumn_Filter_Condition.Text = "Condition";
+            this.olvColumn_Filter_Condition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // olvColumn_Filter_Value
+            // 
+            this.olvColumn_Filter_Value.AspectName = "Filter_Value";
+            this.olvColumn_Filter_Value.GroupWithItemCountFormat = "";
+            this.olvColumn_Filter_Value.GroupWithItemCountSingularFormat = "";
+            this.olvColumn_Filter_Value.Sortable = false;
+            this.olvColumn_Filter_Value.Text = "Value";
+            this.olvColumn_Filter_Value.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.olvColumn_Filter_Value.Width = 200;
             // 
             // button_Clear_Saved_Filters
             // 
@@ -597,7 +669,7 @@
             // 
             this.button_Apply_Saved_Filters.AutoSize = true;
             this.button_Apply_Saved_Filters.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_Apply_Saved_Filters.Location = new System.Drawing.Point(3, 2);
+            this.button_Apply_Saved_Filters.Location = new System.Drawing.Point(3, 23);
             this.button_Apply_Saved_Filters.Name = "button_Apply_Saved_Filters";
             this.button_Apply_Saved_Filters.Size = new System.Drawing.Size(113, 23);
             this.button_Apply_Saved_Filters.TabIndex = 56;
@@ -666,27 +738,30 @@
             this.OLV_Objects_Filtered.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.OLV_Objects_Filtered.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.OLV_Objects_Filtered.CheckBoxes = true;
             this.OLV_Objects_Filtered.CheckedAspectName = "";
             this.OLV_Objects_Filtered.Cursor = System.Windows.Forms.Cursors.Default;
+            this.OLV_Objects_Filtered.EmptyListMsg = "List is Empty";
             this.OLV_Objects_Filtered.FullRowSelect = true;
             this.OLV_Objects_Filtered.GridLines = true;
             this.OLV_Objects_Filtered.HeaderWordWrap = true;
             this.OLV_Objects_Filtered.HideSelection = false;
             this.OLV_Objects_Filtered.IncludeColumnHeadersInCopy = true;
-            this.OLV_Objects_Filtered.Location = new System.Drawing.Point(3, 52);
+            this.OLV_Objects_Filtered.Location = new System.Drawing.Point(3, 110);
             this.OLV_Objects_Filtered.Name = "OLV_Objects_Filtered";
             this.OLV_Objects_Filtered.OverlayText.Alignment = System.Drawing.ContentAlignment.BottomLeft;
             this.OLV_Objects_Filtered.OverlayText.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.OLV_Objects_Filtered.OverlayText.BorderWidth = 2F;
             this.OLV_Objects_Filtered.OverlayText.Rotation = -20;
             this.OLV_Objects_Filtered.OverlayText.Text = "";
+            this.OLV_Objects_Filtered.PersistentCheckBoxes = false;
             this.OLV_Objects_Filtered.SelectColumnsOnRightClickBehaviour = BrightIdeasSoftware.ObjectListView.ColumnSelectBehaviour.Submenu;
             this.OLV_Objects_Filtered.ShowCommandMenuOnRightClick = true;
             this.OLV_Objects_Filtered.ShowGroups = false;
             this.OLV_Objects_Filtered.ShowHeaderInAllViews = false;
             this.OLV_Objects_Filtered.ShowItemToolTips = true;
-            this.OLV_Objects_Filtered.Size = new System.Drawing.Size(1104, 413);
+            this.OLV_Objects_Filtered.Size = new System.Drawing.Size(1104, 355);
             this.OLV_Objects_Filtered.SortGroupItemsByPrimaryColumn = false;
             this.OLV_Objects_Filtered.TabIndex = 37;
             this.OLV_Objects_Filtered.TriStateCheckBoxes = true;
@@ -738,9 +813,9 @@
             this.comboBox_Parameters.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox_Parameters.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox_Parameters.FormattingEnabled = true;
-            this.comboBox_Parameters.Location = new System.Drawing.Point(122, 3);
+            this.comboBox_Parameters.Location = new System.Drawing.Point(3, 3);
             this.comboBox_Parameters.Name = "comboBox_Parameters";
-            this.comboBox_Parameters.Size = new System.Drawing.Size(131, 21);
+            this.comboBox_Parameters.Size = new System.Drawing.Size(250, 21);
             this.comboBox_Parameters.TabIndex = 28;
             this.comboBox_Parameters.Text = "Select Parameter";
             // 
@@ -775,8 +850,13 @@
             // 
             // tabPage_Settings_Controls_Collumns
             // 
-            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.label15);
-            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.OLV_Fast_Filters);
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.button_Replace_Update_Propertie);
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.textBox_New_Propertie_Value);
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.label19);
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.textBox_Old_Propertie_Value);
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.comboBox_Select_Propertie_To_Edit);
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.label17);
+            this.tabPage_Settings_Controls_Collumns.Controls.Add(this.label18);
             this.tabPage_Settings_Controls_Collumns.Controls.Add(this.button_Import_Replace_Columns);
             this.tabPage_Settings_Controls_Collumns.Controls.Add(this.button_Import_New_Columns);
             this.tabPage_Settings_Controls_Collumns.Controls.Add(this.button_Export_Current_Columns);
@@ -812,87 +892,71 @@
             this.tabPage_Settings_Controls_Collumns.Text = "Settings/Properties/Controls";
             this.tabPage_Settings_Controls_Collumns.UseVisualStyleBackColor = true;
             // 
-            // label15
+            // button_Replace_Update_Propertie
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(6, 213);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(137, 24);
-            this.label15.TabIndex = 64;
-            this.label15.Text = "Saved Filters:";
+            this.button_Replace_Update_Propertie.Location = new System.Drawing.Point(178, 346);
+            this.button_Replace_Update_Propertie.Name = "button_Replace_Update_Propertie";
+            this.button_Replace_Update_Propertie.Size = new System.Drawing.Size(168, 23);
+            this.button_Replace_Update_Propertie.TabIndex = 69;
+            this.button_Replace_Update_Propertie.Text = "Replace/Update Propertie";
+            this.button_Replace_Update_Propertie.UseVisualStyleBackColor = true;
+            this.button_Replace_Update_Propertie.Click += new System.EventHandler(this.button_Replace_Update_Propertie_Click);
             // 
-            // OLV_Fast_Filters
+            // textBox_New_Propertie_Value
             // 
-            this.OLV_Fast_Filters.AllColumns.Add(this.olvColumn_Filter_Name);
-            this.OLV_Fast_Filters.AllColumns.Add(this.olvColumn_Filter_Condition);
-            this.OLV_Fast_Filters.AllColumns.Add(this.olvColumn_Filter_Value);
-            this.OLV_Fast_Filters.AllowColumnReorder = true;
-            this.OLV_Fast_Filters.AllowDrop = true;
-            this.OLV_Fast_Filters.AlternateRowBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.OLV_Fast_Filters.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.OLV_Fast_Filters.BackgroundImageTiled = true;
-            this.OLV_Fast_Filters.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.OLV_Fast_Filters.CellEditActivation = BrightIdeasSoftware.ObjectListView.CellEditActivateMode.DoubleClick;
-            this.OLV_Fast_Filters.CellEditEnterChangesRows = true;
-            this.OLV_Fast_Filters.CellEditTabChangesRows = true;
-            this.OLV_Fast_Filters.CellEditUseWholeCell = false;
-            this.OLV_Fast_Filters.CheckedAspectName = "";
-            this.OLV_Fast_Filters.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvColumn_Filter_Name,
-            this.olvColumn_Filter_Condition,
-            this.olvColumn_Filter_Value});
-            this.OLV_Fast_Filters.Cursor = System.Windows.Forms.Cursors.Default;
-            this.OLV_Fast_Filters.EmptyListMsg = "This fast list is empty";
-            this.OLV_Fast_Filters.FullRowSelect = true;
-            this.OLV_Fast_Filters.HideSelection = false;
-            this.OLV_Fast_Filters.Location = new System.Drawing.Point(6, 240);
-            this.OLV_Fast_Filters.Name = "OLV_Fast_Filters";
-            this.OLV_Fast_Filters.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.OLV_Fast_Filters.SelectColumnsOnRightClickBehaviour = BrightIdeasSoftware.ObjectListView.ColumnSelectBehaviour.Submenu;
-            this.OLV_Fast_Filters.SelectedColumnTint = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
-            this.OLV_Fast_Filters.ShowCommandMenuOnRightClick = true;
-            this.OLV_Fast_Filters.ShowGroups = false;
-            this.OLV_Fast_Filters.ShowImagesOnSubItems = true;
-            this.OLV_Fast_Filters.ShowItemToolTips = true;
-            this.OLV_Fast_Filters.Size = new System.Drawing.Size(514, 225);
-            this.OLV_Fast_Filters.SpaceBetweenGroups = 20;
-            this.OLV_Fast_Filters.TabIndex = 63;
-            this.OLV_Fast_Filters.TintSortColumn = true;
-            this.OLV_Fast_Filters.TriStateCheckBoxes = true;
-            this.OLV_Fast_Filters.UseAlternatingBackColors = true;
-            this.OLV_Fast_Filters.UseCompatibleStateImageBehavior = false;
-            this.OLV_Fast_Filters.UseFilterIndicator = true;
-            this.OLV_Fast_Filters.UseFiltering = true;
-            this.OLV_Fast_Filters.View = System.Windows.Forms.View.Details;
-            this.OLV_Fast_Filters.VirtualMode = true;
+            this.textBox_New_Propertie_Value.Location = new System.Drawing.Point(178, 320);
+            this.textBox_New_Propertie_Value.Name = "textBox_New_Propertie_Value";
+            this.textBox_New_Propertie_Value.Size = new System.Drawing.Size(168, 20);
+            this.textBox_New_Propertie_Value.TabIndex = 67;
+            this.textBox_New_Propertie_Value.Text = "New_Propertie_Value";
             // 
-            // olvColumn_Filter_Name
+            // label19
             // 
-            this.olvColumn_Filter_Name.AspectName = "Filter_Name";
-            this.olvColumn_Filter_Name.Sortable = false;
-            this.olvColumn_Filter_Name.Text = "Propertie";
-            this.olvColumn_Filter_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn_Filter_Name.Width = 200;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(120, 323);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(62, 13);
+            this.label19.TabIndex = 68;
+            this.label19.Text = "New Value:";
             // 
-            // olvColumn_Filter_Condition
+            // textBox_Old_Propertie_Value
             // 
-            this.olvColumn_Filter_Condition.AspectName = "Filter_Condition";
-            this.olvColumn_Filter_Condition.IsTileViewColumn = true;
-            this.olvColumn_Filter_Condition.Sortable = false;
-            this.olvColumn_Filter_Condition.Text = "Condition";
-            this.olvColumn_Filter_Condition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_Old_Propertie_Value.Location = new System.Drawing.Point(178, 296);
+            this.textBox_Old_Propertie_Value.Name = "textBox_Old_Propertie_Value";
+            this.textBox_Old_Propertie_Value.Size = new System.Drawing.Size(168, 20);
+            this.textBox_Old_Propertie_Value.TabIndex = 64;
+            this.textBox_Old_Propertie_Value.Text = "Old_Propertie_Value";
             // 
-            // olvColumn_Filter_Value
+            // comboBox_Select_Propertie_To_Edit
             // 
-            this.olvColumn_Filter_Value.AspectName = "Filter_Value";
-            this.olvColumn_Filter_Value.GroupWithItemCountFormat = "";
-            this.olvColumn_Filter_Value.GroupWithItemCountSingularFormat = "";
-            this.olvColumn_Filter_Value.Sortable = false;
-            this.olvColumn_Filter_Value.Text = "Value";
-            this.olvColumn_Filter_Value.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn_Filter_Value.Width = 200;
+            this.comboBox_Select_Propertie_To_Edit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBox_Select_Propertie_To_Edit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_Select_Propertie_To_Edit.FormattingEnabled = true;
+            this.comboBox_Select_Propertie_To_Edit.Location = new System.Drawing.Point(178, 269);
+            this.comboBox_Select_Propertie_To_Edit.Name = "comboBox_Select_Propertie_To_Edit";
+            this.comboBox_Select_Propertie_To_Edit.Size = new System.Drawing.Size(168, 21);
+            this.comboBox_Select_Propertie_To_Edit.Sorted = true;
+            this.comboBox_Select_Propertie_To_Edit.TabIndex = 63;
+            this.comboBox_Select_Propertie_To_Edit.Text = "Select Propertie To Edit";
+            this.comboBox_Select_Propertie_To_Edit.SelectedIndexChanged += new System.EventHandler(this.comboBox_Select_Propertie_To_Edit_SelectedIndexChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(92, 272);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(89, 13);
+            this.label17.TabIndex = 65;
+            this.label17.Text = "Propertie To Edit:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(67, 299);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(115, 13);
+            this.label18.TabIndex = 66;
+            this.label18.Text = "Old Value To Replace:";
             // 
             // button_Import_Replace_Columns
             // 
@@ -940,7 +1004,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.propertyGrid_Column.Location = new System.Drawing.Point(526, 3);
             this.propertyGrid_Column.Name = "propertyGrid_Column";
-            this.propertyGrid_Column.Size = new System.Drawing.Size(578, 465);
+            this.propertyGrid_Column.Size = new System.Drawing.Size(578, 300);
             this.propertyGrid_Column.TabIndex = 57;
             // 
             // textBox_Sorting_Parameter
@@ -1091,7 +1155,7 @@
             this.textBox_Header_Text.Name = "textBox_Header_Text";
             this.textBox_Header_Text.Size = new System.Drawing.Size(168, 20);
             this.textBox_Header_Text.TabIndex = 35;
-            this.textBox_Header_Text.Text = "Shart Parameter Name";
+            this.textBox_Header_Text.Text = "Short Parameter Name";
             this.textBox_Header_Text.Validated += new System.EventHandler(this.textBox_Header_Text_Validated);
             // 
             // comboBox_Parameters_Columns
@@ -1191,10 +1255,10 @@
             this.tabPage_SymbolsObjects.ResumeLayout(false);
             this.tabPage_Filtered_Symbols.ResumeLayout(false);
             this.tabPage_Filtered_Symbols.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OLV_Fast_Filters)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OLV_Objects_Filtered)).EndInit();
             this.tabPage_Settings_Controls_Collumns.ResumeLayout(false);
             this.tabPage_Settings_Controls_Collumns.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OLV_Fast_Filters)).EndInit();
             this.tabPage_Symbol_Properties.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1270,7 +1334,6 @@
         private System.Windows.Forms.Button button_Pause_Q;
         private System.Windows.Forms.Button button_Start_Q;
         private System.Windows.Forms.Button button_Incert_To_Update_Q;
-        private System.Windows.Forms.TextBox textBox_Updating_Seconds;
         private System.Windows.Forms.TextBox textBox_Updating_Minutes;
         private System.Windows.Forms.Button button_Apply_Saved_Filters;
         private System.Windows.Forms.Button button_Continue_Filter_Add_To_Saved;
@@ -1282,5 +1345,12 @@
         private BrightIdeasSoftware.OLVColumn olvColumn_Filter_Value;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button_Fill_Update_From_DT;
+        private System.Windows.Forms.Button button_Replace_Update_Propertie;
+        private System.Windows.Forms.TextBox textBox_New_Propertie_Value;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox_Old_Propertie_Value;
+        private System.Windows.Forms.ComboBox comboBox_Select_Propertie_To_Edit;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }

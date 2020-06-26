@@ -12,20 +12,20 @@ namespace OLVTools2020
     {
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public OLVMgr OLV_Mgr
-        {
-            get { return _OLVMgr; }
-            set
-            {
-                _OLVMgr = value;
-                if (value != null)
-                {
-                    this.InitializeTab();
-                    //this.SetupGeneralListViewEvents();
-                }
-            }
-        }
-        private OLVMgr _OLVMgr;
+        //public OLVMgr OLV_Mgr
+        //{
+        //    get { return _OLVMgr; }
+        //    set
+        //    {
+        //        _OLVMgr = value;
+        //        if (value != null)
+        //        {
+        //            this.InitializeTab();
+        //            //this.SetupGeneralListViewEvents();
+        //        }
+        //    }
+        //}
+        //private OLVMgr _OLVMgr;
         private object _Object_Mgr;
         private GenericTools.Tools Gen_Tools = new GenericTools.Tools();
 
@@ -221,7 +221,7 @@ namespace OLVTools2020
         private void checkBoxGroups_CheckedChanged(object sender, EventArgs e)
         {
            
-                OLV_Mgr.ShowGroupsChecked(this.ListView, (CheckBox)sender);
+                //OLV_Mgr.ShowGroupsChecked(this.ListView, (CheckBox)sender);
             
         }
 

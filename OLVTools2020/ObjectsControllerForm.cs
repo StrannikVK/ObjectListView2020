@@ -38,7 +38,7 @@ namespace OLVTools2020 {
             if (ObjectListView.IsVistaOrLater)
                 this.Font = new Font("Segoe UI", 9);
              
-            OLVMgr OLV_Mgr = new OLVMgr(this);
+            //OLVMgr OLV_Mgr = new OLVMgr(this);
 
             //this.tabSimple.Coordinator = OLV_Mgr;
             //this.tabComplex.Coordinator = OLV_Mgr;
